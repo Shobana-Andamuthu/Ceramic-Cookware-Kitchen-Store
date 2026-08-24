@@ -302,7 +302,51 @@
         </div>
       </div>
     </div>
-  </footer>
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
+      <button id="closeMobileNavBtn" class="text-stone-500 hover:text-brandBrown"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
+      <div>
+        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
+          <span>Home</span>
+          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+          <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
+          <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
+      <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
+      <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
+      <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
+      <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
+      <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
+      <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
+      <a href="account.html" class="block py-2 text-brandBrown font-bold">My Account</a>
+    </div>
+  </aside>
+
+  <!-- CART DRAWER -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-lg">Your Shopping Bag</h3>
+      <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div id="cartItemsContainer" class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-sm font-semibold">Subtotal:</span>
+        <span id="cartSubtotal" class="font-serif font-bold text-lg text-brandBrown">₹ 0.00</span>
+      </div>
+      <a href="cart.html" class="btn-brown w-full text-center block text-xs">View Cart & Checkout</a>
+    </div>
+  </aside>
 
   <script src="assets/js/main.js"></script>
   <script>

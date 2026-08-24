@@ -810,6 +810,51 @@ html.dark .stock-order { color: #60a5fa; }
   visibility: visible;
 }
 
+/* Mobile Navigation Backdrop - Clear, Un-blurred, Un-darkened */
+#mobileNavBackdrop,
+.mobile-nav-backdrop {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+#mobileNavDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 85vw;
+  max-width: 320px;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 105;
+  box-shadow: -6px 0 30px rgba(0, 0, 0, 0.18);
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform var(--transition-smooth), visibility var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+html[dir="rtl"] #mobileNavDrawer {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: 6px 0 30px rgba(0, 0, 0, 0.18);
+}
+
+#mobileNavDrawer.active {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+html[dir="rtl"] #mobileNavDrawer.active {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 .cart-drawer {
   position: fixed;
   top: 0;
