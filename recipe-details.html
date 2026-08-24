@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Vegetable Stew Recipe | Ceramic Kitchen</title>
+  <meta name="description" content="Learn step-by-step how to slow-cook rich harvest vegetable stew in an earthen terracotta Dutch oven.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 1: RECIPE HEADER & HERO IMAGE
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom max-w-4xl space-y-4 text-center">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block">SLOW SIMMER RECIPE</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Harvest Vegetable Stew in Claypot</h1>
+      <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 max-w-xl mx-auto leading-relaxed">
+        A comforting blend of roasted sweet potatoes, lentils, and garden herbs slow-simmered inside an earthen terracotta pot.
+      </p>
+      <div class="rounded-2xl overflow-hidden h-96 border border-brandBorder shadow-subtle mt-4">
+        <img src="assets/images/recipes/recipe-stew.png" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 2: RECIPE META BAR (CLEAN SVG ICONS)
+       ========================================================================= -->
+  <section class="py-4 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom max-w-4xl flex justify-around items-center text-xs font-semibold text-stone-700 dark:text-stone-300">
+      <div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Prep: 15 mins</div>
+      <div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg> Cook: 90 mins</div>
+      <div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg> Serves: 4 Persons</div>
+      <div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg> Difficulty: Easy</div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 3: INGREDIENTS LIST
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom max-w-3xl">
+      <h2 class="text-xl font-serif font-bold text-brandText mb-4">Fresh Ingredients</h2>
+      <ul class="space-y-2 text-xs text-stone-700 dark:text-stone-300 divide-y divide-brandBorder/40">
+        <li class="pt-2 flex justify-between"><span>• Diced sweet potatoes & carrots</span> <span class="font-bold">300g</span></li>
+        <li class="pt-2 flex justify-between"><span>• Brown lentils (soaked)</span> <span class="font-bold">1 Cup</span></li>
+        <li class="pt-2 flex justify-between"><span>• Cold-pressed mustard oil</span> <span class="font-bold">2 Tbsp</span></li>
+        <li class="pt-2 flex justify-between"><span>• Cumin seeds & crushed garlic</span> <span class="font-bold">1 tsp</span></li>
+        <li class="pt-2 flex justify-between"><span>• Vegetable broth</span> <span class="font-bold">3 Cups</span></li>
+        <li class="pt-2 flex justify-between"><span>• Fresh rosemary sprigs</span> <span class="font-bold">2 sprigs</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 4: STEP-BY-STEP COOKING METHOD
+       ========================================================================= -->
+  <section class="py-10 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom max-w-3xl space-y-6">
+      <h2 class="text-xl font-serif font-bold text-brandText">Preparation Method</h2>
+
+      <div class="space-y-4 text-xs">
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-1">
+          <div class="font-bold text-brandBrown">Step 1: Tempering Spices</div>
+          <p class="text-stone-600 dark:text-stone-400">Heat mustard oil in your clay pot over low flame. Add cumin seeds and crushed garlic until golden aroma fills the room.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-1">
+          <div class="font-bold text-brandBrown">Step 2: Sautéing Vegetables</div>
+          <p class="text-stone-600 dark:text-stone-400">Toss in sweet potatoes and carrots. Stir gently for 5 minutes as clay absorbs and radiates heat.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-1">
+          <div class="font-bold text-brandBrown">Step 3: Slow Simmering</div>
+          <p class="text-stone-600 dark:text-stone-400">Add soaked lentils, vegetable broth, and rosemary. Cover with clay lid and simmer on low heat for 80 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 5: RECOMMENDED COOKWARE PAIRING
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom max-w-3xl">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle flex flex-col sm:flex-row items-center gap-6">
+        <img src="assets/images/products/ceramic-cooking-pot.png" class="w-24 h-24 object-cover rounded-xl border border-brandBorder">
+        <div class="space-y-2 flex-1">
+          <span class="text-[10px] font-bold text-brandOlive uppercase">COOKWARE USED IN THIS RECIPE</span>
+          <h3 class="font-serif font-bold text-base text-brandText">Durable Ceramic Cooking Pot with Lid</h3>
+          <p class="text-xs text-stone-500">2.5 Liter capacity, gas stove safe, non-reactive lead-free glaze.</p>
+          <div class="flex items-center justify-between pt-1">
+            <span class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 1,500.00</span>
+            <button class="btn-brown text-xs py-1.5 px-4 btn-add-cart" data-id="prod-3" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1500.00" data-image="assets/images/products/ceramic-cooking-pot.png">Add Cookware to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 6: RELATED RECIPES
+       ========================================================================= -->
+  <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom">
+      <h2 class="text-xl font-serif font-bold text-brandText mb-6 text-center">More Slow Cooking Guides</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <a href="recipes.html" class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center hover:shadow-hover transition-all">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" class="w-16 h-16 object-cover rounded-lg">
+          <div>
+            <h4 class="font-serif font-bold text-xs text-brandText">Rustic Country Sourdough Loaf</h4>
+            <span class="text-[10px] text-stone-500">Baking • 45 Mins</span>
+          </div>
+        </a>
+
+        <a href="recipes.html" class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center hover:shadow-hover transition-all">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Spiced Cardamom Milk Tea" class="w-16 h-16 object-cover rounded-lg">
+          <div>
+            <h4 class="font-serif font-bold text-xs text-brandText">Spiced Cardamom Milk Tea</h4>
+            <span class="text-[10px] text-stone-500">Tea Ritual • 15 Mins</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPE DETAILS — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl font-serif font-bold">Start Cooking With Earthenware</h2>
+      <p class="text-xs text-stone-200">Shop handcrafted terracotta cooking pots and stoneware serving platters.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore Shop Collection &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material & Care Guide | Ceramic Kitchen</title>
+  <meta name="description" content="Learn about natural clay composition, far-infrared heat radiation, lead-free mineral glazes, and terracotta seasoning techniques.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link active">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 1: MATERIAL HERO
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">CRAFT & SCIENCE</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Material & Care Science</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        Understanding natural Jaipur clay composition, thermal shock resistance, and non-toxic mineral glaze standards.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 2: CLAY COMPOSITION & MINERAL SCIENCE
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Raw Jaipur Terracotta Clay Wedging" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">MINERAL PURITY</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">Organic Earthen Terracotta</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Our clay is harvested from deep alluvial deposits in Rajasthan. Rich in calcium, magnesium, and iron oxides, natural unglazed clay interacts with steam during cooking to enhance natural dish aromas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 3: LEAD-FREE SAFETY STANDARDS
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom text-center max-w-2xl mx-auto space-y-4">
+      <span class="text-xs font-bold text-brandOlive uppercase tracking-widest block">SAFETY CERTIFICATION</span>
+      <h2 class="text-2xl font-serif font-bold text-brandText">100% Non-Toxic Mineral Glazes</h2>
+      <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+        Many commercial ceramics rely on lead or cadmium fluxes to lower firing temperatures. Ceramic Kitchen glazes are formulated purely from ground quartz, feldspar, and non-reactive earth minerals vitrified at 1200°C.
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 text-xs font-bold pt-2">
+        <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Zero Lead</span>
+        <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Zero Cadmium</span>
+        <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Zero PTFE / PFOA</span>
+        <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> NABL Certified</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 4: HEATING PERFORMANCE & FAR-INFRARED HEAT (CLEAN SVG ICONS)
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xs">
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-12 h-12 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brandText">Deep Thermal Retention</h3>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Clay holds heat twice as long as stainless steel, keeping curries piping hot at the dining table for up to 45 minutes.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-12 h-12 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4v4m-4-2v4m8-4v4m-8 6c0 3.314 2.686 6 6 6s6-2.686 6-6H8z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brandText">Self-Basting Steam Loop</h3>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Pores in the lid trap aromatics and drip moisture continuously back onto simmering vegetables and lentils.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-12 h-12 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brandText">Thermal Shock Guard</h3>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Vitrified at 1200°C for exceptional resistance to heat expansion on stovetops and inside ovens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 4.5 (NEW): VITRIFICATION SCIENCE
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">MINERAL SCIENCE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Vitrification & Quartz Density</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            At temperatures between 1180°C and 1220°C, natural quartz sand and clay silica particles melt and fuse together into a dense, stone-like matrix. This eliminates liquid absorption while preserving the clay's far-infrared thermal emission properties.
+          </p>
+          <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">&lt;0.5% Porosity</span>
+              <span class="text-stone-500">Non-Absorbent Surface</span>
+            </div>
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">Natural Quartz</span>
+              <span class="text-stone-500">Zero Chemical Synthetic Flux</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="assets/images/lifestyle/mineral-glaze.png" alt="Raw Quartz Minerals & Glazes" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 4.6 (NEW): STOVE COMPATIBILITY MATRIX
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+        <span class="text-xs font-bold text-brandOlive uppercase tracking-widest block">KITCHEN APPLIANCE SAFETY</span>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Heat Source Compatibility</h2>
+        <p class="text-xs text-stone-600 dark:text-stone-400">Our vitrified ceramic pots are engineered for versatile kitchen use.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl space-y-2 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+          </div>
+          <h4 class="font-serif font-bold text-stone-900 dark:text-stone-100">Gas Flame</h4>
+          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block">100% Compatible</span>
+          <p class="text-[11px] text-stone-500">Low to medium direct flame</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl space-y-2 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h4 class="font-serif font-bold text-stone-900 dark:text-stone-100">Oven Safe</h4>
+          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block">Up to 350°C</span>
+          <p class="text-[11px] text-stone-500">Perfect for slow baking</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl space-y-2 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h4 class="font-serif font-bold text-stone-900 dark:text-stone-100">Microwave Safe</h4>
+          <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block">100% Compatible</span>
+          <p class="text-[11px] text-stone-500">No metallic arc interference</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl space-y-2 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          </div>
+          <h4 class="font-serif font-bold text-stone-900 dark:text-stone-100">Induction Cooktop</h4>
+          <span class="text-[11px] text-amber-600 dark:text-amber-400 font-bold block">Requires Interface Disc</span>
+          <p class="text-[11px] text-stone-500">Use with heat diffuser plate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 4.7 (NEW): CARE JOURNAL & WASHING BEST PRACTICES
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-2 lg:order-1">
+          <img src="assets/images/lifestyle/kitchen-shelf.png" alt="Handcrafted Clayware Kitchen Storage" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">DAILY MAINTENANCE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Cleaning & Storage Journal</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Maintaining earthen ceramics is simple. Wash with warm water and soft coconut fiber sponge. Avoid harsh chemical detergents or synthetic bleach. Allow pots to air dry completely before storing in open wooden kitchen racks.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-xs">
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">✓ Warm Water Rinse</span>
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">✓ Air Dry in Sunlight</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 5: CARE & SEASONING STEPS
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom max-w-3xl">
+      <h2 class="text-2xl font-serif font-bold text-brandText mb-8 text-center">First-Time Seasoning Steps</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="font-serif font-bold text-brandBrown text-lg">Step 1: Soak</div>
+          <p class="text-stone-600 dark:text-stone-400">Submerge the new pot in clean water for 8-12 hours before initial cooking.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="font-serif font-bold text-brandBrown text-lg">Step 2: Oil Coat</div>
+          <p class="text-stone-600 dark:text-stone-400">Rub unrefined mustard or sesame oil into interior surfaces and air dry.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="font-serif font-bold text-brandBrown text-lg">Step 3: Low Simmer</div>
+          <p class="text-stone-600 dark:text-stone-400">Simmer rice water on low heat for 15 mins to seal natural clay pores.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 6: MATERIAL COMPARISON TABLE
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <h2 class="text-2xl font-serif font-bold text-brandText mb-6 text-center">Material Performance Comparison</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs text-left border border-brandBorder rounded-xl overflow-hidden bg-brandCard">
+          <thead class="bg-brandTan text-brandBrown font-serif font-bold border-b border-brandBorder">
+            <tr>
+              <th class="p-3">Cookware Feature</th>
+              <th class="p-3">Earthen Terracotta Clay</th>
+              <th class="p-3">Enameled Cast Iron</th>
+              <th class="p-3">Synthetic Non-Stick (PTFE)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-brandBorder/60 text-stone-700 dark:text-stone-300">
+            <tr>
+              <td class="p-3 font-semibold">Toxics & Heavy Metals</td>
+              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">100% Free</td>
+              <td class="p-3">Low Risk</td>
+              <td class="p-3 text-red-600">Chemical Fumes at >260°C</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Nutrient & Steam Retention</td>
+              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">High (Micro-Porous)</td>
+              <td class="p-3">Moderate</td>
+              <td class="p-3">Low</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Alkaline Neutralization</td>
+              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">Yes (Neutralizes Acid)</td>
+              <td class="p-3">No</td>
+              <td class="p-3">No</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Heat Distribution</td>
+              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">Far-Infrared Even Heat</td>
+              <td class="p-3">Heavy Direct Heat</td>
+              <td class="p-3">Quick Hot Spots</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MATERIAL GUIDE — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl font-serif font-bold">Experience Healthier Cooking</h2>
+      <p class="text-xs text-stone-200">Switch to non-toxic clay Dutch ovens and handcrafted bakeware today.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Shop Cookware Collection &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

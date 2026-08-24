@@ -1,0 +1,153 @@
+/* ==========================================================================
+   CERAMIC KITCHEN STORE - RESPONSIVE STYLES
+   Ensures 100% fidelity on 320px, 375px, 480px, 768px, 1024px, 1440px+
+   ========================================================================== */
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .container-custom {
+    max-width: 1280px;
+  }
+}
+
+/* Medium Desktop / Laptops (1024px to 1439px) */
+@media (max-width: 1279px) {
+  .hero-content-box {
+    left: 2rem;
+    max-width: 420px;
+    padding: 2rem;
+  }
+  .hero-title {
+    font-size: 1.9rem;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) {
+  .nav-links {
+    gap: 1.25rem;
+  }
+  
+  .nav-link {
+    font-size: 0.88rem;
+  }
+
+  .hero-image {
+    height: 420px;
+  }
+
+  .hero-content-box {
+    left: 1.5rem;
+    max-width: 380px;
+    padding: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Mobile & Small Tablets (up to 767px) */
+@media (max-width: 767px) {
+  .top-nav-strip {
+    font-size: 0.72rem;
+  }
+
+  .top-tab {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .top-green-strip {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.72rem;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-image {
+    height: 280px;
+  }
+
+  .hero-content-box {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    max-width: 100%;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .cart-drawer {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+  }
+
+  .back-to-top-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Very Small Mobile Screens (320px to 479px) */
+@media (max-width: 479px) {
+  .container-custom {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 1.35rem;
+  }
+
+  .product-card {
+    padding: 0.75rem;
+  }
+
+  .product-title {
+    font-size: 0.88rem;
+  }
+
+  .product-price {
+    font-size: 0.95rem;
+  }
+
+  .back-to-top-btn {
+    bottom: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+  }
+}

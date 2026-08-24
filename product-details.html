@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durable Ceramic Cooking Pot with Lid | Ceramic Kitchen</title>
+  <meta name="description" content="Handcrafted 2.5L terracotta ceramic cooking pot with lid. Lead-free mineral glaze, ideal for slow cooking and rich stews.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 1: MAIN SHOWCASE HERO
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- LEFT: GALLERY IMAGES -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="h-96 rounded-2xl overflow-hidden shadow-subtle border border-brandBorder bg-brandTan">
+            <img id="mainProductImg" src="assets/images/products/ceramic-cooking-pot.png" class="w-full h-full object-cover">
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <img src="assets/images/products/ceramic-cooking-pot.png" alt="Front View Pot" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBrown cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" alt="Clay Texture Detail" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Simmering Stew in Pot" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="Studio Handle Craft" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+          </div>
+        </div>
+
+        <!-- RIGHT: PRODUCT DETAILS & BUY BOX -->
+        <div class="lg:col-span-6 space-y-5 flex flex-col justify-center">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">COOKWARE • 2.5L CAPACITY</span>
+          <h1 class="text-3xl font-serif font-bold text-brandText">Durable Ceramic Cooking Pot with Lid</h1>
+          
+          <div class="flex items-center gap-3">
+            <div class="star-rating text-sm">★★★★★</div>
+            <span class="text-xs text-stone-500 font-semibold">(48 Verified Reviews)</span>
+            <span class="stock-in text-xs font-bold">● 12 in stock</span>
+          </div>
+
+          <div class="text-2xl font-bold text-amber-900 dark:text-amber-400">₹ 1,500.00</div>
+
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Handmolded by studio potters using 100% natural Jaipur red clay. Vitrified at high temperature to seal moisture while slowly releasing far-infrared heat into soups, stews, and lentils.
+          </p>
+
+          <div class="border-y border-brandBorder py-4 space-y-3 text-xs">
+            <div class="flex items-center gap-4">
+              <span class="font-bold text-stone-700 dark:text-stone-300 w-20">Capacity:</span>
+              <div class="flex gap-2">
+                <button class="px-3 py-1 rounded bg-brandBrown text-white font-bold">2.5 Liters</button>
+                <button class="px-3 py-1 rounded bg-brandCard border border-brandBorder text-stone-600 dark:text-stone-400">4.0 Liters</button>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="font-bold text-stone-700 dark:text-stone-300 w-20">Stovetop:</span>
+              <span class="text-stone-600 dark:text-stone-400 font-semibold">Gas Flame, Electric Oven (Up to 260°C)</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <button class="btn-brown text-xs py-3 px-8 flex-1 btn-add-cart" data-id="prod-3" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1500.00" data-image="assets/images/products/ceramic-cooking-pot.png">Add to Shopping Bag &rarr;</button>
+          </div>
+
+          <div class="bg-brandTan/40 p-4 rounded-xl text-xs space-y-1 text-stone-600 dark:text-stone-400 border border-brandBorder">
+            <div>✓ 100% Lead-Free & Cadmium-Free Mineral Glaze</div>
+            <div>✓ Plastic-Free Honeycomb Transit Guarantee</div>
+            <div>✓ 30-Day Studio Warranty</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 2: TECHNICAL SPECIFICATIONS GRID
+       ========================================================================= -->
+  <section class="py-10 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">TECHNICAL SPECIFICATIONS</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">Craft & Thermal Properties</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="w-8 h-8 rounded-full bg-brandTan text-brandBrown flex items-center justify-center font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-brandText">Kiln Vitrification</h3>
+          <p class="text-stone-600 dark:text-stone-400">Dense clay body fired at 1180°C prevents moisture absorption and resists thermal shock on gas stovetops.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="w-8 h-8 rounded-full bg-brandTan text-brandBrown flex items-center justify-center font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v4m-4-2v4m8-4v4m-8 6c0 3.314 2.686 6 6 6s6-2.686 6-6H8z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-brandText">Far-Infrared Heat</h3>
+          <p class="text-stone-600 dark:text-stone-400">Emits gentle radiant heat wave that breaks down tough fibers while retaining nutrient juices.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="w-8 h-8 rounded-full bg-brandTan text-brandBrown flex items-center justify-center font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-brandText">Non-Reactive Surface</h3>
+          <p class="text-stone-600 dark:text-stone-400">Formulated with natural quartz and feldspar minerals. 100% safe for acidic tomato stews.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+          <div class="w-8 h-8 rounded-full bg-brandTan text-brandBrown flex items-center justify-center font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 18h12l3-18H3z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-brandText">Ergonomic Handles</h3>
+          <p class="text-stone-600 dark:text-stone-400">2.4 kg dry weight with balanced ceramic side handles engineered for easy lifting from oven to table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 3: CRAFTSMANSHIP JOURNEY
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">HANDMADE PROCESS</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">How This Pot Is Handcrafted</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-3">
+          <span class="text-2xl font-serif font-bold text-brandTan dark:text-stone-600">01</span>
+          <h3 class="font-serif font-bold text-base text-brandText">Jaipur Clay Preparation</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            Raw terracotta is sieved with natural river quartz to ensure even porosity and structural strength during high heat cooking.
+          </p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-3">
+          <span class="text-2xl font-serif font-bold text-brandTan dark:text-stone-600">02</span>
+          <h3 class="font-serif font-bold text-base text-brandText">Wheel Shaping & Trimming</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            Master potters turn each vessel by hand, carving heavy pot walls and tight-fitting steam retention lids.
+          </p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-3">
+          <span class="text-2xl font-serif font-bold text-brandTan dark:text-stone-600">03</span>
+          <h3 class="font-serif font-bold text-base text-brandText">Slow Wood-Kiln Firing</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            Fired for 18 hours in artisanal kilns. Natural ash glazes create subtle color variations on every lid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 4: SEASONING & CARE INSTRUCTIONS
+       ========================================================================= -->
+  <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">CARE GUIDE</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">First-Time Seasoning Steps</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-2">
+          <span class="font-bold text-brandBrown block text-sm">Step 1: Water Soak</span>
+          <p class="text-stone-600 dark:text-stone-400">Submerge pot and lid in clean tap water for 12 hours before initial use.</p>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-2">
+          <span class="font-bold text-brandBrown block text-sm">Step 2: Mustard Oil Coat</span>
+          <p class="text-stone-600 dark:text-stone-400">Rub unglazed interior with organic edible oil and let dry thoroughly.</p>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-2">
+          <span class="font-bold text-brandBrown block text-sm">Step 3: Low Heat Warm-Up</span>
+          <p class="text-stone-600 dark:text-stone-400">Simmer rice water on low flame for 30 minutes to seal clay micro-pores.</p>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl space-y-2">
+          <span class="font-bold text-brandBrown block text-sm">Step 4: Gentle Care</span>
+          <p class="text-stone-600 dark:text-stone-400">Hand wash with hot water and soft brush. Avoid harsh chemical soap powders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 5: RECOMMENDED RECIPES
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">KITCHEN INSPIRATION</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">Recipes Perfect for This Pot</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col sm:flex-row">
+          <img src="assets/images/recipes/recipe-stew.png" class="w-full sm:w-48 h-48 object-cover">
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOKED</span>
+              <h3 class="font-serif font-bold text-base text-brandText mt-1">Harvest Vegetable Stew</h3>
+              <p class="text-xs text-stone-500 mt-1">Simmer root vegetables and aromatic spices slowly to lock in mineral nutrients.</p>
+            </div>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline block">View Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col sm:flex-row">
+          <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=800&q=80" alt="Country Sourdough Boule" class="w-full sm:w-48 h-48 object-cover">
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-brandOlive uppercase">BAKEWARE</span>
+              <h3 class="font-serif font-bold text-base text-brandText mt-1">Country Sourdough Boule</h3>
+              <p class="text-xs text-stone-500 mt-1">Achieve a crackly crust and tender crumb using steam trapped under the lid.</p>
+            </div>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline block">View Recipe &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 6: CUSTOMER REVIEWS
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <div class="lg:col-span-4 bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle space-y-3 h-fit">
+          <h3 class="font-serif font-bold text-lg text-brandText">Verified Customer Reviews</h3>
+          <div class="flex items-center gap-3">
+            <span class="text-3xl font-bold text-brandBrown font-serif">4.9</span>
+            <div>
+              <div class="text-amber-800">★★★★★</div>
+              <div class="text-xs text-stone-500">Based on 48 kitchen reviews</div>
+            </div>
+          </div>
+          <div class="border-t border-brandBorder pt-3 space-y-2 text-xs text-stone-600 dark:text-stone-400">
+            <div>98% would recommend to a friend</div>
+            <div>100% lead-free certified</div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 space-y-4">
+          
+          <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <div class="font-bold text-brandText">Meera R. — Jaipur</div>
+              <div class="text-amber-800">★★★★★</div>
+            </div>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              "The heat retention is incredible! Dal cooked in this claypot tastes distinctly richer and stays hot for over an hour after turning off the gas."
+            </p>
+          </div>
+
+          <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <div class="font-bold text-brandText">Vikram S. — Bengaluru</div>
+              <div class="text-amber-800">★★★★★</div>
+            </div>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              "Packaging was top notch! Honeycomb paper kept the lid completely safe during transit. Fits perfectly on our gas stovetop."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCT DETAILS — SECTION 7: RELATED STUDIO PRODUCTS (NO WISHLIST OVERLAY)
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">STUDIO COLLECTION</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">You May Also Like</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/serving-bowl.png" alt="Serving Soup Bowl" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">DINING</div>
+          <h3 class="product-title">Earthen Serving Soup Bowl</h3>
+          <div class="product-price">₹ 340.00</div>
+          <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-6" data-title="Earthen Serving Soup Bowl" data-price="340.00" data-image="assets/images/products/serving-bowl.png">Add to Bag</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/bakeware-casserole.png" alt="Sourdough Baker" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">BAKEWARE</div>
+          <h3 class="product-title">Artisan Sourdough Ceramic Baker</h3>
+          <div class="product-price">₹ 1,250.00</div>
+          <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-4" data-title="Artisan Sourdough Ceramic Baker" data-price="1250.00" data-image="assets/images/products/bakeware-casserole.png">Add to Bag</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/fry-pan.png" alt="Ceramic Fry Pan" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">COOKWARE</div>
+          <h3 class="product-title">Handcrafted Ceramic Fry Pan</h3>
+          <div class="product-price">₹ 1,180.00</div>
+          <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-5" data-title="Handcrafted Ceramic Fry Pan" data-price="1180.00" data-image="assets/images/products/fry-pan.png">Add to Bag</button>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/tea-set.png" alt="Teapot & Cup Trio" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">TEA & DRINKWARE</div>
+          <h3 class="product-title">Hand-Turned Teapot & Cup Trio</h3>
+          <div class="product-price">₹ 1,350.00</div>
+          <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-8" data-title="Hand-Turned Teapot & Cup Trio" data-price="1350.00" data-image="assets/images/products/tea-set.png">Add to Bag</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="cart-drawer left-auto right-[-320px] max-w-[300px]">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
+      <button id="closeMobileNavBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
+      <div>
+        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60">
+          <span>Home</span>
+          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+          <a href="index.html" class="block hover:text-brandBrown">Home 1</a>
+          <a href="home-2.html" class="block hover:text-brandBrown">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="block py-2  border-b border-brandBorder/60">About</a>
+      <a href="products.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Products</a>
+      <a href="material-guide.html" class="block py-2  border-b border-brandBorder/60">Material Guide</a>
+      <a href="recipes.html" class="block py-2  border-b border-brandBorder/60">Recipes</a>
+      <a href="gallery.html" class="block py-2  border-b border-brandBorder/60">Gallery</a>
+      <a href="contact.html" class="block py-2  border-b border-brandBorder/60">Contact</a>
+      <a href="login.html" class="block py-2 text-brandBrown">Login</a>
+    </div>
+  </aside>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

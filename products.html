@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Handcrafted Cookware & Kitchenware | Ceramic Kitchen</title>
+  <meta name="description" content="Browse our complete catalog of terracotta Dutch ovens, ceramic casseroles, stoneware serving platters, and clay tea sets.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link active">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 1: PAGE HERO
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">STUDIO CATALOG</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Explore Earthen Ceramics</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        Handmolded cookware, sourdough baking dishes, and non-toxic ceramic serving platters.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 2: INTERACTIVE VISUAL CATEGORY CARDS
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-6">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block">FEATURED CATEGORIES</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">Browse by Kitchen Need</h2>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        
+        <!-- ALL CATEGORIES CARD -->
+        <button onclick="filterCategory('all', this)" class="category-card-btn active group text-left bg-brandCard border-2 border-brandBrown rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/hero/hero-1.png" alt="All Products" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">All Items</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">8</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Complete Collection</span>
+        </button>
+
+        <!-- COOKWARE CARD -->
+        <button onclick="filterCategory('cookware', this)" class="category-card-btn group text-left bg-brandCard border border-brandBorder rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/products/ceramic-cooking-pot.png" alt="Cookware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">Cookware</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">2</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Pots & Fry Pans</span>
+        </button>
+
+        <!-- BAKEWARE CARD -->
+        <button onclick="filterCategory('bakeware', this)" class="category-card-btn group text-left bg-brandCard border border-brandBorder rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/products/bakeware-casserole.png" alt="Bakeware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">Bakeware</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">1</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Sourdough Bakers</span>
+        </button>
+
+        <!-- DINING CARD -->
+        <button onclick="filterCategory('dining', this)" class="category-card-btn group text-left bg-brandCard border border-brandBorder rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/products/large-platter.png" alt="Dining" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">Dining</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">3</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Platters & Bowls</span>
+        </button>
+
+        <!-- STORAGE CARD -->
+        <button onclick="filterCategory('storage', this)" class="category-card-btn group text-left bg-brandCard border border-brandBorder rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/products/storage-jar.png" alt="Storage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">Storage</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">1</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Jars & Canisters</span>
+        </button>
+
+        <!-- TEA & DRINKWARE CARD -->
+        <button onclick="filterCategory('tea', this)" class="category-card-btn group text-left bg-brandCard border border-brandBorder rounded-2xl overflow-hidden p-3 transition-all hover:shadow-hover">
+          <div class="h-24 w-full rounded-xl overflow-hidden bg-brandTan mb-2.5">
+            <img src="assets/images/products/tea-set.png" alt="Tea & Drinkware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="flex justify-between items-center">
+            <h3 class="font-serif font-bold text-xs text-brandText">Tea & Cups</h3>
+            <span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brandTan text-brandBrown">2</span>
+          </div>
+          <span class="text-[10px] text-stone-500 block mt-0.5">Teapots & Mugs</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 3: FILTER PILLS & SORT CONTROLS
+       ========================================================================= -->
+  <section class="py-4 bg-brandTan/20 border-b border-brandBorder">
+    <div class="container-custom flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
+      <div class="flex flex-wrap gap-2 items-center">
+        <span class="font-semibold text-stone-500 mr-1">Filter:</span>
+        <button onclick="filterCategory('all', this)" class="cat-pill active px-3.5 py-1 rounded-full bg-brandBrown text-white font-semibold transition-all">All</button>
+        <button onclick="filterCategory('cookware', this)" class="cat-pill px-3.5 py-1 rounded-full bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 font-semibold hover:border-brandBrown transition-all">Cookware</button>
+        <button onclick="filterCategory('bakeware', this)" class="cat-pill px-3.5 py-1 rounded-full bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 font-semibold hover:border-brandBrown transition-all">Bakeware</button>
+        <button onclick="filterCategory('dining', this)" class="cat-pill px-3.5 py-1 rounded-full bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 font-semibold hover:border-brandBrown transition-all">Dining</button>
+        <button onclick="filterCategory('storage', this)" class="cat-pill px-3.5 py-1 rounded-full bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 font-semibold hover:border-brandBrown transition-all">Storage</button>
+        <button onclick="filterCategory('tea', this)" class="cat-pill px-3.5 py-1 rounded-full bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 font-semibold hover:border-brandBrown transition-all">Tea & Cups</button>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span id="productCounterText" class="font-semibold text-stone-600 dark:text-stone-400">Showing 8 of 8 Artisanal Items</span>
+        <select onchange="sortProducts(this.value)" class="bg-brandCream border border-brandBorder rounded p-1.5 text-xs outline-none focus:border-brandBrown">
+          <option value="featured">Featured</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 4: MAIN PRODUCT GRID (NO WISHLIST OVERLAY ICONS)
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- CARD 1 -->
+        <div class="product-card" data-category="cookware" data-price="1500">
+          <div class="product-img-wrapper">
+            <span class="product-tag">BESTSELLER</span>
+            <img src="assets/images/products/ceramic-cooking-pot.png" alt="Durable Ceramic Cooking Pot" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">COOKWARE</div>
+          <h3 class="product-title">Durable Ceramic Cooking Pot with Lid</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 1,500.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-3" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1500.00" data-image="assets/images/products/ceramic-cooking-pot.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1,500.00" data-image="assets/images/products/ceramic-cooking-pot.png" data-category="Cookware" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="product-card" data-category="dining tea" data-price="229">
+          <div class="product-img-wrapper">
+            <span class="product-tag">POPULAR</span>
+            <img src="assets/images/products/mug-set.png" alt="Mug Set, 3-Piece" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">TEA & DINING</div>
+          <h3 class="product-title">Hand-Turned Mug Set, 3-Piece</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 229.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-1" data-title="Hand-Turned Mug Set, 3-Piece" data-price="229.00" data-image="assets/images/products/mug-set.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Hand-Turned Mug Set, 3-Piece" data-price="229.00" data-image="assets/images/products/mug-set.png" data-category="Dining" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="product-card" data-category="dining" data-price="159">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/large-platter.png" alt="Large Platter Plate" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">DINING</div>
+          <h3 class="product-title">Earthen Large Platter Serving Plate</h3>
+          <div class="product-stock stock-low">Only 4 Left</div>
+          <div class="product-price">₹ 159.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-2" data-title="Earthen Large Platter Serving Plate" data-price="159.00" data-image="assets/images/products/large-platter.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Earthen Large Platter Serving Plate" data-price="159.00" data-image="assets/images/products/large-platter.png" data-category="Dining" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="product-card" data-category="bakeware" data-price="1250">
+          <div class="product-img-wrapper">
+            <span class="product-tag">NEW</span>
+            <img src="assets/images/products/bakeware-casserole.png" alt="Artisan Sourdough Baker" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">BAKEWARE</div>
+          <h3 class="product-title">Artisan Sourdough Ceramic Baker</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 1,250.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-4" data-title="Artisan Sourdough Ceramic Baker" data-price="1250.00" data-image="assets/images/products/bakeware-casserole.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Artisan Sourdough Ceramic Baker" data-price="1,250.00" data-image="assets/images/products/bakeware-casserole.png" data-category="Bakeware" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="product-card" data-category="cookware" data-price="1180">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/fry-pan.png" alt="Ceramic Fry Pan" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">COOKWARE</div>
+          <h3 class="product-title">Handcrafted Ceramic Fry Pan</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 1,180.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-5" data-title="Handcrafted Ceramic Fry Pan" data-price="1180.00" data-image="assets/images/products/fry-pan.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Handcrafted Ceramic Fry Pan" data-price="1,180.00" data-image="assets/images/products/fry-pan.png" data-category="Cookware" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="product-card" data-category="dining" data-price="340">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/serving-bowl.png" alt="Ceramic Serving Bowl" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">DINING</div>
+          <h3 class="product-title">Earthen Serving Soup Bowl</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 340.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-6" data-title="Earthen Serving Soup Bowl" data-price="340.00" data-image="assets/images/products/serving-bowl.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Earthen Serving Soup Bowl" data-price="340.00" data-image="assets/images/products/serving-bowl.png" data-category="Dining" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="product-card" data-category="storage" data-price="480">
+          <div class="product-img-wrapper">
+            <img src="assets/images/products/storage-jar.png" alt="Storage Jar Set" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">STORAGE</div>
+          <h3 class="product-title">Ceramic Spice & Oil Canister Set</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 480.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-7" data-title="Ceramic Spice & Oil Canister Set" data-price="480.00" data-image="assets/images/products/storage-jar.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Ceramic Spice & Oil Canister Set" data-price="480.00" data-image="assets/images/products/storage-jar.png" data-category="Storage" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="product-card" data-category="tea" data-price="1350">
+          <div class="product-img-wrapper">
+            <span class="product-tag">TEA SET</span>
+            <img src="assets/images/products/tea-set.png" alt="Hand-Turned Teapot & Cup Trio" class="product-img">
+          </div>
+          <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">TEA & DRINKWARE</div>
+          <h3 class="product-title">Hand-Turned Teapot & Cup Trio</h3>
+          <div class="product-stock stock-in">In Stock • Ready to Dispatch</div>
+          <div class="product-price">₹ 1,350.00</div>
+          <div class="product-card-actions">
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="prod-8" data-title="Hand-Turned Teapot & Cup Trio" data-price="1350.00" data-image="assets/images/products/tea-set.png">Add to Bag</button>
+            <button class="btn-outline-brown text-xs p-2 btn-quick-view" data-title="Hand-Turned Teapot & Cup Trio" data-price="1,350.00" data-image="assets/images/products/tea-set.png" data-category="Dining" aria-label="Quick View"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 5: NEW ARRIVALS SPOTLIGHT
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="assets/images/products/gift-starter-set.png" alt="Jaipur Starter Set" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">NEW IN STUDIO</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">The Jaipur Starter Gift Box</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Featuring a 2.5L cooking pot, a matching sourdough serving bowl, and a lead-free spice jar. Carefully wrapped in unbleached cotton cord with handmade pottery tags.
+          </p>
+          <a href="product-details.html" class="btn-brown text-xs py-2.5 px-5 inline-block">Explore Starter Box &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 6: SHOPPING INFORMATION & GUARANTEE (CLEAN SVG ICONS)
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xs">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-3 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 17a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zM3 9h11v6H3V9zm11 0h4l3 3v3h-7V9z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-sm text-brandText">Pan-India Express Dispatch</h3>
+          <p class="text-stone-600 dark:text-stone-400">Shipped within 24 hours in multi-layered honeycomb paper protection.</p>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-3 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-sm text-brandText">Zero-Transit Damage Guarantee</h3>
+          <p class="text-stone-600 dark:text-stone-400">If your clay pot arrives chipped, we send an immediate free replacement.</p>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-3 shadow-subtle">
+          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-sm text-brandText">100% Non-Toxic Certified</h3>
+          <p class="text-stone-600 dark:text-stone-400">Third-party lab tested for zero lead, cadmium, or toxic chemical residue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 7 (NEW): CUSTOM MONOGRAM & ENGRAVING SERVICE
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">BESPOKE STUDIO SERVICE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Personalized Studio Engraving</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Make your earthen cookware uniquely yours or create a memorable gift. Our master potters hand-stamp custom family initials, wedding dates, or restaurant crests onto the base of any Dutch pot before final kiln vitrification.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-xs">
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">✦ Hand-Stamped Initialing</span>
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">✦ Custom Gift Box</span>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="Hand Stamping Artisan Engraving" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 8 (NEW): COOKWARE CARE & SEASONING ESSENTIALS
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-2 lg:order-1">
+          <img src="assets/images/products/care-kit.png" alt="Artisan Pot Care & Seasoning Kit" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">COOKWARE CARE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Earthen Seasoning & Care Kit</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Keep your unglazed clay cookware naturally non-stick and durable for a lifetime. Our studio care kit includes organic cold-pressed sesame oil, a hand-wound coconut fiber scrub brush, and a soft linen drying towel.
+          </p>
+          <div class="flex items-center gap-4">
+            <span class="text-lg font-bold text-brandBrown font-serif">₹ 699</span>
+            <button onclick="addToCart('Artisan Pot Seasoning Kit', 699, 'assets/images/products/care-kit.png')" class="btn-brown text-xs py-2 px-5 rounded-full">Add Care Kit to Cart &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl md:text-3xl font-serif font-bold">Custom & Restaurant Orders</h2>
+      <p class="text-xs text-stone-200">Looking for custom pottery stamp engraving or bulk restaurant dinnerware?</p>
+      <a href="contact.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Inquire With Studio Concierge &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="cart-drawer left-auto right-[-320px] max-w-[300px]">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
+      <button id="closeMobileNavBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
+      <div>
+        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60">
+          <span>Home</span>
+          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+          <a href="index.html" class="block hover:text-brandBrown">Home 1</a>
+          <a href="home-2.html" class="block hover:text-brandBrown">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="block py-2  border-b border-brandBorder/60">About</a>
+      <a href="products.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Products</a>
+      <a href="material-guide.html" class="block py-2  border-b border-brandBorder/60">Material Guide</a>
+      <a href="recipes.html" class="block py-2  border-b border-brandBorder/60">Recipes</a>
+      <a href="gallery.html" class="block py-2  border-b border-brandBorder/60">Gallery</a>
+      <a href="contact.html" class="block py-2  border-b border-brandBorder/60">Contact</a>
+      <a href="login.html" class="block py-2 text-brandBrown">Login</a>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW MODAL OVERLAY -->
+  <div id="quickViewModal" class="modal-overlay">
+    <div class="modal-content max-w-2xl">
+      <div class="flex justify-between items-center border-b border-brandBorder pb-3 mb-4">
+        <span id="qvCategory" class="text-[10px] font-bold text-brandBrown tracking-widest">COOKWARE</span>
+        <button id="closeQuickViewBtn" class="text-stone-500 hover:text-stone-800"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-6 aspect-square rounded-xl overflow-hidden bg-brandTan">
+          <img id="qvImage" src="" class="w-full h-full object-cover">
+        </div>
+        <div class="md:col-span-6 space-y-3">
+          <h3 id="qvTitle" class="font-serif font-bold text-xl text-brandText">Product Title</h3>
+          <div id="qvPrice" class="text-xl font-bold text-amber-900 dark:text-amber-400">₹ 0.00</div>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            Handmolded earthenware, vitrified in 18-hour kilns. Non-toxic mineral glazes, gas stove and oven safe up to 260°C.
+          </p>
+          <button id="qvAddToCartBtn" class="btn-brown text-xs py-2.5 w-full btn-add-cart">Add to Bag &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function filterCategory(cat, el) {
+      // Highlight active category card
+      document.querySelectorAll('.category-card-btn').forEach(btn => {
+        btn.classList.remove('active', 'border-2', 'border-brandBrown');
+        btn.classList.add('border', 'border-brandBorder');
+      });
+      // Highlight active pill
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.classList.remove('active', 'bg-brandBrown', 'text-white');
+        btn.classList.add('bg-brandCard', 'text-stone-700', 'dark:text-stone-300');
+      });
+
+      if (el) {
+        if (el.classList.contains('category-card-btn')) {
+          el.classList.add('active', 'border-2', 'border-brandBrown');
+          el.classList.remove('border-brandBorder');
+        } else if (el.classList.contains('cat-pill')) {
+          el.classList.add('active', 'bg-brandBrown', 'text-white');
+          el.classList.remove('bg-brandCard', 'text-stone-700', 'dark:text-stone-300');
+        }
+      }
+
+      const cards = document.querySelectorAll('#productGrid .product-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const itemCat = card.dataset.category || '';
+        if (cat === 'all' || itemCat.includes(cat)) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const catNameFormatted = cat === 'all' ? 'Artisanal' : (cat.charAt(0).toUpperCase() + cat.slice(1));
+      const counterEl = document.getElementById('productCounterText');
+      if (counterEl) {
+        counterEl.textContent = `Showing ${visibleCount} of 8 ${catNameFormatted} Items`;
+      }
+    }
+
+    function sortProducts(val) {
+      const grid = document.getElementById('productGrid');
+      const cards = Array.from(grid.querySelectorAll('.product-card'));
+      
+      cards.sort((a, b) => {
+        const priceA = parseFloat(a.dataset.price || 0);
+        const priceB = parseFloat(b.dataset.price || 0);
+        if (val === 'low-high') return priceA - priceB;
+        if (val === 'high-low') return priceB - priceA;
+        return 0;
+      });
+
+      cards.forEach(c => grid.appendChild(c));
+    }
+  </script>
+</body>
+</html>

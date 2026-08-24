@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Studio Gallery | Ceramic Kitchen</title>
+  <meta name="description" content="Explore our visual photography gallery of handcrafted terracotta pots, sourdough bakeware, tea ceramics, and Jaipur studio craftsmanship.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 1: GALLERY INTRODUCTION
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">STUDIO PHOTOGRAPHY</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Artisan Gallery Showcase</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        A visual exploration of kick-wheel pottery creation, wood kiln atmospheres, and kitchen lifestyle moments.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 2: GALLERY STATISTICS
+       ========================================================================= -->
+  <section class="py-6 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="p-3 bg-brandCard border border-brandBorder rounded-xl">
+          <div class="font-serif font-bold text-xl text-brandBrown">450+</div>
+          <div class="text-[10px] uppercase font-bold text-stone-500">Unique Designs</div>
+        </div>
+        <div class="p-3 bg-brandCard border border-brandBorder rounded-xl">
+          <div class="font-serif font-bold text-xl text-brandBrown">12</div>
+          <div class="text-[10px] uppercase font-bold text-stone-500">Master Potters</div>
+        </div>
+        <div class="p-3 bg-brandCard border border-brandBorder rounded-xl">
+          <div class="font-serif font-bold text-xl text-brandBrown">18 Hours</div>
+          <div class="text-[10px] uppercase font-bold text-stone-500">Wood Kiln Firing</div>
+        </div>
+        <div class="p-3 bg-brandCard border border-brandBorder rounded-xl">
+          <div class="font-serif font-bold text-xl text-brandBrown">100%</div>
+          <div class="text-[10px] uppercase font-bold text-stone-500">Handcrafted</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 3: CATEGORY FILTERS (FUNCTIONAL)
+       ========================================================================= -->
+  <section class="py-5 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom flex justify-center flex-wrap gap-2 text-xs font-semibold">
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandBrown text-white shadow-sm" data-category="all">All Gallery</button>
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="cookware">Cookware</button>
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="dining">Dining</button>
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="kitchen">Kitchen</button>
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="craftsmanship">Craftsmanship</button>
+      <button class="gallery-cat-btn px-4 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="recipes">Recipes</button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 4: GALLERY GRID (FILTERABLE, LIGHTBOX ENABLED)
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- ITEM 1 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="craftsmanship">
+          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Jaipur Studio Pottery Wheel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">CRAFTSMANSHIP</span>
+            <h4 class="font-serif font-bold text-sm">Wheel Throwing Session</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="cookware">
+          <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80" alt="Earthen Terracotta Cooking Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">COOKWARE</span>
+            <h4 class="font-serif font-bold text-sm">Terracotta Dutch Ovens</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="dining">
+          <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" alt="Glazed Ceramic Coffee Mug and Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">DINING</span>
+            <h4 class="font-serif font-bold text-sm">Hand-Turned Mug & Plate</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="kitchen">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Sunlit Kitchen Shelving with Ceramic Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">KITCHEN</span>
+            <h4 class="font-serif font-bold text-sm">Warm Kitchen Setting</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="dining">
+          <img src="assets/images/lifestyle/table-styling.png" alt="Handcrafted Dinnerware & Table Setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">DINING</span>
+            <h4 class="font-serif font-bold text-sm">Artisan Dining Setup</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="dining">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Earthen Teapot and Tea Cups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">DINING</span>
+            <h4 class="font-serif font-bold text-sm">Artisan Teapot Set</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 7 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="recipes">
+          <img src="assets/images/recipes/claypot-curry.png" alt="Slow Cooking Stew in Clay Pot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">RECIPES</span>
+            <h4 class="font-serif font-bold text-sm">Slow Simmered Curry</h4>
+          </div>
+        </div>
+
+        <!-- ITEM 8 -->
+        <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="recipes">
+          <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80" alt="Fresh Baked Sourdough Bread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">RECIPES</span>
+            <h4 class="font-serif font-bold text-sm">Sourdough Baking</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 4.5: JAIPUR KILN FIRING GALLERY (IMAGE LEFT)
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="Traditional Brick Kiln Firing" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">FIRE & ATMOSPHERE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Wood Kiln Firing & Vitrification</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Witnessing a firing night in Sanganer is pure magic. As temperatures cross 1200°C, wood embers dance around terracotta walls, permanently locking natural mineral colors into the ceramic surface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 4.6: MINERAL GLAZE LAB SPOTLIGHT (TEXT LEFT, IMAGE RIGHT)
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4 order-2 lg:order-1">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">RAW MATERIALS</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Natural Earth Pigments & Mineral Glazes</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Our glaze lab uses only ground quartz, white clay, cobalt oxides, and crushed stone to achieve subtle earth tones. Zero lead, zero synthetic plastic resins.
+          </p>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-1 lg:order-2">
+          <img src="assets/images/lifestyle/mineral-glaze.png" alt="Mineral Glaze Ingredients" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 4.7: KITCHEN SHELF LIFESTYLE SHOWCASE (IMAGE LEFT, TEXT RIGHT)
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="assets/images/lifestyle/kitchen-shelf.png" alt="Sunlit Open Wooden Kitchen Shelving" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">HOME LIFESTYLE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Handcrafted Clay in Modern Homes</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            From open wooden pantry shelves to rustic dining tables, warm earthenware adds organic texture, serene grounding, and timeless beauty to modern living spaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 5: CRAFTSMANSHIP STORY (CORRECTED ALTERNATING LAYOUT: TEXT LEFT, IMAGE RIGHT)
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4 order-2 lg:order-1">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">BEHIND THE WHEEL</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">Preserving Earthen Heritage</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Each ceramic piece tells a story of patient craftsmanship. From wedging raw Jaipur clay to hand-applying lead-free glazes and firing at 1200°C.
+          </p>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-1 lg:order-2">
+          <img src="assets/images/lifestyle/artisan-hands.png" alt="Artisan Hands Shaping Clay" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 6: KITCHEN LIFESTYLE SHOWCASE
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-xl font-serif font-bold text-brandText">Share Your Kitchen Moments</h2>
+      <p class="text-xs text-stone-500">Tag @CeramicKitchenStore on Instagram to be featured in our monthly customer kitchen gallery.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GALLERY — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl md:text-3xl font-serif font-bold">Bring Earthen Art Home</h2>
+      <p class="text-xs text-stone-200">Explore our handcrafted cooking pots, bakeware, and dining platters.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Shop Collection &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL OVERLAY -->
+  <div id="galleryLightbox" class="modal-overlay">
+    <div class="relative max-w-4xl w-full p-4 flex flex-col items-center">
+      <button id="closeLightboxBtn" class="absolute top-2 right-4 text-white text-3xl font-bold hover:text-stone-300 z-10">&times;</button>
+      <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black flex items-center justify-center border border-white/20 shadow-2xl">
+        <img id="lightboxImg" src="" class="max-h-full max-w-full object-contain">
+        <button id="prevLightboxBtn" class="absolute left-4 text-white text-2xl bg-black/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/80">&larr;</button>
+        <button id="nextLightboxBtn" class="absolute right-4 text-white text-2xl bg-black/50 w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/80">&rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Ceramic Kitchen</title>
+  <meta name="description" content="Create a Ceramic Kitchen account to join our studio guild, track cookware orders, and receive exclusive recipes.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col justify-center">
+
+  <!-- REGISTER CONTAINER — SPLIT SCREEN LAYOUT WITH OPPOSITE IMAGE POSITIONING -->
+  <div class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+    
+    <!-- LEFT SIDE: CLEAN MODERN REGISTER FORM (BALANCED UPWARD ALIGNMENT) -->
+    <div class="flex flex-col justify-start pt-10 sm:pt-16 lg:pt-20 items-center p-6 sm:p-12 lg:p-16 bg-brandCream order-2 lg:order-1">
+      <div class="w-full max-w-md space-y-5">
+        
+        <!-- HEADER EYEBROW & TITLE -->
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-6 h-[2px] bg-amber-700 dark:bg-amber-500"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-amber-800 dark:text-amber-400">ACCOUNT REGISTRATION</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brandText">Create Account</h2>
+          <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Join Ceramic Kitchen to track studio orders & save your wishlist.</p>
+        </div>
+
+        <!-- FORM -->
+        <form onsubmit="handleRegisterSubmit(event)" class="space-y-4 text-sm">
+          <div>
+            <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Full Name</label>
+            <input type="text" id="regName" required placeholder="Enter your full name" value="Ananya Sharma" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+          </div>
+
+          <div>
+            <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Email address</label>
+            <input type="email" id="regEmail" required placeholder="you@example.com" value="ananya@example.com" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Password</label>
+              <input type="password" id="regPass" required placeholder="Create password" value="password123" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            </div>
+            <div>
+              <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Confirm Password</label>
+              <input type="password" id="regConfPass" required placeholder="Confirm password" value="password123" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            </div>
+          </div>
+
+          <div class="text-xs text-stone-600 dark:text-stone-400 pt-1">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" checked required class="w-4 h-4 accent-amber-800 rounded">
+              <span>I agree to the Terms of Service & Privacy Policy</span>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-6 rounded-full btn-brown font-bold text-sm shadow-md transition-all transform active:scale-95 mt-2">
+            Create Account
+          </button>
+        </form>
+
+        <!-- FOOTER LINK TO LOGIN -->
+        <div class="text-center text-xs text-stone-600 dark:text-stone-400 pt-4 border-t border-brandBorder">
+          Already have an account? <a href="login.html" class="text-amber-800 dark:text-amber-400 font-bold hover:underline">Log in</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: DIFFERENT CRAFTSMANSHIP IMAGE (OPPOSITE LAYOUT FROM LOGIN PAGE) -->
+    <div class="relative overflow-hidden bg-brandTan min-h-[380px] lg:min-h-screen flex flex-col justify-between p-6 lg:p-12 order-1 lg:order-2">
+      <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80" alt="Master Potter Shaping Earthenware" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30"></div>
+
+      <!-- TOP FLOATING UTILITY CONTROLS (LOGO, DARK MODE, RTL ON SAME HORIZONTAL LINE) -->
+      <div class="relative z-10 flex items-center justify-between gap-3 w-full">
+        <a href="index.html" class="inline-flex items-center gap-2 bg-white/95 dark:bg-stone-900/95 backdrop-blur-md py-2 px-3.5 rounded-2xl text-stone-900 dark:text-stone-100 shadow-md hover:bg-white transition-all group">
+          <div class="w-7 h-7 rounded-xl bg-brandBrown text-white flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <span class="font-serif font-bold text-sm text-stone-900 dark:text-stone-100 whitespace-nowrap">Ceramic Kitchen</span>
+        </a>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <button class="toggle-pill-btn theme-toggle-btn bg-white/90 dark:bg-stone-900/90 backdrop-blur-md text-xs py-1.5 px-3 rounded-full text-stone-900 dark:text-stone-100 border-none shadow-md">☾ Dark</button>
+          <button class="toggle-pill-btn dir-toggle-btn bg-white/90 dark:bg-stone-900/90 backdrop-blur-md text-xs py-1.5 px-3 rounded-full text-stone-900 dark:text-stone-100 border-none shadow-md">LTR</button>
+        </div>
+      </div>
+
+      <!-- BOTTOM OVERLAY TEXT (HIGH-CONTRAST GLASS CARD) -->
+      <div class="relative z-10 auth-overlay-card max-w-lg bg-black/60 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/20 shadow-2xl space-y-3 my-auto lg:my-0 lg:mt-auto">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-[2px] bg-amber-400"></span>
+          <span class="text-xs font-bold uppercase tracking-widest eyebrow-text text-amber-300" style="color: #fcd34d !important;">JOIN THE GUILD</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight text-white" style="color: #ffffff !important; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+          Handcrafted living, made for your table.
+        </h1>
+        <p class="text-xs sm:text-sm text-stone-100 leading-relaxed font-sans" style="color: #f1f5f9 !important;">
+          Register to unlock 10% off your first earthen order, priority kiln glaze releases, and artisan recipe guides.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleRegisterSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('regName').value;
+      const pass = document.getElementById('regPass').value;
+      const conf = document.getElementById('regConfPass').value;
+
+      if (pass !== conf) {
+        showToast('Passwords do not match!');
+        return;
+      }
+
+      localStorage.setItem('ceramic_user', name);
+      showToast('Account created successfully!');
+      setTimeout(() => {
+        window.location.href = 'account.html';
+      }, 700);
+    }
+  </script>
+</body>
+</html>

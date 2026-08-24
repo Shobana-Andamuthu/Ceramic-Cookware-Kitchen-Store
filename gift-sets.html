@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Gift Sets | Ceramic Kitchen</title>
+  <meta name="description" content="Explore artisan ceramic gift sets for weddings, housewarmings, and festive occasions wrapped in sustainable cotton ribbon.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- TOP NAV STRIP -->
+  
+  </div>
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 1: HERO
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">HANDMADE PRESENTATION</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Artisan Gift Sets</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        Thoughtfully boxed cookware, baker sets, and teaware wrapped in sustainable unbleached cotton cord and wooden studio tags.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 2: GIFT OCCASION FILTERS (FUNCTIONAL)
+       ========================================================================= -->
+  <section class="py-5 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom flex justify-center flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold px-2 max-w-full">
+      <button class="gift-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandBrown text-white shadow-sm" data-category="all">All Gift Bundles (6)</button>
+      <button class="gift-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="housewarming">Housewarming</button>
+      <button class="gift-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="weddings">Weddings</button>
+      <button class="gift-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="festive">Festive</button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 3: CURATED GIFT BUNDLES GRID
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div id="giftGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- GIFT CARD 1 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="housewarming">
+          <img src="assets/images/products/gift-starter-set.png" alt="The Artisan Starter Gift Bundle" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">HOUSEWARMING</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">The Artisan Starter Gift Bundle</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Includes 2.5L cooking pot, serving bowl, and spice jar tied with jute ribbon.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 2,450.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-1" data-title="Artisan Starter Gift Bundle" data-price="2450.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+        <!-- GIFT CARD 2 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="weddings">
+          <img src="assets/images/products/bakeware-casserole.png" alt="The Baker's Heritage Trio" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">WEDDINGS</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">The Baker's Heritage Trio</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Sourdough rectangular baker, mixing bowl, and silicone spatula.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 1,890.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-2" data-title="The Baker's Heritage Trio" data-price="1890.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+        <!-- GIFT CARD 3 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="festive">
+          <img src="assets/images/products/tea-set.png" alt="Hand-Turned Teapot & Cup Trio" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">FESTIVE</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">Hand-Turned Teapot & Cup Trio</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">1L earthen clay teapot with 3 matching handle-less tea cups.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 1,350.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-3" data-title="Hand-Turned Teapot & Cup Trio" data-price="1350.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+        <!-- GIFT CARD 4 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="housewarming weddings">
+          <img src="assets/images/products/large-platter.png" alt="Royal Terracotta Dining Collection" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">WEDDINGS & HOUSEWARMING</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">Royal Terracotta Dining Collection</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">4 handcrafted dinner plates, bowls & centerpiece platter set.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 3,200.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-4" data-title="Royal Terracotta Dining Collection" data-price="3200.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+        <!-- GIFT CARD 5 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="festive">
+          <img src="assets/images/products/storage-jar.png" alt="Festive Earthen Spice Caddy Set" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">FESTIVE</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">Festive Earthen Spice Caddy Set</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">3 airtight glazed storage jars in natural wood gift hamper box.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 1,650.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-5" data-title="Festive Earthen Spice Caddy Set" data-price="1650.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+        <!-- GIFT CARD 6 -->
+        <div class="gift-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="housewarming">
+          <img src="assets/images/products/ceramic-cooking-pot.png" alt="Artisan Dutch Pot Slow-Cooker Box" class="h-56 w-full object-cover">
+          <div class="p-5 space-y-3 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">HOUSEWARMING</span>
+            <h3 class="font-serif font-bold text-lg text-brandText">Artisan Dutch Pot Slow-Cooker Box</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400">Heavy clay dutch pot, ladle set, and natural linen apron.</p>
+            <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-auto">₹ 2,890.00</div>
+            <button class="btn-brown text-xs py-2 w-full btn-add-cart" data-id="gift-6" data-title="Artisan Dutch Pot Slow-Cooker Box" data-price="2890.00">Add Gift Box to Bag</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 4: GIFT PACKAGING STORY
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Sustainable Unboxing & Twine Packaging" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">ECO PACKAGING</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">Unboxing Built to Wow</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Every gift set arrives inside recycled craft paper boxes with custom wood-shaving padding, dried botanical sprigs, and a handwritten card with your personalized message.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 5: CUSTOM GIFT NOTE BUILDER
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom max-w-xl bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle space-y-4">
+      <h3 class="font-serif font-bold text-lg text-brandText text-center">Add a Free Studio Gift Note</h3>
+      <p class="text-xs text-stone-500 text-center">We will handwrite your personal note on handmade deckle-edge pottery paper.</p>
+      <form onsubmit="event.preventDefault(); showToast('Gift note saved!');" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold mb-1">Recipient Name</label>
+          <input type="text" placeholder="e.g. Rahul & Priya" class="w-full bg-brandCream border border-brandBorder rounded p-2.5 outline-none">
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Personal Message</label>
+          <textarea rows="3" placeholder="Wishing you endless warm meals in your new kitchen..." class="w-full bg-brandCream border border-brandBorder rounded p-2.5 outline-none"></textarea>
+        </div>
+        <button class="btn-brown w-full py-2.5 text-xs">Save Gift Note &rarr;</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 6: CORPORATE & BULK GIFTING
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom text-center max-w-lg space-y-3">
+      <h2 class="text-xl font-serif font-bold text-brandText">Corporate & Wedding Registry Orders</h2>
+      <p class="text-xs text-stone-500">Custom pottery stamp engraving available for orders of 25+ gift sets.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       GIFT SETS — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl md:text-3xl font-serif font-bold">Gift Warmth & Craftsmanship</h2>
+      <p class="text-xs text-stone-200">Send an authentic handmade ceramic gift box directly to their door.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore All Products &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-lg">Your Shopping Bag</h3>
+      <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div id="cartItemsContainer" class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">₹ 0.00</span>
+      </div>
+      <button class="btn-brown w-full py-3 text-center block">Proceed to Checkout &rarr;</button>
+    </div>
+  </aside>
+
+  <!-- SEARCH MODAL OVERLAY -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="modal-content p-6 max-w-xl">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-serif font-bold text-lg text-brandText">Search Ceramic Kitchen</h3>
+        <button id="closeSearchBtn" class="text-stone-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <input id="globalSearchInput" type="text" placeholder="Type to search cookware, recipes, guides..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-3 text-xs outline-none focus:border-brandBrown mb-4">
+      <div id="searchResultsContainer" class="max-h-60 overflow-y-auto space-y-2"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

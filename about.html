@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Pottery Studio | Ceramic Kitchen</title>
+  <meta name="description" content="Discover our Jaipur studio story, traditional kick-wheel pottery craftsmanship, and commitment to non-toxic earthen kitchenware.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- TOP NAV STRIP -->
+  
+  </div>
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link ">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 1: HERO
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">OUR HERITAGE</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Crafting Earthen Heritage</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        Founded in Jaipur with a vision to replace synthetic Teflon cookware with pure, non-toxic terracotta clay pieces.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 2: STUDIO PHILOSOPHY
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-80 border border-brandBorder shadow-subtle">
+          <img src="assets/images/lifestyle/artisan-story.png" alt="Jaipur Studio Pottery Craft" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">HANDMADE ETHOS</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Slow Pottery for Slow Meals</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            In a fast-paced world, we believe in taking time. Every cooking pot is wedged, shaped on kick-wheels, air-dried under Jaipur sunshine, and fired in wood kilns for over 18 hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 3: MASTER POTTERS (REDESIGNED WITH ARTISAN PORTRAITS)
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block">THE HANDS BEHIND THE CLAY</span>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Meet Our Master Potters</h2>
+        <p class="text-xs text-stone-600 dark:text-stone-400">Our Jaipur studio brings together master artisans with decades of wheel-spinning heritage.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center text-xs">
+        
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brandBrown/40 mx-auto shadow-md">
+            <img src="assets/images/avatars/ramdev.png" alt="Ramdev Prajapati" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-brandText">Ramdev Prajapati</h3>
+            <span class="text-brandBrown font-bold block text-xs mt-0.5">Head Master Potter • 28 Yrs</span>
+          </div>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Master of heavy earthen Dutch pots, hand-wedged clay density, and wheel balance precision.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brandBrown/40 mx-auto shadow-md">
+            <img src="assets/images/avatars/sunita.png" alt="Sunita Kumawat" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-brandText">Sunita Kumawat</h3>
+            <span class="text-brandBrown font-bold block text-xs mt-0.5">Senior Glaze Chemist</span>
+          </div>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Formulates our 100% lead-free quartz glazes and organic oxide dip finishes.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brandBrown/40 mx-auto shadow-md">
+            <img src="assets/images/avatars/anand.png" alt="Anand Sharma" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-lg text-brandText">Anand Sharma</h3>
+            <span class="text-brandBrown font-bold block text-xs mt-0.5">Studio Founder</span>
+          </div>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Brings ancient Rajasthani pottery traditions into modern, health-conscious home kitchens.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 4: CRAFT VALUES & COMMITMENTS (HIGH CONTRAST REDESIGN)
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="text-xs font-bold text-brandOlive uppercase tracking-widest block mb-1">OUR STANDARDS</span>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Our Studio Commitments</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-base text-stone-900 dark:text-stone-100">100% Non-Toxic</h3>
+          <p class="text-stone-700 dark:text-stone-300 leading-relaxed">Certified free from lead, cadmium, PFOA, and heavy metal fluxes by NABL laboratory testing.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-base text-stone-900 dark:text-stone-100">Fair Wage Studio</h3>
+          <p class="text-stone-700 dark:text-stone-300 leading-relaxed">Empowering traditional artisan families with sustainable wages, health coverage, and workshop pensions.</p>
+        </div>
+
+        <div class="bg-brandCard border border-brandBorder p-6 rounded-2xl space-y-3 shadow-subtle hover:shadow-hover transition-all">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          </div>
+          <h3 class="font-serif font-bold text-base text-stone-900 dark:text-stone-100">Zero-Plastic Shipping</h3>
+          <p class="text-stone-700 dark:text-stone-300 leading-relaxed">Packed carefully using recycled honeycomb paper wrap, biodegradable straw, and cotton twine tie.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 5 (NEW): WOOD-FIRED KILN HERITAGE
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">FIRE & EARTH SCIENCE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">18-Hour Kiln Firing Mastery</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Our traditional brick kilns are stoked by hand using renewable wood trimmings. Reaching temperatures exceeding 1200°C, the intense heat fuses raw quartz minerals directly into the earthen body—creating cookware that endures generations of gas stove cooking.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-2 text-xs">
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">1200°C</span>
+              <span class="text-stone-500">Vitrification Temp</span>
+            </div>
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">100% Organic</span>
+              <span class="text-stone-500">Rajasthani Alluvial Clay</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-80 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="High Temperature Pottery Vitrification" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 6 (NEW): ZERO-WASTE & RE-GLAZING SUPPORT
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-80 border border-brandBorder shadow-subtle order-2 lg:order-1">
+          <img src="assets/images/lifestyle/kitchen-shelf.png" alt="Sustainable Kitchen Clayware Shelf" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">SUSTAINABILITY</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Lifetime Re-Glazing & Circular Pottery</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Unlike disposable Teflon pans that end up in landfills after a few years, earthen ceramics can be re-seasoned, restored, and used for decades. We offer studio re-glazing services and lifetime care support for every pot sold.
+          </p>
+          <ul class="space-y-2 text-xs text-stone-700 dark:text-stone-300">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Biodegradable natural clay composition</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Free lifetime pottery seasoning advice</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Zero synthetic chemical binders</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 7: STUDIO JOURNEY TIMELINE
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom max-w-2xl space-y-6">
+      <h2 class="text-2xl font-serif font-bold text-brandText text-center">Our Studio Journey</h2>
+      <div class="space-y-4 text-xs">
+        <div class="flex gap-4 items-center bg-brandCard border border-brandBorder p-4 rounded-xl">
+          <span class="font-serif font-bold text-brandBrown text-base">2016</span>
+          <p class="text-stone-600 dark:text-stone-400">Started as a small 2-wheel studio in Sanganer with 10 traditional pots.</p>
+        </div>
+        <div class="flex gap-4 items-center bg-brandCard border border-brandBorder p-4 rounded-xl">
+          <span class="font-serif font-bold text-brandBrown text-base">2020</span>
+          <p class="text-stone-600 dark:text-stone-400">Pioneered thermal-shock resistant lead-free glazes for modern gas stoves.</p>
+        </div>
+        <div class="flex gap-4 items-center bg-brandCard border border-brandBorder p-4 rounded-xl">
+          <span class="font-serif font-bold text-brandBrown text-base">2026</span>
+          <p class="text-stone-600 dark:text-stone-400">Now trusted by over 25,000 kitchens across India and worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 6: STUDIO VISIT
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder text-center">
+    <div class="container-custom max-w-lg space-y-3">
+      <h2 class="text-xl font-serif font-bold text-brandText">Visit Our Jaipur Pottery Studio</h2>
+      <p class="text-xs text-stone-500">We host weekend pottery workshops and studio store tours by prior booking.</p>
+      <a href="contact.html" class="text-xs font-bold text-brandBrown hover:underline block">Book Studio Tour &rarr;</a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT PAGE — SECTION 7: FINAL CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl md:text-3xl font-serif font-bold">Discover Earthen Cookware</h2>
+      <p class="text-xs text-stone-200">Explore our handcrafted cooking pots and bakeware collections.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Shop Collection &rarr;</a>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-lg">Your Shopping Bag</h3>
+      <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div id="cartItemsContainer" class="cart-body"></div>
+    <div class="cart-footer">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">₹ 0.00</span>
+      </div>
+      <button class="btn-brown w-full py-3 text-center block">Proceed to Checkout &rarr;</button>
+    </div>
+  </aside>
+
+  <!-- SEARCH MODAL OVERLAY -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="modal-content p-6 max-w-xl">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-serif font-bold text-lg text-brandText">Search Ceramic Kitchen</h3>
+        <button id="closeSearchBtn" class="text-stone-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <input id="globalSearchInput" type="text" placeholder="Type to search cookware, recipes, guides..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-3 text-xs outline-none focus:border-brandBrown mb-4">
+      <div id="searchResultsContainer" class="max-h-60 overflow-y-auto space-y-2"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

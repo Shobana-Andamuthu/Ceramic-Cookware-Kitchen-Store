@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Recipe Journal | Ceramic Kitchen</title>
+  <meta name="description" content="Discover slow-cooked recipes, artisanal sourdough baking techniques, and earthen pot cooking guides created for real home kitchens.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandCream: 'var(--bg-primary)',
+            brandTan: 'var(--bg-secondary)',
+            brandOlive: 'var(--bg-olive)',
+            brandBrown: 'var(--accent-brown)',
+            brandText: 'var(--text-primary)',
+            brandBorder: 'var(--border-subtle)',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+
+  <!-- GLOBAL HEADER -->
+  <header class="main-header">
+    <div class="container-custom py-3.5 flex items-center justify-between">
+      <a href="index.html" class="brand-logo group">
+        <div class="brand-logo-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+        </div>
+        <div>
+          <span class="brand-name block">Ceramic Kitchen</span>
+          <span class="brand-subtitle block">Ceramic Cookware and Kitchen Store</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVBAR -->
+      <nav class="desktop-nav hidden lg:block">
+        <ul class="nav-links">
+          <li class="nav-item group">
+            <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="index.html" class="dropdown-link ">Home 1</a>
+              <a href="home-2.html" class="dropdown-link ">Home 2</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+          <li class="nav-item"><a href="products.html" class="nav-link ">Products</a></li>
+          <li class="nav-item"><a href="material-guide.html" class="nav-link ">Material Guide</a></li>
+          <li class="nav-item"><a href="recipes.html" class="nav-link active">Recipes</a></li>
+          <li class="nav-item"><a href="gallery.html" class="nav-link ">Gallery</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- RIGHT UTILITIES -->
+      <div class="header-actions">
+        <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
+        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 1: HERO
+       ========================================================================= -->
+  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
+    <div class="container-custom max-w-xl">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">SLOW COOKING JOURNAL</span>
+      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Kitchen Recipes & Guides</h1>
+      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+        Nourishing slow-simmered stews, artisan sourdough loafs, and earthen tea recipes crafted for clay pot cooking.
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 2: FEATURED RECIPE SPOTLIGHT (BALANCED & PERFECTLY FILLED)
+       ========================================================================= -->
+  <section class="py-8 bg-brandCream border-b border-brandBorder/60">
+    <div class="container-custom">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
+        <div class="lg:col-span-6 h-64 sm:h-80 lg:h-full min-h-[340px]">
+          <img src="assets/images/recipes/recipe-stew.png" alt="Harvest Vegetable Stew in Claypot" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 p-6 lg:p-8 flex flex-col justify-center space-y-4">
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brandBrown/10 dark:bg-amber-400/10 text-brandBrown dark:text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                SPOTLIGHT RECIPE OF THE MONTH
+              </span>
+            </div>
+            <h2 class="font-serif font-bold text-2xl lg:text-3xl text-brandText">Harvest Vegetable Stew in Claypot</h2>
+            <p class="text-xs md:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+              A rich winter stew slow-cooked for 90 minutes in Jaipur unglazed earthenware. Natural clay retains aromatic steam, developing deep, complex herbal aromas without heavy oils.
+            </p>
+          </div>
+
+          <!-- 4-ITEM SPECS GRID -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 py-2 border-y border-brandBorder/60 text-center text-xs">
+            <div class="bg-brandCream dark:bg-stone-900/60 p-2 rounded-xl border border-brandBorder/40">
+              <span class="text-[10px] text-stone-500 uppercase block font-semibold">PREP TIME</span>
+              <span class="font-serif font-bold text-brandBrown text-sm">15 Mins</span>
+            </div>
+            <div class="bg-brandCream dark:bg-stone-900/60 p-2 rounded-xl border border-brandBorder/40">
+              <span class="text-[10px] text-stone-500 uppercase block font-semibold">COOK TIME</span>
+              <span class="font-serif font-bold text-brandBrown text-sm">90 Mins</span>
+            </div>
+            <div class="bg-brandCream dark:bg-stone-900/60 p-2 rounded-xl border border-brandBorder/40">
+              <span class="text-[10px] text-stone-500 uppercase block font-semibold">SERVINGS</span>
+              <span class="font-serif font-bold text-brandBrown text-sm">4 People</span>
+            </div>
+            <div class="bg-brandCream dark:bg-stone-900/60 p-2 rounded-xl border border-brandBorder/40">
+              <span class="text-[10px] text-stone-500 uppercase block font-semibold">METHOD</span>
+              <span class="font-serif font-bold text-brandBrown text-sm">Clay Simmer</span>
+            </div>
+          </div>
+
+          <!-- FLAVOR TAGS & DUAL CTA -->
+          <div class="space-y-3">
+            <div class="flex flex-wrap gap-2 text-[10px] font-semibold">
+              <span class="px-2.5 py-1 rounded-md bg-brandTan/60 dark:bg-stone-800 text-stone-700 dark:text-stone-300">100% Organic</span>
+              <span class="px-2.5 py-1 rounded-md bg-brandTan/60 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Alkaline Balanced</span>
+              <span class="px-2.5 py-1 rounded-md bg-brandTan/60 dark:bg-stone-800 text-stone-700 dark:text-stone-300">Low-Oil Cooking</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 pt-1">
+              <a href="recipe-details.html" class="btn-brown text-xs py-2.5 px-5 rounded-full inline-block shadow-sm">View Full Recipe &rarr;</a>
+              <a href="products.html" class="btn-outline-brown text-xs py-2.5 px-5 rounded-full inline-block">Shop Dutch Pot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 3: RECIPE CATEGORY FILTERS (FUNCTIONAL & COMPACT)
+       ========================================================================= -->
+  <section class="py-4 bg-brandCream border-b border-brandBorder/60">
+    <div class="container-custom flex justify-center flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold px-2 max-w-full">
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandBrown text-white shadow-sm" data-category="all">All Recipes (8)</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="breakfast">Breakfast</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="everyday">Everyday Meals</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="baking">Baking</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="slow">Slow Cooking</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="vegetarian">Vegetarian</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="desserts">Desserts</button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 4: LATEST RECIPES (FILTERABLE GRID)
+       ========================================================================= -->
+  <section class="py-8 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <h2 class="text-xl font-serif font-bold text-brandText mb-5 text-center">Latest Kitchen Recipes</h2>
+      <div id="recipeGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        
+        <!-- CARD 1 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking vegetarian">
+          <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=800&q=80" alt="Rustic Country Sourdough Loaf" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Rustic Country Sourdough</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Crisp golden crust baked inside a ceramic casserole lid trap.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast vegetarian">
+          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Spiced Cardamom Milk Tea" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Spiced Cardamom Milk Tea</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Steeped gently in clay teapots for an earthy, soothing aroma.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow vegetarian">
+          <img src="assets/images/recipes/claypot-curry.png" alt="Slow Braised Lentil Dal" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOK</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Slow Braised Lentil Dal</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Creamy yellow lentils infused with cumin and mustard seeds.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast vegetarian">
+          <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=800&q=80" alt="Earthen Claypot Honey Oats" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Earthen Claypot Honey Oats</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Warm oat porridge infused with wild cinnamon and clay-baked almonds.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow vegetarian">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Harvest Vegetable Stew" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOK</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Harvest Vegetable Stew</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Earthen clay retains aromatic steam, creating deep winter flavors.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking vegetarian">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Rosemary Terracotta Focaccia" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Rosemary Clay Focaccia</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Herb-infused Italian flatbread oven-baked on terracotta baking tiles.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts vegetarian">
+          <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=800&q=80" alt="Earthen Baked Rice Pudding" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Claypot Saffron Phirni</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Slow-chilled cardamom rice pudding served in unglazed earthen bowls.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday vegetarian">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Roasted Root Vegetables" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col">
+            <span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span>
+            <h3 class="font-serif font-bold text-sm text-brandText">Clay-Roasted Root Medley</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Tender sweet potatoes, carrots, and shallots roasted in earthen covered pots.</p>
+            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 4.5 (NEW): CLAYPOT SLOW SIMMERING MASTERY
+       ========================================================================= -->
+  <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">CULINARY SCIENCE</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">The Magic of Claypot Slow Cooking</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Cooking in unglazed earthenware is unlike any metal pot. Clay's natural alkaline composition neutralizes acidity in tomatoes and citrus, producing sweeter, creamier, and more aromatic curries and stews without excessive fat or artificial seasoning.
+          </p>
+          <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">Natural Alkalinity</span>
+              <span class="text-stone-500">Balances Dish Acidity</span>
+            </div>
+            <div class="bg-brandCard border border-brandBorder p-3 rounded-xl">
+              <span class="font-serif font-bold text-brandBrown text-base block">Self-Basting Steam</span>
+              <span class="text-stone-500">Locks Herbal Aromatics</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Slow Simmered Claypot Curry" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 4.6 (NEW): BREAD BAKING IN TERRACOTTA
+       ========================================================================= -->
+  <section class="py-14 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-2 lg:order-1">
+          <img src="assets/images/lifestyle/table-styling.png" alt="Artisan Sourdough Dining Table Setting" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-4 order-1 lg:order-2">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">BAKING TECHNIQUES</span>
+          <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Baking Oven-Spring Sourdough in Terracotta</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Terracotta Dutch ovens trap steam released by dough during the first 20 minutes of baking. This prevents early crust hardening, allowing maximum oven spring and yielding an exceptionally crisp, blistered artisanal sourdough crust.
+          </p>
+          <a href="recipe-details.html" class="btn-brown text-xs py-2 px-5 rounded-full inline-block">Read Sourdough Masterclass &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 5: POPULAR RECIPES
+       ========================================================================= -->
+  <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
+    <div class="container-custom">
+      <h2 class="text-xl font-serif font-bold text-brandText mb-6 text-center">Popular Community Favorites</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center">
+          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80" alt="Jaipur Spiced Chickpea Stew" class="w-20 h-20 object-cover rounded-lg">
+          <div>
+            <span class="text-[10px] font-bold text-brandBrown uppercase">SLOW SIMMER</span>
+            <h4 class="font-serif font-bold text-sm text-brandText">Jaipur Spiced Chickpea Stew</h4>
+            <span class="text-xs text-stone-500">★ 4.9 • 140 Reviews</span>
+          </div>
+        </div>
+        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" class="w-20 h-20 object-cover rounded-lg">
+          <div>
+            <span class="text-[10px] font-bold text-brandBrown uppercase">BAKING</span>
+            <h4 class="font-serif font-bold text-sm text-brandText">Earthen Terracotta Focaccia</h4>
+            <span class="text-xs text-stone-500">★ 4.8 • 98 Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 6: KITCHEN TIPS & COOKWARE PAIRING
+       ========================================================================= -->
+  <section class="py-12 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom max-w-xl text-center space-y-4">
+      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">COOKING WISDOM</span>
+      <h2 class="text-2xl font-serif font-bold text-brandText">Why Clay Enhances Stew Aromas</h2>
+      <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+        Because unglazed earthen clay contains micro-pores, steam condenses and drips continuously off the lid back into your soup, sealing in essential herbs and mineral flavors.
+      </p>
+      <a href="material-guide.html" class="btn-brown text-xs inline-block">Read Material Science &rarr;</a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RECIPES PAGE — SECTION 7: NEWSLETTER CTA
+       ========================================================================= -->
+  <section class="py-12 bg-brandOlive text-white text-center">
+    <div class="container-custom max-w-xl space-y-3">
+      <h2 class="text-2xl md:text-3xl font-serif font-bold">Join Our Weekly Kitchen Journal</h2>
+      <p class="text-xs text-stone-200">Receive seasonal earthen pot recipes and studio updates direct to your inbox.</p>
+      <form onsubmit="event.preventDefault(); showToast('Subscribed to Kitchen Journal!');" class="flex gap-2 max-w-md mx-auto mt-4">
+        <input type="email" required placeholder="Enter your email address" class="bg-white text-stone-900 px-4 py-2.5 rounded-lg text-xs flex-1 outline-none">
+        <button type="submit" class="btn-brown text-xs px-5 py-2.5">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="footer-wrapper">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="account.html" class="footer-link">My Account</a></li>
+            <li><a href="account.html" class="footer-link">Wishlist</a></li>
+            <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact Us</h4>
+          <p class="text-xs text-stone-200 leading-relaxed">
+            Studio 4, Potter's Quarter<br>
+            Jaipur, Rajasthan 302001<br>
+            Phone: +91 91 123 4567<br>
+            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Join Our Kitchen Journal</h4>
+          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
+            <input type="email" required placeholder="Enter your email" class="newsletter-input">
+            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="cart-drawer left-auto right-[-320px] max-w-[300px]">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
+      <button id="closeMobileNavBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
+      <div>
+        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60">
+          <span>Home</span>
+          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+          <a href="index.html" class="block hover:text-brandBrown">Home 1</a>
+          <a href="home-2.html" class="block hover:text-brandBrown">Home 2</a>
+        </div>
+      </div>
+      <a href="about.html" class="block py-2  border-b border-brandBorder/60">About</a>
+      <a href="products.html" class="block py-2  border-b border-brandBorder/60">Products</a>
+      <a href="material-guide.html" class="block py-2  border-b border-brandBorder/60">Material Guide</a>
+      <a href="recipes.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Recipes</a>
+      <a href="gallery.html" class="block py-2  border-b border-brandBorder/60">Gallery</a>
+      <a href="contact.html" class="block py-2  border-b border-brandBorder/60">Contact</a>
+      <a href="login.html" class="block py-2 text-brandBrown">Login</a>
+    </div>
+  </aside>
+
+  <!-- CART DRAWER -->
+  <div id="drawerOverlay" class="drawer-overlay"></div>
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-lg">Your Shopping Bag</h3>
+      <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div id="cartItemsContainer" class="cart-body"></div>
+    <div class="cart-footer p-4 border-t border-brandBorder">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">₹ 0.00</span>
+      </div>
+      <a href="cart.html" class="btn-brown w-full py-3 text-center block">View Shopping Bag & Checkout &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- SEARCH MODAL OVERLAY -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="modal-content p-6 max-w-xl">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-serif font-bold text-lg text-brandText">Search Ceramic Kitchen</h3>
+        <button id="closeSearchBtn" class="text-stone-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <input id="globalSearchInput" type="text" placeholder="Type to search cookware, recipes, guides..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-3 text-xs outline-none focus:border-brandBrown mb-4">
+      <div id="searchResultsContainer" class="max-h-60 overflow-y-auto space-y-2"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
