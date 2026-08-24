@@ -24,6 +24,13 @@
 
 /* Tablets (768px to 1023px) */
 @media (max-width: 1023px) {
+  /* Move top navbar controls (RTL, Dark, Login) into Drawer on Mobile & Tablet */
+  .header-actions .dir-toggle-btn,
+  .header-actions .theme-toggle-btn,
+  .header-actions .auth-action-btn {
+    display: none !important;
+  }
+
   .nav-links {
     gap: 1.25rem;
   }

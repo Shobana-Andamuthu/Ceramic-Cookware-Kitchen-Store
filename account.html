@@ -104,74 +104,317 @@
        ========================================================================= -->
   <section class="py-4 bg-brandCream border-b border-brandBorder">
     <div class="container-custom flex justify-center flex-wrap gap-2 text-xs font-semibold">
-      <button class="px-4 py-2 rounded-lg bg-brandBrown text-white">My Orders</button>
-      <button class="px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300">Saved Wishlist (<span id="accWishlistCount">1</span>)</button>
-      <button class="px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300">Delivery Addresses</button>
-      <button class="px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300">Payment Options</button>
-      <button class="px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300">Profile Settings</button>
+      <button class="account-tab-btn px-4 py-2 rounded-lg bg-brandBrown text-white shadow-sm transition-all" data-tab="orders">My Orders</button>
+      <button class="account-tab-btn px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown transition-all" data-tab="wishlist">Saved Wishlist (<span id="accWishlistCount">2</span>)</button>
+      <button class="account-tab-btn px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown transition-all" data-tab="addresses">Delivery Addresses</button>
+      <button class="account-tab-btn px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown transition-all" data-tab="payment">Payment Options</button>
+      <button class="account-tab-btn px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown transition-all" data-tab="profile">Profile Settings</button>
     </div>
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 3: ACTIVE TAB CONTENT PANEL
+       ACCOUNT — SECTION 3: ACTIVE TAB CONTENT PANELS
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle space-y-6">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle min-h-[420px]">
         
-        <div class="flex justify-between items-center border-b border-brandBorder pb-4">
-          <h2 class="font-serif font-bold text-lg text-brandText">Recent Studio Orders</h2>
-          <span class="text-xs text-brandBrown font-bold">2 Total Orders</span>
+        <!-- TAB 1: MY ORDERS -->
+        <div id="tab-orders" class="account-tab-content space-y-6">
+          <div class="flex justify-between items-center border-b border-brandBorder pb-4">
+            <div>
+              <h2 class="font-serif font-bold text-lg text-brandText">Recent Studio Orders</h2>
+              <p class="text-xs text-stone-500">Track current shipments and view order invoices</p>
+            </div>
+            <span class="text-xs text-brandBrown font-bold bg-brandTan/60 px-3 py-1 rounded-full border border-brandBorder">2 Total Orders</span>
+          </div>
+
+          <div class="space-y-4">
+            <!-- ORDER 1 -->
+            <div class="border border-brandBorder rounded-xl p-4 space-y-3 bg-brandCream shadow-subtle hover:border-brandBrown transition-all">
+              <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2.5">
+                <div>
+                  <span class="font-bold text-brandText">Order #CK-89420</span>
+                  <span class="text-stone-500 ml-2">• Placed 14 Feb 2026</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Delivered</span>
+              </div>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <img src="assets/images/products/ceramic-cooking-pot.png" alt="Ceramic Pot" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
+                <div class="flex-1">
+                  <h4 class="font-serif font-bold text-sm text-brandText">Durable Ceramic Cooking Pot with Lid</h4>
+                  <div class="text-xs text-stone-500">Qty: 1 • Size: 2.5 Liters • Color: Natural Terracotta</div>
+                  <div class="text-xs text-stone-400 mt-0.5">Courier: Express Cargo (AWB: EXP-982410294)</div>
+                </div>
+                <div class="text-left sm:text-right flex sm:flex-col justify-between items-center sm:items-end">
+                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 1,500.00</div>
+                  <div class="flex gap-2 mt-2">
+                    <button onclick="openCourierModal('CK-89420', 'EXP-982410294', 'Delivered to Jaipur Address on Feb 16, 2026')" class="btn-brown text-xs py-1 px-3">Track Courier &rarr;</button>
+                    <button onclick="openInvoiceModal('CK-89420', '14 Feb 2026', 'Durable Ceramic Cooking Pot with Lid', '1,500.00')" class="btn-outline-brown text-xs py-1 px-3">Download PDF</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ORDER 2 -->
+            <div class="border border-brandBorder rounded-xl p-4 space-y-3 bg-brandCream shadow-subtle hover:border-brandBrown transition-all">
+              <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2.5">
+                <div>
+                  <span class="font-bold text-brandText">Order #CK-81204</span>
+                  <span class="text-stone-500 ml-2">• Placed 02 Jan 2026</span>
+                </div>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Delivered</span>
+              </div>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <img src="assets/images/products/mug-set.png" alt="Mug Set" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
+                <div class="flex-1">
+                  <h4 class="font-serif font-bold text-sm text-brandText">Hand-Turned Mug Set, 3-Piece</h4>
+                  <div class="text-xs text-stone-500">Qty: 1 • Glaze: Cream White Finish</div>
+                  <div class="text-xs text-stone-400 mt-0.5">Courier: Studio Direct Post (AWB: SDP-441092)</div>
+                </div>
+                <div class="text-left sm:text-right flex sm:flex-col justify-between items-center sm:items-end">
+                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 229.00</div>
+                  <div class="flex gap-2 mt-2">
+                    <button onclick="openCourierModal('CK-81204', 'SDP-441092', 'Delivered to Jaipur Address on Jan 05, 2026')" class="btn-brown text-xs py-1 px-3">Track Courier &rarr;</button>
+                    <button onclick="openInvoiceModal('CK-81204', '02 Jan 2026', 'Hand-Turned Mug Set, 3-Piece', '229.00')" class="btn-outline-brown text-xs py-1 px-3">Download PDF</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="space-y-4">
-          
-          <!-- ORDER 1 -->
-          <div class="border border-brandBorder rounded-xl p-4 space-y-3 bg-brandCream">
-            <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2">
-              <div>
-                <span class="font-bold text-brandText">Order #CK-89420</span>
-                <span class="text-stone-500 ml-2">• Placed 14 Feb 2026</span>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Delivered</span>
+        <!-- TAB 2: SAVED WISHLIST -->
+        <div id="tab-wishlist" class="account-tab-content hidden space-y-6">
+          <div class="flex justify-between items-center border-b border-brandBorder pb-4">
+            <div>
+              <h2 class="font-serif font-bold text-lg text-brandText">Your Saved Wishlist</h2>
+              <p class="text-xs text-stone-500">Handcrafted pieces saved for your kitchen studio</p>
             </div>
-            
-            <div class="flex items-center gap-4">
-              <img src="assets/images/products/ceramic-cooking-pot.png" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
-              <div class="flex-1">
-                <h4 class="font-serif font-bold text-sm text-brandText">Durable Ceramic Cooking Pot with Lid</h4>
-                <div class="text-xs text-stone-500">Qty: 1 • Size: 2.5 Liters</div>
+            <span class="text-xs text-brandBrown font-bold bg-brandTan/60 px-3 py-1 rounded-full border border-brandBorder" id="wishlistItemsCountText">2 Items Saved</span>
+          </div>
+
+          <div id="wishlistGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Wishlist Item 1 -->
+            <div class="bg-brandCream border border-brandBorder rounded-xl p-4 space-y-3 shadow-subtle flex flex-col justify-between" id="wish-card-prod-1">
+              <div class="relative">
+                <img src="assets/images/products/large-platter.png" alt="Large Platter Plate" class="w-full h-40 object-cover rounded-lg border border-brandBorder">
+                <button onclick="removeWishlistItem('prod-1', 'Large Platter Plate')" class="absolute top-2 right-2 bg-white/90 dark:bg-stone-800/90 text-stone-600 dark:text-stone-300 p-1.5 rounded-full hover:text-red-500 transition-colors" title="Remove Item">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
               </div>
-              <div class="text-right">
-                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 1,500.00</div>
-                <button onclick="showToast('Tracking link opened!');" class="text-xs text-brandBrown font-bold hover:underline mt-1">Track Courier &rarr;</button>
+              <div>
+                <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">DINING</span>
+                <h4 class="font-serif font-bold text-sm text-brandText">Large Platter Plate</h4>
+                <p class="text-xs text-stone-500 line-clamp-2">Hand-glazed serving platter, ideal for rustic sourdough and fruit displays.</p>
+                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ 159.00</div>
+              </div>
+              <button onclick="addToCart('prod-1', 'Large Platter Plate', 159.00, 'assets/images/products/large-platter.png')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
+            </div>
+
+            <!-- Wishlist Item 2 -->
+            <div class="bg-brandCream border border-brandBorder rounded-xl p-4 space-y-3 shadow-subtle flex flex-col justify-between" id="wish-card-prod-2">
+              <div class="relative">
+                <img src="assets/images/products/serving-bowl.png" alt="Ceramic Serving Bowl" class="w-full h-40 object-cover rounded-lg border border-brandBorder">
+                <button onclick="removeWishlistItem('prod-2', 'Ceramic Serving Bowl')" class="absolute top-2 right-2 bg-white/90 dark:bg-stone-800/90 text-stone-600 dark:text-stone-300 p-1.5 rounded-full hover:text-red-500 transition-colors" title="Remove Item">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+              <div>
+                <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">DINING</span>
+                <h4 class="font-serif font-bold text-sm text-brandText">Ceramic Serving Bowl</h4>
+                <p class="text-xs text-stone-500 line-clamp-2">Deep speckled clay bowl crafted for soups, salads, and pasta dishes.</p>
+                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ 340.00</div>
+              </div>
+              <button onclick="addToCart('prod-2', 'Ceramic Serving Bowl', 340.00, 'assets/images/products/serving-bowl.png')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: DELIVERY ADDRESSES -->
+        <div id="tab-addresses" class="account-tab-content hidden space-y-6">
+          <div class="flex flex-wrap justify-between items-center border-b border-brandBorder pb-4 gap-2">
+            <div>
+              <h2 class="font-serif font-bold text-lg text-brandText">Delivery Addresses</h2>
+              <p class="text-xs text-stone-500">Manage studio shipping addresses and preferred delivery locations</p>
+            </div>
+            <button onclick="openAddressModal()" class="btn-brown text-xs py-2 px-4 flex items-center gap-1.5">+ Add New Address</button>
+          </div>
+
+          <div id="addressesList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Address 1 (Primary) -->
+            <div class="border-2 border-brandBrown bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle relative" id="addr-card-1">
+              <div class="flex justify-between items-start">
+                <span class="px-2.5 py-0.5 rounded-full bg-brandBrown text-white font-bold text-[10px] uppercase">Default Primary</span>
+                <div class="flex gap-2 text-xs">
+                  <button onclick="editAddressModal('Home Studio', 'Ananya Sharma', '42 Pottery Lane, Sanganer', 'Jaipur', 'Rajasthan', '302029', '+91 98765 43210')" class="text-brandBrown font-bold hover:underline">Edit</button>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-brandText">Home Studio</h4>
+                <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">Ananya Sharma</p>
+                <p class="text-xs text-stone-500 mt-1">42 Pottery Lane, Sanganer<br>Jaipur, Rajasthan — 302029</p>
+                <p class="text-xs text-stone-500 mt-1">Phone: +91 98765 43210</p>
+              </div>
+            </div>
+
+            <!-- Address 2 -->
+            <div class="border border-brandBorder bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle relative hover:border-brandBrown transition-all" id="addr-card-2">
+              <div class="flex justify-between items-start">
+                <span class="px-2.5 py-0.5 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-[10px] uppercase">Secondary</span>
+                <div class="flex gap-2 text-xs">
+                  <button onclick="setAddressDefault('addr-card-2')" class="text-stone-500 hover:text-brandBrown font-bold">Set Default</button>
+                  <span class="text-stone-300">•</span>
+                  <button onclick="editAddressModal('Pottery Guild Workshop', 'Ananya Sharma (Studio 9)', '108 Crafts Avenue, Malviya Nagar', 'Jaipur', 'Rajasthan', '302017', '+91 98765 43210')" class="text-brandBrown font-bold hover:underline">Edit</button>
+                  <span class="text-stone-300">•</span>
+                  <button onclick="deleteAddressCard('addr-card-2')" class="text-red-500 font-bold hover:underline">Delete</button>
+                </div>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-brandText">Pottery Guild Workshop</h4>
+                <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">Ananya Sharma (Studio 9)</p>
+                <p class="text-xs text-stone-500 mt-1">108 Crafts Avenue, Malviya Nagar<br>Jaipur, Rajasthan — 302017</p>
+                <p class="text-xs text-stone-500 mt-1">Phone: +91 98765 43210</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- ORDER 2 -->
-          <div class="border border-brandBorder rounded-xl p-4 space-y-3 bg-brandCream">
-            <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2">
-              <div>
-                <span class="font-bold text-brandText">Order #CK-81204</span>
-                <span class="text-stone-500 ml-2">• Placed 02 Jan 2026</span>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 font-bold text-[10px]">Delivered</span>
+        <!-- TAB 4: PAYMENT OPTIONS -->
+        <div id="tab-payment" class="account-tab-content hidden space-y-6">
+          <div class="flex flex-wrap justify-between items-center border-b border-brandBorder pb-4 gap-2">
+            <div>
+              <h2 class="font-serif font-bold text-lg text-brandText">Payment Options & Credit</h2>
+              <p class="text-xs text-stone-500">Manage saved payment methods, UPI handles, and studio rewards wallet</p>
             </div>
-            
-            <div class="flex items-center gap-4">
-              <img src="assets/images/products/mug-set.png" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
-              <div class="flex-1">
-                <h4 class="font-serif font-bold text-sm text-brandText">Hand-Turned Mug Set, 3-Piece</h4>
-                <div class="text-xs text-stone-500">Qty: 1 • Glaze: Cream White</div>
-              </div>
-              <div class="text-right">
-                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 229.00</div>
-                <button onclick="showToast('Invoice downloaded!');" class="text-xs text-brandBrown font-bold hover:underline mt-1">Download PDF</button>
-              </div>
-            </div>
+            <button onclick="openPaymentModal()" class="btn-brown text-xs py-2 px-4 flex items-center gap-1.5">+ Add Payment Method</button>
           </div>
 
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Card 1: HDFC Credit Card -->
+            <div class="border border-brandBorder bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle hover:border-brandBrown transition-all" id="pay-card-1">
+              <div class="flex justify-between items-center">
+                <span class="font-mono font-bold text-xs text-brandBrown uppercase">VISA</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Primary</span>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-sm text-brandText">HDFC Platinum Card</h4>
+                <p class="text-xs font-mono text-stone-600 dark:text-stone-400 mt-1">•••• •••• •••• 4092</p>
+                <p class="text-[11px] text-stone-400">Expires 08 / 2028 • Ananya Sharma</p>
+              </div>
+              <div class="flex justify-between items-center pt-2 border-t border-brandBorder text-xs">
+                <button onclick="showToast('Card details editable');" class="text-brandBrown font-bold hover:underline">Edit</button>
+                <button onclick="removePaymentCard('pay-card-1')" class="text-red-500 font-bold hover:underline">Remove</button>
+              </div>
+            </div>
+
+            <!-- Card 2: UPI ID -->
+            <div class="border border-brandBorder bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle hover:border-brandBrown transition-all" id="pay-card-2">
+              <div class="flex justify-between items-center">
+                <span class="font-mono font-bold text-xs text-amber-700 dark:text-amber-400 uppercase">UPI / VPA</span>
+                <span class="px-2 py-0.5 rounded bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-[10px]">Verified</span>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-sm text-brandText">Google Pay / BHIM</h4>
+                <p class="text-xs font-mono text-stone-600 dark:text-stone-400 mt-1">ananya.sharma@okicici</p>
+                <p class="text-[11px] text-stone-400">Instant UPI Checkout Enabled</p>
+              </div>
+              <div class="flex justify-between items-center pt-2 border-t border-brandBorder text-xs">
+                <button onclick="showToast('UPI Handle verified');" class="text-brandBrown font-bold hover:underline">Edit</button>
+                <button onclick="removePaymentCard('pay-card-2')" class="text-red-500 font-bold hover:underline">Remove</button>
+              </div>
+            </div>
+
+            <!-- Card 3: Studio Wallet -->
+            <div class="border border-brandBorder bg-brandTan/60 rounded-xl p-5 space-y-3 shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center">
+                  <span class="font-serif font-bold text-xs text-brandBrown uppercase">STUDIO WALLET</span>
+                  <span class="px-2 py-0.5 rounded bg-brandBrown text-white font-bold text-[10px]">Active</span>
+                </div>
+                <h4 class="font-serif font-bold text-sm text-brandText mt-2">Artisan Store Credit</h4>
+                <div class="text-xl font-serif font-bold text-amber-900 dark:text-amber-400 mt-1" id="walletBalanceText">₹ 450.00</div>
+                <p class="text-[11px] text-stone-500">Usable on any ceramic cookware purchase</p>
+              </div>
+              <button onclick="openTopupModal()" class="btn-brown w-full text-xs py-2 mt-2">Top Up Wallet &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: PROFILE SETTINGS -->
+        <div id="tab-profile" class="account-tab-content hidden space-y-6">
+          <div class="border-b border-brandBorder pb-4">
+            <h2 class="font-serif font-bold text-lg text-brandText">Profile & Account Settings</h2>
+            <p class="text-xs text-stone-500">Update your account information, studio preferences, and password</p>
+          </div>
+
+          <form id="profileForm" onsubmit="event.preventDefault(); saveProfileSettings();" class="space-y-6 max-w-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Full Name</label>
+                <input type="text" id="profFullName" value="Ananya Sharma" required class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText focus:outline-none focus:border-brandBrown">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Email Address</label>
+                <input type="email" id="profEmail" value="ananya.sharma@example.com" required class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText focus:outline-none focus:border-brandBrown">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Phone Number</label>
+                <input type="tel" id="profPhone" value="+91 98765 43210" required class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText focus:outline-none focus:border-brandBrown">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-stone-700 dark:text-stone-300 mb-1">Preferred Pottery Glaze</label>
+                <select id="profGlaze" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText focus:outline-none focus:border-brandBrown">
+                  <option value="cream">Cream White Finish</option>
+                  <option value="terracotta" selected>Natural Terracotta</option>
+                  <option value="speckled">Speckled Olive Glaze</option>
+                  <option value="matte">Matte Charcoal</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="border-t border-brandBorder pt-4 space-y-3">
+              <h3 class="font-serif font-bold text-sm text-brandText">Security & Password</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">Current Password</label>
+                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">New Password</label>
+                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">Confirm Password</label>
+                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t border-brandBorder pt-4 space-y-2">
+              <h3 class="font-serif font-bold text-sm text-brandText">Communication & Subscriptions</h3>
+              <div class="space-y-2 text-xs text-stone-700 dark:text-stone-300">
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded border-brandBorder text-brandBrown focus:ring-brandBrown">
+                  <span>Weekly Artisan Recipe & Pottery Journal Newsletter</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded border-brandBorder text-brandBrown focus:ring-brandBrown">
+                  <span>SMS & WhatsApp Order Dispatch Notifications</span>
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked class="rounded border-brandBorder text-brandBrown focus:ring-brandBrown">
+                  <span>Early Access Invites for New Kiln Collection Drops</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="btn-brown text-xs py-2.5 px-6">Save Profile Changes</button>
+            </div>
+          </form>
         </div>
 
       </div>
@@ -184,22 +427,22 @@
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle hover:border-brandBrown transition-all">
           <h3 class="font-serif font-bold text-sm text-brandText">Default Shipping Address</h3>
           <p class="text-xs text-stone-500">42 Pottery Lane, Sanganer, Jaipur 302029</p>
-          <button onclick="showToast('Address editor opened');" class="text-xs text-brandBrown font-bold hover:underline">Edit Address &rarr;</button>
+          <button onclick="switchAccountTab('addresses')" class="text-xs text-brandBrown font-bold hover:underline">Edit Address &rarr;</button>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle hover:border-brandBrown transition-all">
           <h3 class="font-serif font-bold text-sm text-brandText">Saved Payment Cards</h3>
           <p class="text-xs text-stone-500">Visa ending in •••• 4092</p>
-          <button onclick="showToast('Card manager opened');" class="text-xs text-brandBrown font-bold hover:underline">Manage Methods &rarr;</button>
+          <button onclick="switchAccountTab('payment')" class="text-xs text-brandBrown font-bold hover:underline">Manage Methods &rarr;</button>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle hover:border-brandBrown transition-all">
           <h3 class="font-serif font-bold text-sm text-brandText">Communication Preferences</h3>
           <p class="text-xs text-stone-500">Email Journal: Active</p>
-          <button onclick="showToast('Preferences updated');" class="text-xs text-brandBrown font-bold hover:underline">Update Settings &rarr;</button>
+          <button onclick="switchAccountTab('profile')" class="text-xs text-brandBrown font-bold hover:underline">Update Settings &rarr;</button>
         </div>
       </div>
     </div>
@@ -247,6 +490,516 @@
       <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore New Cookware &rarr;</a>
     </div>
   </section>
+
+  <!-- MODALS -->
+  <!-- MODAL: COURIER TRACKING -->
+  <div id="courierModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-brandCard border border-brandBorder rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('courierModal')" class="absolute top-4 right-4 text-stone-500 hover:text-brandBrown">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="border-b border-brandBorder pb-3">
+        <span class="text-[10px] font-bold text-brandBrown uppercase tracking-widest">EXPRESS DISPATCH</span>
+        <h3 class="font-serif font-bold text-lg text-brandText" id="courierOrderTitle">Order Tracking</h3>
+      </div>
+      <div class="space-y-3 text-xs">
+        <div class="flex justify-between items-center bg-brandCream p-3 rounded-lg border border-brandBorder">
+          <span class="text-stone-500">AWB Tracking ID:</span>
+          <span class="font-mono font-bold text-brandText" id="courierAwbText">EXP-982410294</span>
+        </div>
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div>
+              <p class="font-bold text-brandText">Order Confirmed & Sealed</p>
+              <p class="text-[10px] text-stone-400">Jaipur Studio Guild • 14 Feb, 10:30 AM</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div>
+              <p class="font-bold text-brandText">Kiln Thermal Check & Wooden Tagging</p>
+              <p class="text-[10px] text-stone-400">Packaging Station #2 • 14 Feb, 03:15 PM</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div>
+              <p class="font-bold text-brandText">In Transit with Express Cargo</p>
+              <p class="text-[10px] text-stone-400">Jaipur Sorting Hub • 15 Feb, 08:00 AM</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div>
+              <p class="font-bold text-emerald-600 dark:text-emerald-400" id="courierStatusText">Delivered to Recipient</p>
+              <p class="text-[10px] text-stone-400">Handed over to Ananya Sharma • 16 Feb</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button onclick="showToast('Courier AWB copied to clipboard');" class="btn-brown w-full text-xs py-2">Copy AWB Tracking Number</button>
+    </div>
+  </div>
+
+  <!-- MODAL: INVOICE DOWNLOAD -->
+  <div id="invoiceModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-brandCard border border-brandBorder rounded-2xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('invoiceModal')" class="absolute top-4 right-4 text-stone-500 hover:text-brandBrown">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="border-b border-brandBorder pb-3 flex justify-between items-center">
+        <div>
+          <span class="text-[10px] font-bold text-brandBrown uppercase tracking-widest">OFFICIAL TAX INVOICE</span>
+          <h3 class="font-serif font-bold text-lg text-brandText" id="invModalTitle">Invoice #CK-89420</h3>
+        </div>
+        <span class="text-xs text-stone-400" id="invModalDate">14 Feb 2026</span>
+      </div>
+      <div class="bg-brandCream border border-brandBorder rounded-xl p-4 space-y-3 text-xs">
+        <div class="flex justify-between text-stone-500 border-b border-brandBorder pb-2">
+          <span>Billed To: <strong>Ananya Sharma</strong></span>
+          <span>GSTIN: <strong>08AAAAA0000A1Z5</strong></span>
+        </div>
+        <div class="flex justify-between items-center font-bold text-brandText pt-1">
+          <span id="invModalItem">Durable Ceramic Cooking Pot with Lid</span>
+          <span id="invModalPrice">₹ 1,500.00</span>
+        </div>
+        <div class="border-t border-brandBorder pt-2 flex justify-between font-bold text-stone-700 dark:text-stone-300">
+          <span>Total Paid (Incl. Taxes & Packaging):</span>
+          <span class="text-amber-900 dark:text-amber-400" id="invModalTotal">₹ 1,500.00</span>
+        </div>
+      </div>
+      <button onclick="downloadInvoicePDF()" class="btn-brown w-full text-xs py-2.5 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        Download Official PDF Invoice
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD / EDIT ADDRESS -->
+  <div id="addressModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-brandCard border border-brandBorder rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('addressModal')" class="absolute top-4 right-4 text-stone-500 hover:text-brandBrown">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="border-b border-brandBorder pb-2">
+        <h3 class="font-serif font-bold text-lg text-brandText" id="addrModalTitle">Add New Delivery Address</h3>
+      </div>
+      <form onsubmit="event.preventDefault(); saveAddressSubmit();" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Address Label (e.g. Home, Studio, Office)</label>
+          <input type="text" id="addrInputTitle" required placeholder="e.g. Studio Workshop" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Recipient Full Name</label>
+          <input type="text" id="addrInputName" required placeholder="Ananya Sharma" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Street Address & Landmark</label>
+          <input type="text" id="addrInputStreet" required placeholder="42 Pottery Lane, Sanganer" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">City</label>
+            <input type="text" id="addrInputCity" required placeholder="Jaipur" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Pincode</label>
+            <input type="text" id="addrInputPin" required placeholder="302029" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Contact Phone Number</label>
+          <input type="tel" id="addrInputPhone" required placeholder="+91 98765 43210" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+        </div>
+        <button type="submit" class="btn-brown w-full py-2.5 mt-2">Save Shipping Address</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD PAYMENT METHOD -->
+  <div id="paymentModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-brandCard border border-brandBorder rounded-2xl max-w-md w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('paymentModal')" class="absolute top-4 right-4 text-stone-500 hover:text-brandBrown">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="border-b border-brandBorder pb-2">
+        <h3 class="font-serif font-bold text-lg text-brandText">Add Payment Method</h3>
+      </div>
+      <form onsubmit="event.preventDefault(); savePaymentSubmit();" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Method Type</label>
+          <select id="payTypeSelect" onchange="togglePayInputs(this.value)" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+            <option value="card">Credit / Debit Card</option>
+            <option value="upi">UPI / VPA Handle</option>
+          </select>
+        </div>
+        <div id="cardFields" class="space-y-3">
+          <div>
+            <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Cardholder Name</label>
+            <input type="text" id="cardName" placeholder="Ananya Sharma" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="4111 2222 3333 4444" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Expiry (MM/YY)</label>
+              <input type="text" id="cardExpiry" placeholder="12/28" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+            </div>
+            <div>
+              <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">CVV</label>
+              <input type="password" id="cardCvv" placeholder="123" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+            </div>
+          </div>
+        </div>
+        <div id="upiFields" class="space-y-3 hidden">
+          <div>
+            <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">UPI ID (VPA)</label>
+            <input type="text" id="upiId" placeholder="username@upi" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText">
+          </div>
+        </div>
+        <button type="submit" class="btn-brown w-full py-2.5 mt-2">Save Payment Method</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: TOP UP WALLET -->
+  <div id="walletModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden">
+    <div class="bg-brandCard border border-brandBorder rounded-2xl max-w-sm w-full p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('walletModal')" class="absolute top-4 right-4 text-stone-500 hover:text-brandBrown">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="border-b border-brandBorder pb-2">
+        <h3 class="font-serif font-bold text-lg text-brandText">Top Up Studio Wallet</h3>
+      </div>
+      <form onsubmit="event.preventDefault(); saveTopupSubmit();" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Select Amount</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button type="button" onclick="setTopupAmt(500)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 500</button>
+            <button type="button" onclick="setTopupAmt(1000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 1,000</button>
+            <button type="button" onclick="setTopupAmt(2000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 2,000</button>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Custom Amount (₹)</label>
+          <input type="number" id="topupCustomAmt" value="500" min="100" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText font-bold">
+        </div>
+        <button type="submit" class="btn-brown w-full py-2.5 mt-2">Proceed to Add Funds</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPT FOR ACCOUNT TABS & MODALS -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAccountTabSwitching();
+      renderAccountWishlist();
+    });
+
+    function initAccountTabSwitching() {
+      const tabBtns = document.querySelectorAll('.account-tab-btn');
+      const tabContents = document.querySelectorAll('.account-tab-content');
+
+      function switchTab(tabName) {
+        tabBtns.forEach(btn => {
+          if (btn.dataset.tab === tabName) {
+            btn.className = 'account-tab-btn px-4 py-2 rounded-lg bg-brandBrown text-white shadow-sm transition-all';
+          } else {
+            btn.className = 'account-tab-btn px-4 py-2 rounded-lg bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown transition-all';
+          }
+        });
+
+        tabContents.forEach(content => {
+          if (content.id === `tab-${tabName}`) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      }
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+      });
+
+      // Check URL hash
+      const hash = window.location.hash.replace('#', '');
+      if (['orders', 'wishlist', 'addresses', 'payment', 'profile'].includes(hash)) {
+        switchTab(hash);
+      }
+    }
+
+    function switchAccountTab(tabName) {
+      document.querySelector(`.account-tab-btn[data-tab="${tabName}"]`)?.click();
+    }
+
+    // Modal Helpers
+    function openModal(id) { document.getElementById(id)?.classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id)?.classList.add('hidden'); }
+
+    // Courier Modal
+    function openCourierModal(orderId, awb, status) {
+      document.getElementById('courierOrderTitle').textContent = `Order ${orderId} Tracking`;
+      document.getElementById('courierAwbText').textContent = awb;
+      document.getElementById('courierStatusText').textContent = status;
+      openModal('courierModal');
+    }
+
+    // Invoice Modal
+    function openInvoiceModal(orderId, date, item, price) {
+      document.getElementById('invModalTitle').textContent = `Invoice #${orderId}`;
+      document.getElementById('invModalDate').textContent = date;
+      document.getElementById('invModalItem').textContent = item;
+      document.getElementById('invModalPrice').textContent = `₹ ${price}`;
+      document.getElementById('invModalTotal').textContent = `₹ ${price}`;
+      openModal('invoiceModal');
+    }
+
+    function downloadInvoicePDF() {
+      showToast('Downloading Tax Invoice PDF...');
+      closeModal('invoiceModal');
+    }
+
+    // Address Actions
+    function openAddressModal() {
+      document.getElementById('addrModalTitle').textContent = 'Add New Delivery Address';
+      document.getElementById('addrInputTitle').value = '';
+      document.getElementById('addrInputName').value = '';
+      document.getElementById('addrInputStreet').value = '';
+      document.getElementById('addrInputCity').value = 'Jaipur';
+      document.getElementById('addrInputPin').value = '302001';
+      document.getElementById('addrInputPhone').value = '+91 98765 43210';
+      openModal('addressModal');
+    }
+
+    function editAddressModal(title, name, street, city, state, pin, phone) {
+      document.getElementById('addrModalTitle').textContent = `Edit Address: ${title}`;
+      document.getElementById('addrInputTitle').value = title;
+      document.getElementById('addrInputName').value = name;
+      document.getElementById('addrInputStreet').value = street;
+      document.getElementById('addrInputCity').value = city;
+      document.getElementById('addrInputPin').value = pin;
+      document.getElementById('addrInputPhone').value = phone;
+      openModal('addressModal');
+    }
+
+    function saveAddressSubmit() {
+      const title = document.getElementById('addrInputTitle').value || 'New Studio Address';
+      const name = document.getElementById('addrInputName').value;
+      const street = document.getElementById('addrInputStreet').value;
+      const city = document.getElementById('addrInputCity').value;
+      const pin = document.getElementById('addrInputPin').value;
+      const phone = document.getElementById('addrInputPhone').value;
+
+      const list = document.getElementById('addressesList');
+      const newCard = document.createElement('div');
+      newCard.className = 'border border-brandBorder bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle hover:border-brandBrown transition-all';
+      newCard.innerHTML = `
+        <div class="flex justify-between items-start">
+          <span class="px-2.5 py-0.5 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-[10px] uppercase">Custom Address</span>
+          <button onclick="this.closest('.border').remove(); showToast('Address deleted');" class="text-red-500 text-xs font-bold hover:underline">Delete</button>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-base text-brandText">${title}</h4>
+          <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">${name}</p>
+          <p class="text-xs text-stone-500 mt-1">${street}<br>${city} — ${pin}</p>
+          <p class="text-xs text-stone-500 mt-1">Phone: ${phone}</p>
+        </div>
+      `;
+      list.appendChild(newCard);
+      closeModal('addressModal');
+      showToast(`Address "${title}" saved successfully!`);
+    }
+
+    function setAddressDefault(cardId) {
+      document.querySelectorAll('#addressesList > div').forEach(card => {
+        card.className = 'border border-brandBorder bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle hover:border-brandBrown transition-all';
+      });
+      const targetCard = document.getElementById(cardId);
+      if (targetCard) {
+        targetCard.className = 'border-2 border-brandBrown bg-brandCream rounded-xl p-5 space-y-3 shadow-subtle relative';
+      }
+      showToast('Updated primary delivery address!');
+    }
+
+    function deleteAddressCard(cardId) {
+      document.getElementById(cardId)?.remove();
+      showToast('Address removed');
+    }
+
+    // Payment Actions
+    function openPaymentModal() { openModal('paymentModal'); }
+    
+    function togglePayInputs(type) {
+      if (type === 'card') {
+        document.getElementById('cardFields').classList.remove('hidden');
+        document.getElementById('upiFields').classList.add('hidden');
+      } else {
+        document.getElementById('cardFields').classList.add('hidden');
+        document.getElementById('upiFields').classList.remove('hidden');
+      }
+    }
+
+    function savePaymentSubmit() {
+      closeModal('paymentModal');
+      showToast('New payment method added successfully!');
+    }
+
+    function removePaymentCard(cardId) {
+      document.getElementById(cardId)?.remove();
+      showToast('Payment method removed');
+    }
+
+    // Wallet Topup
+    function openTopupModal() { openModal('walletModal'); }
+    function setTopupAmt(amt) { document.getElementById('topupCustomAmt').value = amt; }
+    function saveTopupSubmit() {
+      const amt = parseFloat(document.getElementById('topupCustomAmt').value || 500);
+      const curr = 450.00;
+      const total = curr + amt;
+      document.getElementById('walletBalanceText').textContent = `₹ ${total.toFixed(2)}`;
+      closeModal('walletModal');
+      showToast(`Added ₹ ${amt} to Studio Wallet! Balance: ₹ ${total.toFixed(2)}`);
+    }
+
+    const wishlistProductCatalog = {
+      'prod-1': {
+        id: 'prod-1',
+        title: 'Large Platter Plate',
+        category: 'DINING',
+        description: 'Hand-glazed serving platter, ideal for rustic sourdough and fruit displays.',
+        price: 159.00,
+        image: 'assets/images/products/large-platter.png'
+      },
+      'prod-2': {
+        id: 'prod-2',
+        title: 'Ceramic Serving Bowl',
+        category: 'DINING',
+        description: 'Deep speckled clay bowl crafted for soups, salads, and pasta dishes.',
+        price: 340.00,
+        image: 'assets/images/products/serving-bowl.png'
+      },
+      'prod-3': {
+        id: 'prod-3',
+        title: 'Durable Ceramic Cooking Pot with Lid',
+        category: 'COOKWARE',
+        description: 'Slow-fire Dutch oven pot hand-shaped for stovetop stews and broths.',
+        price: 1500.00,
+        image: 'assets/images/products/ceramic-cooking-pot.png'
+      },
+      'prod-4': {
+        id: 'prod-4',
+        title: 'Hand-Turned Mug Set, 3-Piece',
+        category: 'DINING',
+        description: 'Artisan tea & coffee mugs crafted with cream white glaze finish.',
+        price: 229.00,
+        image: 'assets/images/products/mug-set.png'
+      },
+      'prod-5': {
+        id: 'prod-5',
+        title: 'Ceramic Storage Jar Set',
+        category: 'STORAGE',
+        description: 'Airtight terracotta spice and dry ingredient storage canisters.',
+        price: 480.00,
+        image: 'assets/images/products/storage-jar.png'
+      },
+      'prod-6': {
+        id: 'prod-6',
+        title: 'Artisan Sourdough Baker',
+        category: 'BAKEWARE',
+        description: 'Heavy clay sourdough baking cloche for crispy crusts.',
+        price: 1250.00,
+        image: 'assets/images/products/bakeware-casserole.png'
+      }
+    };
+
+    function renderAccountWishlist() {
+      const wishlistGrid = document.getElementById('wishlistGrid');
+      const wishTextEl = document.getElementById('wishlistItemsCountText');
+      const accCountEl = document.getElementById('accWishlistCount');
+      
+      const items = (typeof wishlistItems !== 'undefined') ? wishlistItems : (JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2']);
+      const count = items.length;
+
+      if (accCountEl) accCountEl.textContent = count;
+      if (wishTextEl) wishTextEl.textContent = `${count} Item${count === 1 ? '' : 's'} Saved`;
+      if (typeof updateWishlistBadges === 'function') updateWishlistBadges();
+
+      if (!wishlistGrid) return;
+
+      if (count === 0) {
+        wishlistGrid.innerHTML = `
+          <div class="col-span-full text-center py-12 bg-brandCream border border-brandBorder rounded-xl space-y-3">
+            <svg class="w-12 h-12 mx-auto text-stone-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.684a4.5 4.5 0 00-7.682-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            <h3 class="font-serif font-bold text-base text-brandText">Your Wishlist is Empty</h3>
+            <p class="text-xs text-stone-500">Explore handcrafted ceramics and tap the heart icon to save your favorite cookware.</p>
+            <a href="products.html" class="btn-brown text-xs py-2 px-5 inline-block">Browse Cookware Collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      wishlistGrid.innerHTML = items.map(id => {
+        const prod = wishlistProductCatalog[id] || {
+          id: id,
+          title: 'Ceramic Cookware Item',
+          category: 'ARTISAN',
+          description: 'Handcrafted ceramic cookware piece for your kitchen.',
+          price: 299.00,
+          image: 'assets/images/products/ceramic-cooking-pot.png'
+        };
+
+        return `
+          <div class="bg-brandCream border border-brandBorder rounded-xl p-4 space-y-3 shadow-subtle flex flex-col justify-between" id="wish-card-${prod.id}">
+            <div class="relative">
+              <img src="${prod.image}" alt="${prod.title}" class="w-full h-40 object-cover rounded-lg border border-brandBorder">
+              <button onclick="removeWishlistItem('${prod.id}', '${prod.title.replace(/'/g, "\\'")}')" class="absolute top-2 right-2 bg-white/90 dark:bg-stone-800/90 text-stone-600 dark:text-stone-300 p-1.5 rounded-full hover:text-red-500 transition-colors shadow" title="Remove Item">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">${prod.category}</span>
+              <h4 class="font-serif font-bold text-sm text-brandText">${prod.title}</h4>
+              <p class="text-xs text-stone-500 line-clamp-2">${prod.description}</p>
+              <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ ${prod.price.toFixed(2)}</div>
+            </div>
+            <button onclick="addToCart('${prod.id}', '${prod.title.replace(/'/g, "\\'")}', ${prod.price}, '${prod.image}')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Wishlist Removal in Account
+    function removeWishlistItem(id, title) {
+      if (typeof wishlistItems !== 'undefined') {
+        const index = wishlistItems.indexOf(id);
+        if (index > -1) {
+          wishlistItems.splice(index, 1);
+        }
+        localStorage.setItem('ceramic_kitchen_wishlist', JSON.stringify(wishlistItems));
+      } else {
+        let stored = JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2'];
+        stored = stored.filter(item => item !== id);
+        localStorage.setItem('ceramic_kitchen_wishlist', JSON.stringify(stored));
+      }
+      showToast(`Removed "${title}" from Wishlist`);
+      renderAccountWishlist();
+    }
+
+    // Save Profile
+    function saveProfileSettings() {
+      const newName = document.getElementById('profFullName').value;
+      if (newName) {
+        document.getElementById('accountUserName').textContent = newName;
+        localStorage.setItem('ceramic_user', newName);
+      }
+      showToast('Profile settings saved successfully!');
+    }
+  </script>
 
   <!-- GLOBAL FOOTER -->
   <footer class="footer-wrapper">
@@ -309,25 +1062,35 @@
       <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
       <button id="closeMobileNavBtn" class="text-stone-500 hover:text-brandBrown"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
     </div>
-    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
-      <div>
-        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
-          <span>Home</span>
-          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
-          <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
-          <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
-        </div>
+    <div class="cart-body p-4 space-y-4 text-sm font-semibold">
+      
+      <!-- MOBILE / TABLET NAV CONTROLS -->
+      <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
+        <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
-      <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
-      <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
-      <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
-      <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-      <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
-      <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
-      <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
-      <a href="account.html" class="block py-2 text-brandBrown font-bold">My Account</a>
+
+      <div class="space-y-3 pt-1">
+        <div>
+          <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
+            <span>Home</span>
+            <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+            <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
+            <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
+        <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
+        <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
+        <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
+        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
+        <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
+        <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
+        <a href="account.html" class="block py-2 text-brandBrown font-bold">My Account</a>
+      </div>
     </div>
   </aside>
 

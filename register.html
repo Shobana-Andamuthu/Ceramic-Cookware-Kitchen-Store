@@ -56,33 +56,38 @@
         </div>
 
         <!-- FORM -->
-        <form onsubmit="handleRegisterSubmit(event)" class="space-y-4 text-sm">
+        <form onsubmit="handleRegisterSubmit(event)" class="space-y-4 text-sm" novalidate>
           <div>
             <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Full Name</label>
-            <input type="text" id="regName" required placeholder="Enter your full name" value="Ananya Sharma" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            <input type="text" id="regName" required placeholder="Enter your full name" value="" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            <p id="regNameError" class="text-xs text-red-500 font-semibold mt-1 hidden">Please enter your full name.</p>
           </div>
 
           <div>
             <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Email address</label>
-            <input type="email" id="regEmail" required placeholder="you@example.com" value="ananya@example.com" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            <input type="email" id="regEmail" required placeholder="you@example.com" value="" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+            <p id="regEmailError" class="text-xs text-red-500 font-semibold mt-1 hidden">Please enter a valid email address.</p>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Password</label>
-              <input type="password" id="regPass" required placeholder="Create password" value="password123" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+              <input type="password" id="regPass" required placeholder="Create password" value="" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+              <p id="regPassError" class="text-xs text-red-500 font-semibold mt-1 hidden">Please create a password.</p>
             </div>
             <div>
               <label class="block font-semibold text-stone-800 dark:text-stone-200 mb-1.5 text-xs">Confirm Password</label>
-              <input type="password" id="regConfPass" required placeholder="Confirm password" value="password123" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+              <input type="password" id="regConfPass" required placeholder="Confirm password" value="" class="w-full bg-white dark:bg-stone-900 border border-brandBorder rounded-xl p-3 text-sm outline-none focus:border-amber-700 dark:focus:border-amber-500 transition-colors shadow-sm">
+              <p id="regConfPassError" class="text-xs text-red-500 font-semibold mt-1 hidden">Passwords do not match.</p>
             </div>
           </div>
 
           <div class="text-xs text-stone-600 dark:text-stone-400 pt-1">
             <label class="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" checked required class="w-4 h-4 accent-amber-800 rounded">
+              <input type="checkbox" id="regTerms" required class="w-4 h-4 accent-amber-800 rounded">
               <span>I agree to the Terms of Service & Privacy Policy</span>
             </label>
+            <p id="regTermsError" class="text-xs text-red-500 font-semibold mt-1 hidden">You must agree to the Terms of Service.</p>
           </div>
 
           <button type="submit" class="w-full py-3.5 px-6 rounded-full btn-brown font-bold text-sm shadow-md transition-all transform active:scale-95 mt-2">
@@ -100,7 +105,7 @@
 
     <!-- RIGHT SIDE: DIFFERENT CRAFTSMANSHIP IMAGE (OPPOSITE LAYOUT FROM LOGIN PAGE) -->
     <div class="relative overflow-hidden bg-brandTan min-h-[380px] lg:min-h-screen flex flex-col justify-between p-6 lg:p-12 order-1 lg:order-2">
-      <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80" alt="Master Potter Shaping Earthenware" class="absolute inset-0 w-full h-full object-cover">
+      <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1200&q=80" alt="Master Potter Shaping Earthenware" class="absolute inset-0 w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30"></div>
 
       <!-- TOP FLOATING UTILITY CONTROLS (LOGO, DARK MODE, RTL ON SAME HORIZONTAL LINE) -->
@@ -139,16 +144,69 @@
   <script>
     function handleRegisterSubmit(e) {
       e.preventDefault();
-      const name = document.getElementById('regName').value;
-      const pass = document.getElementById('regPass').value;
-      const conf = document.getElementById('regConfPass').value;
+      const nameInput = document.getElementById('regName');
+      const emailInput = document.getElementById('regEmail');
+      const passInput = document.getElementById('regPass');
+      const confInput = document.getElementById('regConfPass');
+      const termsCheckbox = document.getElementById('regTerms');
 
-      if (pass !== conf) {
-        showToast('Passwords do not match!');
+      const nameError = document.getElementById('regNameError');
+      const emailError = document.getElementById('regEmailError');
+      const passError = document.getElementById('regPassError');
+      const confPassError = document.getElementById('regConfPassError');
+      const termsError = document.getElementById('regTermsError');
+
+      let valid = true;
+
+      if (!nameInput.value.trim()) {
+        nameError.classList.remove('hidden');
+        nameInput.classList.add('border-red-500');
+        valid = false;
+      } else {
+        nameError.classList.add('hidden');
+        nameInput.classList.remove('border-red-500');
+      }
+
+      if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
+        emailError.classList.remove('hidden');
+        emailInput.classList.add('border-red-500');
+        valid = false;
+      } else {
+        emailError.classList.add('hidden');
+        emailInput.classList.remove('border-red-500');
+      }
+
+      if (!passInput.value.trim()) {
+        passError.classList.remove('hidden');
+        passInput.classList.add('border-red-500');
+        valid = false;
+      } else {
+        passError.classList.add('hidden');
+        passInput.classList.remove('border-red-500');
+      }
+
+      if (!confInput.value.trim() || passInput.value !== confInput.value) {
+        confPassError.classList.remove('hidden');
+        confInput.classList.add('border-red-500');
+        valid = false;
+      } else {
+        confPassError.classList.add('hidden');
+        confInput.classList.remove('border-red-500');
+      }
+
+      if (!termsCheckbox.checked) {
+        termsError.classList.remove('hidden');
+        valid = false;
+      } else {
+        termsError.classList.add('hidden');
+      }
+
+      if (!valid) {
+        showToast('Please fill in all required registration fields.');
         return;
       }
 
-      localStorage.setItem('ceramic_user', name);
+      localStorage.setItem('ceramic_user', nameInput.value.trim());
       showToast('Account created successfully!');
       setTimeout(() => {
         window.location.href = 'account.html';

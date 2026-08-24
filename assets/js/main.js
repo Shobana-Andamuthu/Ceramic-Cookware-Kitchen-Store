@@ -277,7 +277,11 @@ function renderCart() {
 /* --------------------------------------------------------------------------
    6. WISHLIST SYSTEM (LOCALSTORAGE)
    -------------------------------------------------------------------------- */
-let wishlistItems = JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-3'];
+let wishlistItems = JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist'));
+if (!Array.isArray(wishlistItems)) {
+  wishlistItems = ['prod-1', 'prod-2'];
+  localStorage.setItem('ceramic_kitchen_wishlist', JSON.stringify(wishlistItems));
+}
 
 function initWishlist() {
   updateWishlistBadges();
@@ -303,11 +307,19 @@ function toggleWishlist(id, btnEl) {
   }
   localStorage.setItem('ceramic_kitchen_wishlist', JSON.stringify(wishlistItems));
   updateWishlistBadges();
+  if (typeof renderAccountWishlist === 'function') {
+    renderAccountWishlist();
+  }
 }
 
 function updateWishlistBadges() {
-  const wishBadges = document.querySelectorAll('.wishlist-badge-count');
-  wishBadges.forEach(el => el.textContent = wishlistItems.length);
+  const count = wishlistItems.length;
+  const wishBadges = document.querySelectorAll('.wishlist-badge-count, #accWishlistCount');
+  wishBadges.forEach(el => el.textContent = count);
+  const wishTextEl = document.getElementById('wishlistItemsCountText');
+  if (wishTextEl) {
+    wishTextEl.textContent = `${count} Item${count === 1 ? '' : 's'} Saved`;
+  }
 }
 
 /* --------------------------------------------------------------------------
