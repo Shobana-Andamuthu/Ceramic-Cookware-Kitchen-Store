@@ -729,68 +729,292 @@ html.dark .stock-order { color: #60a5fa; }
   font-size: 0.8rem;
 }
 
-/* Footer Section */
+/* ─── Footer — Precision Compact Layout ──────────────────────────────────── */
 .footer-wrapper {
   background-color: var(--bg-olive);
   color: #ffffff;
-  padding-top: 3.5rem;
-  padding-bottom: 1.5rem;
+  padding: 2.25rem 0 0; /* Refined top padding for professional balance */
 }
 
-.footer-title {
+/* Main footer grid: brand | explore(2-col) | care | contact | newsletter */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.8fr 1fr 1.1fr 1.7fr;
+  gap: 2rem 2.5rem; /* Clean grid spacing */
+  align-items: start;
+}
+
+/* Base style for footer columns to align top baseline */
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Brand column layout */
+.footer-brand-col {
+  max-width: 240px; /* Ensure comfortable readable width for brand description */
+}
+
+.footer-brand-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem; /* Match the title margin-bottom exactly for baseline alignment */
+  height: 24px; /* Fix height to align with heading text height */
+}
+
+.footer-brand-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-brand-name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.85rem;
   color: #ffffff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.footer-brand-desc {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6) !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Heading and Title Alignment */
+.footer-title {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   font-family: var(--font-sans);
+  margin-bottom: 1rem; /* Consistent spacing to match the brand logo container */
+  margin-top: 0;
+  display: block;
+  line-height: 24px; /* Matches the brand logo container height for baseline alignment */
+  height: 24px; /* Ensure heading boxes are identical height */
+}
+
+/* Explore sub-grid */
+.footer-explore-cols {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  gap: 0 2rem; /* Balanced, compact gap */
+  width: 100%;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.5rem; /* Equal vertical spacing between links */
+  margin: 0;
+  padding: 0;
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.75rem;
+  line-height: 1.4;
   transition: color var(--transition-fast);
+  display: block;
+  padding: 0;
 }
 
 .footer-link:hover {
   color: #ffffff;
 }
 
+/* Contact column text formatting */
+.footer-contact-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.68) !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Newsletter Input & Button Alignment */
 .newsletter-box {
   display: flex;
   gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.2rem;
 }
 
 .newsletter-input {
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid transparent;
-  padding: 0.6rem 1rem;
+  flex: 1;
+  min-width: 0;
+  height: 36px !important; /* Pixel-perfect identical height */
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  padding: 0 0.75rem !important;
   border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  width: 100%;
-  color: #322316;
+  font-size: 0.75rem !important;
+  color: #ffffff !important;
   outline: none;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .newsletter-input:focus {
-  border-color: var(--accent-brown);
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
+.newsletter-box button {
+  height: 36px !important; /* Pixel-perfect identical height */
+  padding: 0 1rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  background-color: var(--accent-brown) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-sm) !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  transition: background-color var(--transition-fast);
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+}
+
+.newsletter-box button:hover {
+  background-color: var(--accent-brown-hover) !important;
+}
+
+/* Bottom Bar */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2.25rem; /* Refined gap from columns */
+  padding: 1.5rem 0; /* Clean equal top/bottom padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.7);
+  gap: 1.5rem;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+/* Final CTA Section Enhancements */
+.footer-cta {
+  padding-top: 2.75rem; /* Refined space above heading */
+  padding-bottom: 1.75rem; /* Refined space below CTA buttons */
+  text-align: center;
+}
+
+.footer-cta .container-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.footer-cta p {
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.footer-cta .btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Responsive: Tablet (max-width: 1024px) ───────────────────────────────── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem 2rem !important;
+  }
+  .footer-brand-col {
+    grid-column: span 1 !important;
+    max-width: 100% !important;
+  }
+  .footer-explore-col {
+    grid-column: span 2 !important;
+  }
+}
+
+/* ─── Responsive: Mobile (max-width: 768px) ────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    padding: 2.5rem 0 0 !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .footer-brand-col,
+  .footer-explore-col {
+    grid-column: span 1 !important;
+  }
+  .footer-explore-cols {
+    gap: 0 1rem !important;
+  }
+  .footer-brand-logo-container,
+  .footer-title {
+    margin-bottom: 0.75rem !important;
+  }
+  .footer-bottom {
+    margin-top: 2rem !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0.75rem !important;
+    padding: 1.25rem 0 !important;
+  }
+  .newsletter-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+  }
+  .newsletter-input,
+  .newsletter-box button {
+    width: 100% !important;
+  }
 }
 
 /* Drawer & Modal Styling */

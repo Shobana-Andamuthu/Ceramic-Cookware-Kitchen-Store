@@ -288,10 +288,129 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE — SECTION 7: FINAL CTA
+       CONTACT PAGE — SECTION 5: DELIVERY & POLICY STRIP
        ========================================================================= -->
-  <section class="py-12 bg-brandOlive text-white text-center">
-    <div class="container-custom max-w-xl space-y-3">
+  <section class="py-8 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-center">
+        <div class="flex flex-col items-center gap-2 bg-brandCard border border-brandBorder rounded-xl p-4 shadow-subtle">
+          <svg class="w-6 h-6 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          <h4 class="font-serif font-bold text-sm text-brandText">Free Pan-India Shipping</h4>
+          <p class="text-stone-500 dark:text-stone-400">On all orders above ₹999. Express 3-5 day delivery via Delhivery & Bluedart.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 bg-brandCard border border-brandBorder rounded-xl p-4 shadow-subtle">
+          <svg class="w-6 h-6 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          <h4 class="font-serif font-bold text-sm text-brandText">30-Day Easy Returns</h4>
+          <p class="text-stone-500 dark:text-stone-400">Manufacturing defects or transit damage? We replace it hassle-free within 30 days.</p>
+        </div>
+        <div class="flex flex-col items-center gap-2 bg-brandCard border border-brandBorder rounded-xl p-4 shadow-subtle">
+          <svg class="w-6 h-6 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <h4 class="font-serif font-bold text-sm text-brandText">Secure Checkout</h4>
+          <p class="text-stone-500 dark:text-stone-400">256-bit SSL encryption on all transactions. Pay with UPI, cards, or net banking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT PAGE — SECTION 6: WHOLESALE & TRADE ENQUIRY
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">TRADE & WHOLESALE</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">Bulk & Registry Orders</h2>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            Looking to supply restaurants, hotels, or gifting platforms? We offer custom logo-embossed pottery, bulk pricing tiers, and exclusive wholesale accounts with dedicated support.
+          </p>
+          <ul class="space-y-2 text-xs text-stone-600 dark:text-stone-400">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brandBrown flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Custom pottery stamp engraving on 25+ orders</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brandBrown flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Dedicated wholesale account manager</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brandBrown flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Net 30 payment terms available</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-7 bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle">
+          <h3 class="font-serif font-bold text-base text-brandText mb-4">Submit Trade Enquiry</h3>
+          <form onsubmit="event.preventDefault(); showToast('Trade enquiry submitted! We respond within 24 hrs.');" class="space-y-3 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input type="text" required placeholder="Company / Restaurant Name" class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
+              <input type="email" required placeholder="Business Email" class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <select class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
+                <option>50 - 100 Units</option><option>100 - 500 Units</option><option>500+ Units</option>
+              </select>
+              <select class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
+                <option>Cookware Sets</option><option>Dining & Serveware</option><option>Gift Bundles</option><option>Mixed Assortment</option>
+              </select>
+            </div>
+            <textarea rows="2" placeholder="Additional requirements or custom specifications..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown"></textarea>
+            <button class="btn-brown w-full py-2.5 text-xs">Send Trade Enquiry &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT PAGE — SECTION 7: STUDIO TOUR BOOKING
+       ========================================================================= -->
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-8 space-y-3">
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">JAIPUR STUDIO VISITS</span>
+          <h2 class="text-xl font-serif font-bold text-brandText">Book a Weekend Pottery Workshop</h2>
+          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+            We host intimate Saturday studio tours and beginner wheel-throwing sessions for groups of 4–12. Walk through our Sanganer kiln, hand-throw your own clay bowl, and experience first-hand why our cookware tastes different.
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs font-semibold text-stone-600 dark:text-stone-400">
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg> Every Saturday, 10 AM – 1 PM</span>
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Groups of 4–12 people</span>
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> ₹999 per person, includes chai</span>
+          </div>
+        </div>
+        <div class="md:col-span-4 text-center">
+          <a href="#" onclick="showToast('Workshop booking form will open shortly!'); return false;" class="btn-brown text-xs py-3 px-6 w-full sm:w-auto">Book Studio Tour &rarr;</a>
+          <p class="text-[10px] text-stone-500 mt-2">Limited to 12 spots per Saturday session</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT PAGE — SECTION 8: FINAL CTA
+       ========================================================================= -->
+    <!-- =========================================================================
+       CONTACT — NEW SECTION: KICK-WHEEL WORKSHOP BOOKING
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/20 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Visit the Studio</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-brandText">Schedule a Live Kick-Wheel Throwing Session</h2>
+            <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+              Visiting Jaipur? Join us for an hour at the kick-wheel. Under the direct guidance of master potters, sift clay, center it on the stone wheel, and shape your own mini terracotta soup bowl to take home.
+            </p>
+            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 dark:text-stone-400 pt-1">
+              <div><strong class="font-semibold text-brandText">Daily Slots:</strong> 10:00 AM &amp; 3:00 PM</div>
+              <div class="hidden sm:block text-stone-300 dark:text-stone-700">|</div>
+              <div><strong class="font-semibold text-brandText">Fee:</strong> ₹450 per person</div>
+            </div>
+          </div>
+          <div class="lg:col-span-4 lg:text-right">
+            <button onclick="event.preventDefault(); showToast('Pottery slot request sent!');" class="btn-brown text-xs py-3 px-6 w-full lg:w-auto rounded-md shadow-sm">Request Studio Spot Pass &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="footer-cta bg-brandOlive text-white">
+    <div class="container-custom max-w-xl">
       <h2 class="text-2xl md:text-3xl font-serif font-bold">Browse the Collection First</h2>
       <p class="text-xs text-stone-200">Explore our handcrafted cooking pots and bakeware collections online.</p>
       <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore Shop &rarr;</a>
@@ -299,60 +418,84 @@
   </section>
 
   <!-- GLOBAL FOOTER -->
-  <footer class="footer-wrapper">
+      <footer class="footer-wrapper">
     <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h4 class="footer-title">Explore</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="products.html" class="footer-link">Products</a></li>
-            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
-            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
-            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-            <li><a href="contact.html#faq" class="footer-link">FAQs</a></li>
-          </ul>
+      <div class="footer-grid">
+
+        <!-- BRAND -->
+        <div class="footer-column footer-brand-col">
+          <div class="footer-brand-logo-container">
+            <div class="footer-brand-icon">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <span class="footer-brand-name">Ceramic Kitchen</span>
+          </div>
+          <p class="footer-brand-desc">Handcrafted earthen cookware from Jaipur's Sanganer Potter's Quarter since 2016.</p>
         </div>
-        <div>
+
+        <!-- EXPLORE -->
+        <div class="footer-column footer-explore-col">
+          <h4 class="footer-title">Explore</h4>
+          <div class="footer-explore-cols">
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="products.html" class="footer-link">Products</a></li>
+              <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+              <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+              <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+              <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CUSTOMER CARE -->
+        <div class="footer-column footer-care-col">
           <h4 class="footer-title">Customer Care</h4>
           <ul class="footer-links">
             <li><a href="account.html" class="footer-link">My Account</a></li>
             <li><a href="account.html" class="footer-link">Wishlist</a></li>
             <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
-            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping &amp; Returns</a></li>
           </ul>
         </div>
-        <div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact-col">
           <h4 class="footer-title">Contact Us</h4>
-          <p class="text-xs text-stone-200 leading-relaxed">
+          <p class="footer-contact-text">
             Studio 4, Potter's Quarter<br>
             Jaipur, Rajasthan 302001<br>
-            Phone: +91 91 123 4567<br>
-            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+            +91 91 123 4567<br>
+            Mon&ndash;Sat: 9 AM &ndash; 6 PM
           </p>
         </div>
-        <div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
-            <input type="email" required placeholder="Enter your email" class="newsletter-input">
-            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+            <input type="email" required placeholder="Your email" class="newsletter-input">
+            <button type="submit">Subscribe</button>
           </form>
         </div>
+
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
-        <div class="flex gap-4">
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <a href="#" class="hover:underline">Terms of Service</a>
+        <p>&copy; 2026 Ceramic Kitchen. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
     </div>
-  <!-- MOBILE NAVIGATION DRAWER -->
+  </footer><!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobileNavBackdrop" class="drawer-overlay"></div>
   <aside id="mobileNavDrawer" class="cart-drawer">
     <div class="cart-header">

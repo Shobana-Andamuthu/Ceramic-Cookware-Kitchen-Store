@@ -473,7 +473,7 @@
     <div class="container-custom max-w-xl text-center space-y-3">
       <h3 class="font-serif font-bold text-lg text-brandText">Need Assistance With An Order?</h3>
       <p class="text-xs text-stone-600 dark:text-stone-400">Our Jaipur pottery studio concierge is available Mon-Sat (9 AM - 6 PM IST).</p>
-      <div class="flex justify-center gap-3 pt-1">
+      <div class="btn-container">
         <a href="contact.html" class="btn-brown text-xs py-2 px-4">Contact Studio Support</a>
         <a href="contact.html#faq" class="btn-outline-brown text-xs py-2 px-4">View FAQ</a>
       </div>
@@ -481,10 +481,89 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 7: FINAL CTA
+       ACCOUNT — SECTION 7: REORDER YOUR STUDIO FAVOURITES
        ========================================================================= -->
-  <section class="py-12 bg-brandOlive text-white text-center">
-    <div class="container-custom max-w-xl space-y-3">
+  <section class="py-10 bg-brandCream border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="text-center max-w-xl mx-auto mb-6">
+        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block">PREVIOUSLY LOVED</span>
+        <h2 class="text-xl font-serif font-bold text-brandText">Quick Reorder Your Favourites</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 flex items-center gap-3 shadow-subtle hover:border-brandBrown transition-all">
+          <img src="assets/images/products/ceramic-cooking-pot.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
+          <div class="flex-1">
+            <h4 class="font-serif font-bold text-xs text-brandText">Ceramic Cooking Pot</h4>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 1,500.00</div>
+            <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-3" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1500.00">Reorder</button>
+          </div>
+        </div>
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 flex items-center gap-3 shadow-subtle hover:border-brandBrown transition-all">
+          <img src="assets/images/products/mug-set.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
+          <div class="flex-1">
+            <h4 class="font-serif font-bold text-xs text-brandText">Hand-Turned Mug Set</h4>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 229.00</div>
+            <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-10" data-title="Hand-Turned Mug Set, 3-Piece" data-price="229.00">Reorder</button>
+          </div>
+        </div>
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 flex items-center gap-3 shadow-subtle hover:border-brandBrown transition-all">
+          <img src="assets/images/products/large-platter.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
+          <div class="flex-1">
+            <h4 class="font-serif font-bold text-xs text-brandText">Large Platter Plate</h4>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 159.00</div>
+            <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-1" data-title="Large Platter Plate" data-price="159.00">Reorder</button>
+          </div>
+        </div>
+        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 flex items-center gap-3 shadow-subtle hover:border-brandBrown transition-all">
+          <img src="assets/images/products/serving-bowl.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
+          <div class="flex-1">
+            <h4 class="font-serif font-bold text-xs text-brandText">Earthen Serving Bowl</h4>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 340.00</div>
+            <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-6" data-title="Earthen Serving Soup Bowl" data-price="340.00">Reorder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ACCOUNT — SECTION 8: FINAL CTA
+       ========================================================================= -->
+    <!-- =========================================================================
+       ACCOUNT — NEW SECTION: CLAY GUILD REWARDS TIER
+       ========================================================================= -->
+  <section class="py-12 bg-brandTan/20 border-b border-brandBorder">
+    <div class="container-custom">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8 space-y-3">
+            <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Loyalty Status</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-brandText">Jaipur Clay Guild Membership</h2>
+            <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400">
+              You are currently registered as a **Kick-Wheel Apprentice** tier member. Earn points with each clayware purchase and redeem them for free studio seasoning oils and early collection releases.
+            </p>
+            <!-- Progress Bar -->
+            <div class="space-y-1">
+              <div class="flex justify-between text-[10px] font-bold text-stone-500">
+                <span>Apprentice (Level 1)</span>
+                <span>Master Potter (Level 2) — 200 Points to Unlock</span>
+              </div>
+              <div class="w-full bg-stone-200 dark:bg-stone-700 h-2.5 rounded-full overflow-hidden">
+                <div class="bg-brandBrown h-full" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-4 lg:text-right space-y-2">
+            <div class="text-2xl font-serif font-bold text-brandText">300 Points</div>
+            <button onclick="event.preventDefault(); showToast('Redirecting to Guild Catalog!');" class="btn-brown text-xs py-2.5 px-5 w-full rounded-md shadow-sm">Browse Guild Rewards Store</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="footer-cta bg-brandOlive text-white">
+    <div class="container-custom max-w-xl">
       <h2 class="text-2xl font-serif font-bold">Discover New Kiln Arrivals</h2>
       <p class="text-xs text-stone-200">Fresh hand-turned casseroles and teapots added weekly.</p>
       <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore New Cookware &rarr;</a>
@@ -1002,60 +1081,84 @@
   </script>
 
   <!-- GLOBAL FOOTER -->
-  <footer class="footer-wrapper">
+      <footer class="footer-wrapper">
     <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <h4 class="footer-title">Explore</h4>
-          <ul class="footer-links">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="products.html" class="footer-link">Products</a></li>
-            <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
-            <li><a href="recipes.html" class="footer-link">Recipes</a></li>
-            <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="gallery.html" class="footer-link">Gallery</a></li>
-            <li><a href="contact.html" class="footer-link">Contact</a></li>
-            <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
-          </ul>
+      <div class="footer-grid">
+
+        <!-- BRAND -->
+        <div class="footer-column footer-brand-col">
+          <div class="footer-brand-logo-container">
+            <div class="footer-brand-icon">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <span class="footer-brand-name">Ceramic Kitchen</span>
+          </div>
+          <p class="footer-brand-desc">Handcrafted earthen cookware from Jaipur's Sanganer Potter's Quarter since 2016.</p>
         </div>
-        <div>
+
+        <!-- EXPLORE -->
+        <div class="footer-column footer-explore-col">
+          <h4 class="footer-title">Explore</h4>
+          <div class="footer-explore-cols">
+            <ul class="footer-links">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="products.html" class="footer-link">Products</a></li>
+              <li><a href="material-guide.html" class="footer-link">Material Guide</a></li>
+              <li><a href="recipes.html" class="footer-link">Recipes</a></li>
+              <li><a href="gift-sets.html" class="footer-link">Gift Sets</a></li>
+            </ul>
+            <ul class="footer-links">
+              <li><a href="about.html" class="footer-link">About Us</a></li>
+              <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+              <li><a href="contact.html" class="footer-link">Contact</a></li>
+              <li><a href="contact.html#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CUSTOMER CARE -->
+        <div class="footer-column footer-care-col">
           <h4 class="footer-title">Customer Care</h4>
           <ul class="footer-links">
             <li><a href="account.html" class="footer-link">My Account</a></li>
             <li><a href="account.html" class="footer-link">Wishlist</a></li>
             <li><a href="material-guide.html" class="footer-link">Care Guide</a></li>
-            <li><a href="contact.html#faq" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="contact.html#faq" class="footer-link">Shipping &amp; Returns</a></li>
           </ul>
         </div>
-        <div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact-col">
           <h4 class="footer-title">Contact Us</h4>
-          <p class="text-xs text-stone-200 leading-relaxed">
+          <p class="footer-contact-text">
             Studio 4, Potter's Quarter<br>
             Jaipur, Rajasthan 302001<br>
-            Phone: +91 91 123 4567<br>
-            Hours: Mon - Sat: 9:00 AM - 6:00 PM
+            +91 91 123 4567<br>
+            Mon&ndash;Sat: 9 AM &ndash; 6 PM
           </p>
         </div>
-        <div>
+
+        <!-- NEWSLETTER -->
+        <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="text-xs text-stone-200 mb-3">Subscribe for artisan recipe guides and early collection drops.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
-            <input type="email" required placeholder="Enter your email" class="newsletter-input">
-            <button type="submit" class="btn-brown text-xs">Subscribe</button>
+            <input type="email" required placeholder="Your email" class="newsletter-input">
+            <button type="submit">Subscribe</button>
           </form>
         </div>
+
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Ceramic Cookware & Kitchen Store. All Rights Reserved.</p>
-        <div class="flex gap-4">
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <a href="#" class="hover:underline">Terms of Service</a>
+        <p>&copy; 2026 Ceramic Kitchen. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
     </div>
-  <!-- MOBILE NAVIGATION DRAWER -->
+  </footer><!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobileNavBackdrop" class="drawer-overlay"></div>
   <aside id="mobileNavDrawer" class="cart-drawer">
     <div class="cart-header">
