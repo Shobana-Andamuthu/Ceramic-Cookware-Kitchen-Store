@@ -1340,3 +1340,25 @@ html[dir="rtl"] .back-to-top-btn {
   flex-direction: column;
   gap: 0.75rem;
 }
+/* Signature dishes: keep all showcase cards perfectly aligned in one row */
+.signature-dishes-grid {
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
+.signature-dish-card {
+  height: 100%;
+  min-height: 130px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  .signature-dishes-grid {
+    grid-auto-rows: auto;
+  }
+
+  .signature-dish-card {
+    min-height: 0;
+  }
+}
+
