@@ -136,6 +136,29 @@ html.dark .hero-content-box .btn-outline-brown:hover {
   color: #fcd34d !important;
 }
 
+/* Gallery Card Text Overlay High-Contrast Fix */
+.gallery-card-item .gallery-overlay,
+.gallery-card-item h4,
+.gallery-card-item h4 * {
+  color: #ffffff !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.gallery-card-item .gallery-tag {
+  color: #fcd34d !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+html.dark .gallery-card-item h4,
+html.dark .gallery-card-item .gallery-overlay h4 {
+  color: #ffffff !important;
+}
+
+.gallery-card-item .gallery-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.45) 60%, rgba(0, 0, 0, 0) 100%) !important;
+  opacity: 1 !important;
+}
+
 /* Light Green / Olive Contrast Fix for Dark Mode */
 .text-brandOlive {
   color: var(--text-olive);
