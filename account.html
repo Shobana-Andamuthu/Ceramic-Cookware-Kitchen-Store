@@ -31,7 +31,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
@@ -471,7 +471,7 @@
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom max-w-xl text-center space-y-3">
-      <h3 class="font-serif font-bold text-lg text-brandText">Need Assistance With An Order&bull;</h3>
+      <h3 class="font-serif font-bold text-lg text-brandText">Need Assistance With An Order?</h3>
       <p class="text-xs text-stone-600 dark:text-stone-400">Our Jaipur pottery studio concierge is available Mon-Sat (9 AM - 6 PM IST).</p>
       <div class="btn-container">
         <a href="contact.html" class="btn-brown text-xs py-2 px-4">Contact Studio Support</a>
@@ -813,12 +813,12 @@
     }
 
     function switchAccountTab(tabName) {
-      document.querySelector(`.account-tab-btn[data-tab="${tabName}"]`)&bull;.click();
+      document.querySelector(`.account-tab-btn[data-tab="${tabName}"]`).click();
     }
 
     // Modal Helpers
-    function openModal(id) { document.getElementById(id)&bull;.classList.remove('hidden'); }
-    function closeModal(id) { document.getElementById(id)&bull;.classList.add('hidden'); }
+    function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
     // Courier Modal
     function openCourierModal(orderId, awb, status) {
@@ -906,7 +906,7 @@
     }
 
     function deleteAddressCard(cardId) {
-      document.getElementById(cardId)&bull;.remove();
+      document.getElementById(cardId).remove();
       showToast('Address removed');
     }
 
@@ -929,7 +929,7 @@
     }
 
     function removePaymentCard(cardId) {
-      document.getElementById(cardId)&bull;.remove();
+      document.getElementById(cardId).remove();
       showToast('Payment method removed');
     }
 
@@ -1001,11 +1001,11 @@
       const wishTextEl = document.getElementById('wishlistItemsCountText');
       const accCountEl = document.getElementById('accWishlistCount');
       
-      const items = (typeof wishlistItems !== 'undefined') &bull; wishlistItems : (JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2']);
+      const items = (typeof wishlistItems !== 'undefined') ? wishlistItems : (JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2']);
       const count = items.length;
 
       if (accCountEl) accCountEl.textContent = count;
-      if (wishTextEl) wishTextEl.textContent = `${count} Item${count === 1 &bull; '' : 's'} Saved`;
+      if (wishTextEl) wishTextEl.textContent = `${count} Item${count === 1 ? '' : 's'} Saved`;
       if (typeof updateWishlistBadges === 'function') updateWishlistBadges();
 
       if (!wishlistGrid) return;
