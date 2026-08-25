@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER -->
   <header class="main-header">
@@ -73,7 +73,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -81,7 +81,7 @@
   </header>
 
   <!-- =========================================================================
-       GALLERY — SECTION 1: GALLERY INTRODUCTION
+       GALLERY &mdash; SECTION 1: GALLERY INTRODUCTION
        ========================================================================= -->
   <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
     <div class="container-custom max-w-xl">
@@ -94,7 +94,7 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 2: GALLERY STATISTICS
+       GALLERY &mdash; SECTION 2: GALLERY STATISTICS
        ========================================================================= -->
   <section class="py-6 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -120,7 +120,7 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 3: CATEGORY FILTERS (FUNCTIONAL)
+       GALLERY &mdash; SECTION 3: CATEGORY FILTERS (FUNCTIONAL)
        ========================================================================= -->
   <section class="py-5 bg-brandCream border-b border-brandBorder">
     <div class="container-custom flex justify-center flex-wrap gap-2 text-xs font-semibold">
@@ -134,7 +134,7 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 4: GALLERY GRID (FILTERABLE, LIGHTBOX ENABLED)
+       GALLERY &mdash; SECTION 4: GALLERY GRID (FILTERABLE, LIGHTBOX ENABLED)
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -142,7 +142,7 @@
         
         <!-- ITEM 1 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="craftsmanship">
-          <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=800&q=80" alt="Jaipur Studio Pottery Wheel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/lifestyle/artisan-hands.png" alt="Jaipur Studio Pottery Wheel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">CRAFTSMANSHIP</span>
             <h4 class="font-serif font-bold text-sm">Wheel Throwing Session</h4>
@@ -151,7 +151,7 @@
 
         <!-- ITEM 2 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="cookware">
-          <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80" alt="Earthen Terracotta Cooking Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/lifestyle/kiln-firing.png" alt="Earthen Terracotta Cooking Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">COOKWARE</span>
             <h4 class="font-serif font-bold text-sm">Terracotta Dutch Ovens</h4>
@@ -160,7 +160,7 @@
 
         <!-- ITEM 3 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="dining">
-          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Glazed Ceramic Coffee Mug and Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/products/ceramic-cooking-pot.png" alt="Glazed Ceramic Coffee Mug and Plate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">DINING</span>
             <h4 class="font-serif font-bold text-sm">Hand-Turned Mug & Plate</h4>
@@ -169,7 +169,7 @@
 
         <!-- ITEM 4 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="kitchen">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Sunlit Kitchen Shelving with Ceramic Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/products/bakeware-casserole.png" alt="Sunlit Kitchen Shelving with Ceramic Pots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">KITCHEN</span>
             <h4 class="font-serif font-bold text-sm">Warm Kitchen Setting</h4>
@@ -187,7 +187,7 @@
 
         <!-- ITEM 6 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="dining">
-          <img src="https://images.unsplash.com/photo-1610701596061-2ecf227e85b2?auto=format&fit=crop&w=800&q=80" alt="Earthen Teapot and Tea Cups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/lifestyle/table-styling.png" alt="Earthen Teapot and Tea Cups" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">DINING</span>
             <h4 class="font-serif font-bold text-sm">Artisan Teapot Set</h4>
@@ -205,7 +205,7 @@
 
         <!-- ITEM 8 -->
         <div class="gallery-card-item gallery-item-trigger group cursor-pointer relative rounded-2xl overflow-hidden aspect-square border border-brandBorder shadow-subtle bg-brandTan transition-all duration-300" data-category="recipes">
-          <img src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80" alt="Fresh Baked Sourdough Bread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <img src="assets/images/lifestyle/kitchen-shelf.png" alt="Fresh Baked Sourdough Bread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
             <span class="text-[10px] font-bold uppercase tracking-widest text-amber-200">RECIPES</span>
             <h4 class="font-serif font-bold text-sm">Sourdough Baking</h4>
@@ -217,19 +217,19 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 4.5: JAIPUR KILN FIRING GALLERY (IMAGE LEFT)
+       GALLERY &mdash; SECTION 4.5: JAIPUR KILN FIRING GALLERY (IMAGE LEFT)
        ========================================================================= -->
   <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
-          <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80" alt="Traditional Brick Kiln Firing" class="w-full h-full object-cover">
+          <img src="assets/images/lifestyle/artisan-story.png" alt="Traditional Brick Kiln Firing" class="w-full h-full object-cover">
         </div>
         <div class="lg:col-span-6 space-y-4">
           <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">FIRE & ATMOSPHERE</span>
           <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Wood Kiln Firing & Vitrification</h2>
           <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-            Witnessing a firing night in Sanganer is pure magic. As temperatures cross 1200°C, wood embers dance around terracotta walls, permanently locking natural mineral colors into the ceramic surface.
+            Witnessing a firing night in Sanganer is pure magic. As temperatures cross 1200Â°C, wood embers dance around terracotta walls, permanently locking natural mineral colors into the ceramic surface.
           </p>
         </div>
       </div>
@@ -237,7 +237,7 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 4.6: MINERAL GLAZE LAB SPOTLIGHT (TEXT LEFT, IMAGE RIGHT)
+       GALLERY &mdash; SECTION 4.6: MINERAL GLAZE LAB SPOTLIGHT (TEXT LEFT, IMAGE RIGHT)
        ========================================================================= -->
   <section class="py-14 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -250,20 +250,20 @@
           </p>
         </div>
         <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-1 lg:order-2">
-          <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80" alt="Mineral Glaze Ingredients" class="w-full h-full object-cover">
+          <img src="assets/images/lifestyle/mineral-glaze.png" alt="Mineral Glaze Ingredients" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 4.7: KITCHEN SHELF LIFESTYLE SHOWCASE (IMAGE LEFT, TEXT RIGHT)
+       GALLERY &mdash; SECTION 4.7: KITCHEN SHELF LIFESTYLE SHOWCASE (IMAGE LEFT, TEXT RIGHT)
        ========================================================================= -->
   <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
-          <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80" alt="Sunlit Open Wooden Kitchen Shelving" class="w-full h-full object-cover">
+          <img src="assets/images/lifestyle/craftsmanship.png" alt="Sunlit Open Wooden Kitchen Shelving" class="w-full h-full object-cover">
         </div>
         <div class="lg:col-span-6 space-y-4">
           <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">HOME LIFESTYLE</span>
@@ -277,7 +277,7 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 5: CRAFTSMANSHIP STORY (CORRECTED ALTERNATING LAYOUT: TEXT LEFT, IMAGE RIGHT)
+       GALLERY &mdash; SECTION 5: CRAFTSMANSHIP STORY (CORRECTED ALTERNATING LAYOUT: TEXT LEFT, IMAGE RIGHT)
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -286,18 +286,18 @@
           <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">BEHIND THE WHEEL</span>
           <h2 class="text-2xl font-serif font-bold text-brandText">Preserving Earthen Heritage</h2>
           <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-            Each ceramic piece tells a story of patient craftsmanship. From wedging raw Jaipur clay to hand-applying lead-free glazes and firing at 1200°C.
+            Each ceramic piece tells a story of patient craftsmanship. From wedging raw Jaipur clay to hand-applying lead-free glazes and firing at 1200Â°C.
           </p>
         </div>
         <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle order-1 lg:order-2">
-          <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80" alt="Artisan Hands Shaping Clay" class="w-full h-full object-cover">
+          <img src="assets/images/products/tea-set.png" alt="Artisan Hands Shaping Clay" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 6: KITCHEN LIFESTYLE SHOWCASE
+       GALLERY &mdash; SECTION 6: KITCHEN LIFESTYLE SHOWCASE
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder text-center">
     <div class="container-custom max-w-xl space-y-3">
@@ -307,10 +307,10 @@
   </section>
 
   <!-- =========================================================================
-       GALLERY — SECTION 7: FINAL CTA
+       GALLERY &mdash; SECTION 7: FINAL CTA
        ========================================================================= -->
     <!-- =========================================================================
-       GALLERY — NEW SECTION: INSTAGRAM / COMMUNITY SHOWCASE
+       GALLERY &mdash; NEW SECTION: INSTAGRAM / COMMUNITY SHOWCASE
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -322,32 +322,32 @@
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         <!-- Feed Item 1 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=400&q=80" alt="Steaming stew cooked in a rustic earthenware clay pot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/products/large-platter.png" alt="Steaming stew cooked in a rustic earthenware clay pot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@kitchen_diaries</div>
         </div>
         <!-- Feed Item 2 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80" alt="Fresh bread on a rustic artisanal ceramic tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/products/serving-bowl.png" alt="Fresh bread on a rustic artisanal ceramic tray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@slow_sourdough</div>
         </div>
         <!-- Feed Item 3 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?auto=format&fit=crop&w=400&q=80" alt="Potter shaping raw clay on a kick-wheel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/products/storage-jar.png" alt="Potter shaping raw clay on a kick-wheel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@jaipur_pottery_fan</div>
         </div>
         <!-- Feed Item 4 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=400&q=80" alt="Healthy salad served in a handmade ceramic bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/products/mug-set.png" alt="Healthy salad served in a handmade ceramic bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@organic_chef_r</div>
         </div>
         <!-- Feed Item 5 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=400&q=80" alt="Artisanal clay teapot and tiny teacups on wooden table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/recipes/baking-sourdough.png" alt="Artisanal clay teapot and tiny teacups on wooden table" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@healthy_earthen</div>
         </div>
         <!-- Feed Item 6 -->
         <div class="group relative rounded-xl overflow-hidden shadow-subtle border border-brandBorder h-40 bg-stone-100">
-          <img src="https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?auto=format&fit=crop&w=400&q=80" alt="Handcrafted ceramic plates and mugs stacked on a kitchen shelf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/recipes/claypot-curry.png" alt="Handcrafted ceramic plates and mugs stacked on a kitchen shelf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[9px] px-2 py-0.5 rounded-full">@table_stylist_jaipur</div>
         </div>
       </div>
@@ -363,7 +363,7 @@
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+        <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -423,7 +423,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops &mdash; no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input">
             <button type="submit">Subscribe</button>
@@ -454,7 +454,7 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
@@ -495,3 +495,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
   <header class="main-header">
@@ -73,7 +73,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -81,7 +81,7 @@
   </header>
 
   <!-- =========================================================================
-       CART — SECTION 1: HERO
+       CART &mdash; SECTION 1: HERO
        ========================================================================= -->
   <section class="bg-brandTan/40 py-8 border-b border-brandBorder text-center">
     <div class="container-custom max-w-xl">
@@ -91,7 +91,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 2: MAIN CART ITEMS & ORDER SUMMARY
+       CART &mdash; SECTION 2: MAIN CART ITEMS & ORDER SUMMARY
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -114,7 +114,7 @@
           <div class="space-y-2 text-xs">
             <div class="flex justify-between">
               <span class="text-stone-600 dark:text-stone-400">Subtotal</span>
-              <span id="pageSubtotal" class="font-bold text-brandText">₹ 0.00</span>
+              <span id="pageSubtotal" class="font-bold text-brandText">&#8377; 0.00</span>
             </div>
             <div class="flex justify-between">
               <span class="text-stone-600 dark:text-stone-400">Eco Transit Protection</span>
@@ -128,7 +128,7 @@
 
           <div class="border-t border-brandBorder pt-3 flex justify-between items-center text-sm">
             <span class="font-bold text-brandText">Total</span>
-            <span id="pageTotal" class="font-bold text-amber-900 dark:text-amber-400 text-lg">₹ 0.00</span>
+            <span id="pageTotal" class="font-bold text-amber-900 dark:text-amber-400 text-lg">&#8377; 0.00</span>
           </div>
 
           <button onclick="showToast('Proceeding to checkout simulation!');" class="btn-brown w-full py-3 text-xs font-bold text-center block">Complete Checkout &rarr;</button>
@@ -144,7 +144,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 3: ECO PACKAGING PERKS (CLEAN SVG ICONS)
+       CART &mdash; SECTION 3: ECO PACKAGING PERKS (CLEAN SVG ICONS)
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
@@ -175,7 +175,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 4: COMPLEMENTARY CARE ADD-ONS
+       CART &mdash; SECTION 4: COMPLEMENTARY CARE ADD-ONS
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -193,7 +193,7 @@
             <p class="text-[11px] text-stone-500 mt-1">Cold-pressed oil specifically formulated for initial clay seasoning.</p>
           </div>
           <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">₹ 180.00</span>
+            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 180.00</span>
             <button onclick="addToCart('add-oil', 'Organic Mustard Clay Oil', 180, 'assets/images/products/storage-jar.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
           </div>
         </div>
@@ -205,7 +205,7 @@
             <p class="text-[11px] text-stone-500 mt-1">Soft plant bristles designed to clean terracotta without scratching glaze.</p>
           </div>
           <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">₹ 140.00</span>
+            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 140.00</span>
             <button onclick="addToCart('add-brush', 'Natural Sisal Scrubber Brush', 140, 'assets/images/products/serving-bowl.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
           </div>
         </div>
@@ -217,7 +217,7 @@
             <p class="text-[11px] text-stone-500 mt-1">Handwoven jute and clay ring mat to rest hot pots directly on dining tables.</p>
           </div>
           <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">₹ 220.00</span>
+            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 220.00</span>
             <button onclick="addToCart('add-mat', 'Terracotta Heat Trivet Mat', 220, 'assets/images/products/large-platter.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
           </div>
         </div>
@@ -229,7 +229,7 @@
             <p class="text-[11px] text-stone-500 mt-1">Hand-punched terracotta infuser cone for chai and herbal teas.</p>
           </div>
           <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">₹ 190.00</span>
+            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 190.00</span>
             <button onclick="addToCart('add-steeper', 'Clay Botanical Tea Steeper', 190, 'assets/images/products/tea-set.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
           </div>
         </div>
@@ -239,7 +239,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 5: CUSTOMER GUARANTEE & RETURNS
+       CART &mdash; SECTION 5: CUSTOMER GUARANTEE & RETURNS
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
@@ -262,7 +262,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 6: STUDIO CRAFTSMANSHIP BANNER
+       CART &mdash; SECTION 6: STUDIO CRAFTSMANSHIP BANNER
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -280,7 +280,7 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 7: WHY CHOOSE CERAMIC KITCHEN
+       CART &mdash; SECTION 7: WHY CHOOSE CERAMIC KITCHEN
        ========================================================================= -->
   <section class="py-10 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -304,7 +304,7 @@
           <p class="text-stone-500 dark:text-stone-400">Fair-wage artisan community in Sanganer, Jaipur.</p>
         </div>
         <div class="bg-brandCard border border-brandBorder p-4 rounded-xl shadow-subtle space-y-1">
-          <div class="font-serif font-bold text-xl text-brandBrown">4.9★</div>
+          <div class="font-serif font-bold text-xl text-brandBrown">4.9&#9733;</div>
           <div class="font-bold text-stone-500 uppercase tracking-wide text-[10px]">Customer Rating</div>
           <p class="text-stone-500 dark:text-stone-400">Based on 1,200+ verified reviews across platforms.</p>
         </div>
@@ -313,10 +313,10 @@
   </section>
 
   <!-- =========================================================================
-       CART — SECTION 8: FINAL CTA
+       CART &mdash; SECTION 8: FINAL CTA
        ========================================================================= -->
     <!-- =========================================================================
-       CART — NEW SECTION: TRANSIT SAFE BREAKAGE GUARANTEE
+       CART &mdash; NEW SECTION: TRANSIT SAFE BREAKAGE GUARANTEE
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -344,14 +344,14 @@
 
 <section class="footer-cta bg-brandOlive text-white">
     <div class="container-custom max-w-xl">
-      <h2 class="text-2xl font-serif font-bold">Need Custom Gifting or Assistance?</h2>
+      <h2 class="text-2xl font-serif font-bold">Need Custom Gifting or Assistance&bull;</h2>
       <p class="text-xs text-stone-200">Our studio concierge team is available to help with order customizations or handwritten gift notes.</p>
       <a href="contact.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Contact Studio Concierge &rarr;</a>
     </div>
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+        <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -411,7 +411,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops &mdash; no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input">
             <button type="submit">Subscribe</button>
@@ -442,7 +442,7 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
@@ -476,8 +476,8 @@
       const totalEl = document.getElementById('pageTotal');
       
       const sub = cartItems.reduce((a, b) => a + (b.price * b.qty), 0);
-      if (subtotalEl) subtotalEl.textContent = `₹ ${sub.toFixed(2)}`;
-      if (totalEl) totalEl.textContent = `₹ ${sub.toFixed(2)}`;
+      if (subtotalEl) subtotalEl.textContent = `&#8377; ${sub.toFixed(2)}`;
+      if (totalEl) totalEl.textContent = `&#8377; ${sub.toFixed(2)}`;
 
       if (!container) return;
       if (cartItems.length === 0) {
@@ -495,7 +495,7 @@
           <img src="${item.image}" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
           <div class="flex-1">
             <h4 class="font-serif font-bold text-sm text-brandText">${item.title}</h4>
-            <div class="text-xs font-bold text-amber-900 dark:text-amber-400">₹ ${item.price.toFixed(2)}</div>
+            <div class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; ${item.price.toFixed(2)}</div>
           </div>
           <div class="flex items-center gap-2">
             <button onclick="updateCartQty('${item.id}', -1); renderCartPage();" class="px-2 py-0.5 border border-brandBorder rounded text-xs font-bold">-</button>
@@ -511,3 +511,4 @@
   </script>
 </body>
 </html>
+

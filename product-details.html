@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
   <header class="main-header">
@@ -73,7 +73,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -81,7 +81,7 @@
   </header>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 1: MAIN SHOWCASE HERO
+       PRODUCT DETAILS &mdash; SECTION 1: MAIN SHOWCASE HERO
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -94,24 +94,24 @@
           </div>
           <div class="grid grid-cols-4 gap-3">
             <img src="assets/images/products/ceramic-cooking-pot.png" alt="Front View Pot" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBrown cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80" alt="Clay Texture Detail" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Simmering Stew in Pot" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Studio Handle Craft" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+            <img src="assets/images/products/ceramic-cooking-pot.png" alt="Clay Texture Detail" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+            <img src="assets/images/products/bakeware-casserole.png" alt="Simmering Stew in Pot" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
+            <img src="assets/images/products/stewing-stockpot.png" alt="Studio Handle Craft" onclick="document.getElementById('mainProductImg').src=this.src" class="h-20 w-full object-cover rounded-lg border border-brandBorder cursor-pointer">
           </div>
         </div>
 
         <!-- RIGHT: PRODUCT DETAILS & BUY BOX -->
         <div class="lg:col-span-6 space-y-5 flex flex-col justify-center">
-          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">COOKWARE • 2.5L CAPACITY</span>
+          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">COOKWARE &bull; 2.5L CAPACITY</span>
           <h1 class="text-3xl font-serif font-bold text-brandText">Durable Ceramic Cooking Pot with Lid</h1>
           
           <div class="flex items-center gap-3">
-            <div class="star-rating text-sm">★★★★★</div>
+            <div class="star-rating text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <span class="text-xs text-stone-500 font-semibold">(48 Verified Reviews)</span>
-            <span class="stock-in text-xs font-bold">● 12 in stock</span>
+            <span class="stock-in text-xs font-bold">â— 12 in stock</span>
           </div>
 
-          <div class="text-2xl font-bold text-amber-900 dark:text-amber-400">₹ 1,500.00</div>
+          <div class="text-2xl font-bold text-amber-900 dark:text-amber-400">&#8377; 1,500.00</div>
 
           <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Handmolded by studio potters using 100% natural Jaipur red clay. Vitrified at high temperature to seal moisture while slowly releasing far-infrared heat into soups, stews, and lentils.
@@ -127,7 +127,7 @@
             </div>
             <div class="flex items-center gap-4">
               <span class="font-bold text-stone-700 dark:text-stone-300 w-20">Stovetop:</span>
-              <span class="text-stone-600 dark:text-stone-400 font-semibold">Gas Flame, Electric Oven (Up to 260°C)</span>
+              <span class="text-stone-600 dark:text-stone-400 font-semibold">Gas Flame, Electric Oven (Up to 260Â°C)</span>
             </div>
           </div>
 
@@ -136,9 +136,9 @@
           </div>
 
           <div class="bg-brandTan/40 p-4 rounded-xl text-xs space-y-1 text-stone-600 dark:text-stone-400 border border-brandBorder">
-            <div>✓ 100% Lead-Free & Cadmium-Free Mineral Glaze</div>
-            <div>✓ Plastic-Free Honeycomb Transit Guarantee</div>
-            <div>✓ 30-Day Studio Warranty</div>
+            <div>âœ“ 100% Lead-Free & Cadmium-Free Mineral Glaze</div>
+            <div>âœ“ Plastic-Free Honeycomb Transit Guarantee</div>
+            <div>âœ“ 30-Day Studio Warranty</div>
           </div>
 
         </div>
@@ -148,7 +148,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 2: TECHNICAL SPECIFICATIONS GRID
+       PRODUCT DETAILS &mdash; SECTION 2: TECHNICAL SPECIFICATIONS GRID
        ========================================================================= -->
   <section class="py-10 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -163,7 +163,7 @@
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
           </div>
           <h3 class="font-serif font-bold text-brandText">Kiln Vitrification</h3>
-          <p class="text-stone-600 dark:text-stone-400">Dense clay body fired at 1180°C prevents moisture absorption and resists thermal shock on gas stovetops.</p>
+          <p class="text-stone-600 dark:text-stone-400">Dense clay body fired at 1180Â°C prevents moisture absorption and resists thermal shock on gas stovetops.</p>
         </div>
 
         <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
@@ -194,7 +194,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 3: CRAFTSMANSHIP JOURNEY
+       PRODUCT DETAILS &mdash; SECTION 3: CRAFTSMANSHIP JOURNEY
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -232,7 +232,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 4: SEASONING & CARE INSTRUCTIONS
+       PRODUCT DETAILS &mdash; SECTION 4: SEASONING & CARE INSTRUCTIONS
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
@@ -263,7 +263,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 5: RECOMMENDED RECIPES
+       PRODUCT DETAILS &mdash; SECTION 5: RECOMMENDED RECIPES
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -286,7 +286,7 @@
         </div>
 
         <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col sm:flex-row">
-          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Country Sourdough Boule" class="w-full sm:w-48 h-48 object-cover">
+          <img src="assets/images/products/clay-tagine.png" alt="Country Sourdough Boule" class="w-full sm:w-48 h-48 object-cover">
           <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-brandOlive uppercase">BAKEWARE</span>
@@ -301,7 +301,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 6: CUSTOMER REVIEWS
+       PRODUCT DETAILS &mdash; SECTION 6: CUSTOMER REVIEWS
        ========================================================================= -->
   <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -312,7 +312,7 @@
           <div class="flex items-center gap-3">
             <span class="text-3xl font-bold text-brandBrown font-serif">4.9</span>
             <div>
-              <div class="text-amber-800">★★★★★</div>
+              <div class="text-amber-800">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
               <div class="text-xs text-stone-500">Based on 48 kitchen reviews</div>
             </div>
           </div>
@@ -326,8 +326,8 @@
           
           <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-2">
             <div class="flex justify-between items-center text-xs">
-              <div class="font-bold text-brandText">Meera R. — Jaipur</div>
-              <div class="text-amber-800">★★★★★</div>
+              <div class="font-bold text-brandText">Meera R. &mdash; Jaipur</div>
+              <div class="text-amber-800">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
             <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
               "The heat retention is incredible! Dal cooked in this claypot tastes distinctly richer and stays hot for over an hour after turning off the gas."
@@ -336,8 +336,8 @@
 
           <div class="bg-brandCard border border-brandBorder rounded-xl p-5 space-y-2">
             <div class="flex justify-between items-center text-xs">
-              <div class="font-bold text-brandText">Vikram S. — Bengaluru</div>
-              <div class="text-amber-800">★★★★★</div>
+              <div class="font-bold text-brandText">Vikram S. &mdash; Bengaluru</div>
+              <div class="text-amber-800">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             </div>
             <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
               "Packaging was top notch! Honeycomb paper kept the lid completely safe during transit. Fits perfectly on our gas stovetop."
@@ -351,7 +351,7 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 7: RELATED STUDIO PRODUCTS (NO WISHLIST OVERLAY)
+       PRODUCT DETAILS &mdash; SECTION 7: RELATED STUDIO PRODUCTS (NO WISHLIST OVERLAY)
        ========================================================================= -->
   <section class="py-12 bg-brandCream">
     <div class="container-custom">
@@ -368,7 +368,7 @@
           </div>
           <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">DINING</div>
           <h3 class="product-title">Earthen Serving Soup Bowl</h3>
-          <div class="product-price">₹ 340.00</div>
+          <div class="product-price">&#8377; 340.00</div>
           <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-6" data-title="Earthen Serving Soup Bowl" data-price="340.00" data-image="assets/images/products/serving-bowl.png">Add to Bag</button>
         </div>
 
@@ -378,7 +378,7 @@
           </div>
           <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">BAKEWARE</div>
           <h3 class="product-title">Artisan Sourdough Ceramic Baker</h3>
-          <div class="product-price">₹ 1,250.00</div>
+          <div class="product-price">&#8377; 1,250.00</div>
           <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-4" data-title="Artisan Sourdough Ceramic Baker" data-price="1250.00" data-image="assets/images/products/bakeware-casserole.png">Add to Bag</button>
         </div>
 
@@ -388,7 +388,7 @@
           </div>
           <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">COOKWARE</div>
           <h3 class="product-title">Handcrafted Ceramic Fry Pan</h3>
-          <div class="product-price">₹ 1,180.00</div>
+          <div class="product-price">&#8377; 1&#8377;80.00</div>
           <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-5" data-title="Handcrafted Ceramic Fry Pan" data-price="1180.00" data-image="assets/images/products/fry-pan.png">Add to Bag</button>
         </div>
 
@@ -398,7 +398,7 @@
           </div>
           <div class="text-[10px] text-brandOlive font-bold uppercase mb-1">TEA & DRINKWARE</div>
           <h3 class="product-title">Hand-Turned Teapot & Cup Trio</h3>
-          <div class="product-price">₹ 1,350.00</div>
+          <div class="product-price">&#8377; 1,350.00</div>
           <button class="btn-brown text-xs py-2 w-full mt-3 btn-add-cart" data-id="prod-8" data-title="Hand-Turned Teapot & Cup Trio" data-price="1350.00" data-image="assets/images/products/tea-set.png">Add to Bag</button>
         </div>
 
@@ -407,10 +407,10 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCT DETAILS — SECTION 8: ARTISAN QUALITY PLEDGE BANNER
+       PRODUCT DETAILS &mdash; SECTION 8: ARTISAN QUALITY PLEDGE BANNER
        ========================================================================= -->
     <!-- =========================================================================
-       PRODUCT DETAILS — NEW SECTION: CRAFT PRODUCTION LIFECYCLE TIMELINE
+       PRODUCT DETAILS &mdash; NEW SECTION: CRAFT PRODUCTION LIFECYCLE TIMELINE
        ========================================================================= -->
   <section class="py-12 bg-brandTan/20 border-b border-brandBorder">
     <div class="container-custom">
@@ -438,7 +438,7 @@
         <div class="space-y-2 text-center p-4 bg-brandCard border border-brandBorder rounded-xl shadow-subtle">
           <div class="w-8 h-8 rounded-full bg-brandBrown text-white font-serif font-bold flex items-center justify-center mx-auto text-sm">4</div>
           <h3 class="font-bold text-brandText">Kiln Firing &amp; Glaze</h3>
-          <p class="text-stone-600 dark:text-stone-400">Pots are coated in natural lead-free mineral dust and vitrified in our wood-fired kiln at 1180°C for 18 hours.</p>
+          <p class="text-stone-600 dark:text-stone-400">Pots are coated in natural lead-free mineral dust and vitrified in our wood-fired kiln at 1180Â°C for 18 hours.</p>
         </div>
       </div>
     </div>
@@ -452,7 +452,7 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="font-serif font-bold text-sm">NABL Lab Certified</h3>
-          <p class="text-stone-200">100% lead, cadmium & heavy-metal free — tested by independent accredited labs.</p>
+          <p class="text-stone-200">100% lead, cadmium & heavy-metal free &mdash; tested by independent accredited labs.</p>
         </div>
         <div class="space-y-2">
           <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center mx-auto">
@@ -466,21 +466,21 @@
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           </div>
           <h3 class="font-serif font-bold text-sm">30-Day Replacement</h3>
-          <p class="text-stone-200">Manufacturing defects or glaze issues? We ship a replacement at no cost.</p>
+          <p class="text-stone-200">Manufacturing defects or glaze issues&bull; We ship a replacement at no cost.</p>
         </div>
         <div class="space-y-2">
           <div class="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center mx-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="font-serif font-bold text-sm">Free ₹999+ Shipping</h3>
-          <p class="text-stone-200">Pan-India express delivery on all orders over ₹999. Carbon-offset freight.</p>
+          <h3 class="font-serif font-bold text-sm">Free &#8377;999+ Shipping</h3>
+          <p class="text-stone-200">Pan-India express delivery on all orders over &#8377;999. Carbon-offset freight.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+        <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -540,7 +540,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops &mdash; no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input">
             <button type="submit">Subscribe</button>
@@ -571,7 +571,7 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
@@ -600,3 +600,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER -->
   <header class="main-header">
@@ -73,7 +73,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -81,7 +81,7 @@
   </header>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 1: PROFILE HERO
+       ACCOUNT &mdash; SECTION 1: PROFILE HERO
        ========================================================================= -->
   <section class="bg-brandTan/40 py-8 border-b border-brandBorder">
     <div class="container-custom flex items-center justify-between">
@@ -92,7 +92,7 @@
         <div>
           <span class="text-[10px] font-bold text-brandBrown uppercase tracking-widest">ARTISAN CLUB MEMBER</span>
           <h1 id="accountUserName" class="text-2xl font-serif font-bold text-brandText">Ananya Sharma</h1>
-          <p class="text-xs text-stone-500">Member since October 2025 • Jaipur Studio Guild</p>
+          <p class="text-xs text-stone-500">Member since October 2025 &bull; Jaipur Studio Guild</p>
         </div>
       </div>
       <button onclick="localStorage.removeItem('ceramic_user'); showToast('Logged out'); setTimeout(() => window.location.href = 'login.html', 500);" class="btn-outline-brown text-xs py-2 px-4">Log Out</button>
@@ -100,7 +100,7 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 2: DASHBOARD TABS
+       ACCOUNT &mdash; SECTION 2: DASHBOARD TABS
        ========================================================================= -->
   <section class="py-4 bg-brandCream border-b border-brandBorder">
     <div class="container-custom flex justify-center flex-wrap gap-2 text-xs font-semibold">
@@ -113,7 +113,7 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 3: ACTIVE TAB CONTENT PANELS
+       ACCOUNT &mdash; SECTION 3: ACTIVE TAB CONTENT PANELS
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -135,7 +135,7 @@
               <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2.5">
                 <div>
                   <span class="font-bold text-brandText">Order #CK-89420</span>
-                  <span class="text-stone-500 ml-2">• Placed 14 Feb 2026</span>
+                  <span class="text-stone-500 ml-2">&bull; Placed 14 Feb 2026</span>
                 </div>
                 <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Delivered</span>
               </div>
@@ -144,11 +144,11 @@
                 <img src="assets/images/products/ceramic-cooking-pot.png" alt="Ceramic Pot" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
                 <div class="flex-1">
                   <h4 class="font-serif font-bold text-sm text-brandText">Durable Ceramic Cooking Pot with Lid</h4>
-                  <div class="text-xs text-stone-500">Qty: 1 • Size: 2.5 Liters • Color: Natural Terracotta</div>
+                  <div class="text-xs text-stone-500">Qty: 1 &bull; Size: 2.5 Liters &bull; Color: Natural Terracotta</div>
                   <div class="text-xs text-stone-400 mt-0.5">Courier: Express Cargo (AWB: EXP-982410294)</div>
                 </div>
                 <div class="text-left sm:text-right flex sm:flex-col justify-between items-center sm:items-end">
-                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 1,500.00</div>
+                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">&#8377; 1,500.00</div>
                   <div class="flex gap-2 mt-2">
                     <button onclick="openCourierModal('CK-89420', 'EXP-982410294', 'Delivered to Jaipur Address on Feb 16, 2026')" class="btn-brown text-xs py-1 px-3">Track Courier &rarr;</button>
                     <button onclick="openInvoiceModal('CK-89420', '14 Feb 2026', 'Durable Ceramic Cooking Pot with Lid', '1,500.00')" class="btn-outline-brown text-xs py-1 px-3">Download PDF</button>
@@ -162,7 +162,7 @@
               <div class="flex flex-wrap justify-between items-center text-xs border-b border-brandBorder pb-2.5">
                 <div>
                   <span class="font-bold text-brandText">Order #CK-81204</span>
-                  <span class="text-stone-500 ml-2">• Placed 02 Jan 2026</span>
+                  <span class="text-stone-500 ml-2">&bull; Placed 02 Jan 2026</span>
                 </div>
                 <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold text-[10px]">Delivered</span>
               </div>
@@ -171,11 +171,11 @@
                 <img src="assets/images/products/mug-set.png" alt="Mug Set" class="w-16 h-16 object-cover rounded-lg border border-brandBorder">
                 <div class="flex-1">
                   <h4 class="font-serif font-bold text-sm text-brandText">Hand-Turned Mug Set, 3-Piece</h4>
-                  <div class="text-xs text-stone-500">Qty: 1 • Glaze: Cream White Finish</div>
+                  <div class="text-xs text-stone-500">Qty: 1 &bull; Glaze: Cream White Finish</div>
                   <div class="text-xs text-stone-400 mt-0.5">Courier: Studio Direct Post (AWB: SDP-441092)</div>
                 </div>
                 <div class="text-left sm:text-right flex sm:flex-col justify-between items-center sm:items-end">
-                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">₹ 229.00</div>
+                  <div class="font-bold text-amber-900 dark:text-amber-400 text-sm">&#8377; 229.00</div>
                   <div class="flex gap-2 mt-2">
                     <button onclick="openCourierModal('CK-81204', 'SDP-441092', 'Delivered to Jaipur Address on Jan 05, 2026')" class="btn-brown text-xs py-1 px-3">Track Courier &rarr;</button>
                     <button onclick="openInvoiceModal('CK-81204', '02 Jan 2026', 'Hand-Turned Mug Set, 3-Piece', '229.00')" class="btn-outline-brown text-xs py-1 px-3">Download PDF</button>
@@ -209,7 +209,7 @@
                 <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">DINING</span>
                 <h4 class="font-serif font-bold text-sm text-brandText">Large Platter Plate</h4>
                 <p class="text-xs text-stone-500 line-clamp-2">Hand-glazed serving platter, ideal for rustic sourdough and fruit displays.</p>
-                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ 159.00</div>
+                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">&#8377; 159.00</div>
               </div>
               <button onclick="addToCart('prod-1', 'Large Platter Plate', 159.00, 'assets/images/products/large-platter.png')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
             </div>
@@ -226,7 +226,7 @@
                 <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">DINING</span>
                 <h4 class="font-serif font-bold text-sm text-brandText">Ceramic Serving Bowl</h4>
                 <p class="text-xs text-stone-500 line-clamp-2">Deep speckled clay bowl crafted for soups, salads, and pasta dishes.</p>
-                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ 340.00</div>
+                <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">&#8377; 340.00</div>
               </div>
               <button onclick="addToCart('prod-2', 'Ceramic Serving Bowl', 340.00, 'assets/images/products/serving-bowl.png')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
             </div>
@@ -255,7 +255,7 @@
               <div>
                 <h4 class="font-serif font-bold text-base text-brandText">Home Studio</h4>
                 <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">Ananya Sharma</p>
-                <p class="text-xs text-stone-500 mt-1">42 Pottery Lane, Sanganer<br>Jaipur, Rajasthan — 302029</p>
+                <p class="text-xs text-stone-500 mt-1">42 Pottery Lane, Sanganer<br>Jaipur, Rajasthan &mdash; 302029</p>
                 <p class="text-xs text-stone-500 mt-1">Phone: +91 98765 43210</p>
               </div>
             </div>
@@ -266,16 +266,16 @@
                 <span class="px-2.5 py-0.5 rounded-full bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-300 font-bold text-[10px] uppercase">Secondary</span>
                 <div class="flex gap-2 text-xs">
                   <button onclick="setAddressDefault('addr-card-2')" class="text-stone-500 hover:text-brandBrown font-bold">Set Default</button>
-                  <span class="text-stone-300">•</span>
+                  <span class="text-stone-300">&bull;</span>
                   <button onclick="editAddressModal('Pottery Guild Workshop', 'Ananya Sharma (Studio 9)', '108 Crafts Avenue, Malviya Nagar', 'Jaipur', 'Rajasthan', '302017', '+91 98765 43210')" class="text-brandBrown font-bold hover:underline">Edit</button>
-                  <span class="text-stone-300">•</span>
+                  <span class="text-stone-300">&bull;</span>
                   <button onclick="deleteAddressCard('addr-card-2')" class="text-red-500 font-bold hover:underline">Delete</button>
                 </div>
               </div>
               <div>
                 <h4 class="font-serif font-bold text-base text-brandText">Pottery Guild Workshop</h4>
                 <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">Ananya Sharma (Studio 9)</p>
-                <p class="text-xs text-stone-500 mt-1">108 Crafts Avenue, Malviya Nagar<br>Jaipur, Rajasthan — 302017</p>
+                <p class="text-xs text-stone-500 mt-1">108 Crafts Avenue, Malviya Nagar<br>Jaipur, Rajasthan &mdash; 302017</p>
                 <p class="text-xs text-stone-500 mt-1">Phone: +91 98765 43210</p>
               </div>
             </div>
@@ -301,8 +301,8 @@
               </div>
               <div>
                 <h4 class="font-serif font-bold text-sm text-brandText">HDFC Platinum Card</h4>
-                <p class="text-xs font-mono text-stone-600 dark:text-stone-400 mt-1">•••• •••• •••• 4092</p>
-                <p class="text-[11px] text-stone-400">Expires 08 / 2028 • Ananya Sharma</p>
+                <p class="text-xs font-mono text-stone-600 dark:text-stone-400 mt-1">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 4092</p>
+                <p class="text-[11px] text-stone-400">Expires 08 / 2028 &bull; Ananya Sharma</p>
               </div>
               <div class="flex justify-between items-center pt-2 border-t border-brandBorder text-xs">
                 <button onclick="showToast('Card details editable');" class="text-brandBrown font-bold hover:underline">Edit</button>
@@ -335,7 +335,7 @@
                   <span class="px-2 py-0.5 rounded bg-brandBrown text-white font-bold text-[10px]">Active</span>
                 </div>
                 <h4 class="font-serif font-bold text-sm text-brandText mt-2">Artisan Store Credit</h4>
-                <div class="text-xl font-serif font-bold text-amber-900 dark:text-amber-400 mt-1" id="walletBalanceText">₹ 450.00</div>
+                <div class="text-xl font-serif font-bold text-amber-900 dark:text-amber-400 mt-1" id="walletBalanceText">&#8377; 450.00</div>
                 <p class="text-[11px] text-stone-500">Usable on any ceramic cookware purchase</p>
               </div>
               <button onclick="openTopupModal()" class="btn-brown w-full text-xs py-2 mt-2">Top Up Wallet &rarr;</button>
@@ -380,15 +380,15 @@
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
                   <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">Current Password</label>
-                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                  <input type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
                 </div>
                 <div>
                   <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">New Password</label>
-                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                  <input type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
                 </div>
                 <div>
                   <label class="block text-[11px] text-stone-600 dark:text-stone-400 mb-1">Confirm Password</label>
-                  <input type="password" placeholder="••••••••" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
+                  <input type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="w-full px-3 py-2 rounded-lg border border-brandBorder bg-brandCream text-xs text-brandText">
                 </div>
               </div>
             </div>
@@ -422,7 +422,7 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 4: QUICK ACCOUNT ACTIONS
+       ACCOUNT &mdash; SECTION 4: QUICK ACCOUNT ACTIONS
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
@@ -435,7 +435,7 @@
 
         <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle hover:border-brandBrown transition-all">
           <h3 class="font-serif font-bold text-sm text-brandText">Saved Payment Cards</h3>
-          <p class="text-xs text-stone-500">Visa ending in •••• 4092</p>
+          <p class="text-xs text-stone-500">Visa ending in &bull;&bull;&bull;&bull; 4092</p>
           <button onclick="switchAccountTab('payment')" class="text-xs text-brandBrown font-bold hover:underline">Manage Methods &rarr;</button>
         </div>
 
@@ -449,7 +449,7 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 5: MEMBER REWARDS & GUILD PERKS
+       ACCOUNT &mdash; SECTION 5: MEMBER REWARDS & GUILD PERKS
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -457,7 +457,7 @@
         <div class="lg:col-span-8 space-y-2">
           <span class="text-[10px] font-bold text-brandBrown uppercase tracking-widest">ARTISAN REWARDS</span>
           <h3 class="font-serif font-bold text-xl text-brandText">You Have 350 Studio Clay Points</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400">Earn 10 Clay Points for every ₹ 100 spent. Redeem points for free ceramic teacups and exclusive gift wrapping.</p>
+          <p class="text-xs text-stone-600 dark:text-stone-400">Earn 10 Clay Points for every &#8377; 100 spent. Redeem points for free ceramic teacups and exclusive gift wrapping.</p>
         </div>
         <div class="lg:col-span-4 text-right">
           <button onclick="showToast('Redemption catalog coming soon!');" class="btn-brown text-xs py-2.5 px-5 w-full lg:w-auto">Redeem Rewards &rarr;</button>
@@ -467,11 +467,11 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 6: CUSTOMER SUPPORT CARD
+       ACCOUNT &mdash; SECTION 6: CUSTOMER SUPPORT CARD
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom max-w-xl text-center space-y-3">
-      <h3 class="font-serif font-bold text-lg text-brandText">Need Assistance With An Order?</h3>
+      <h3 class="font-serif font-bold text-lg text-brandText">Need Assistance With An Order&bull;</h3>
       <p class="text-xs text-stone-600 dark:text-stone-400">Our Jaipur pottery studio concierge is available Mon-Sat (9 AM - 6 PM IST).</p>
       <div class="btn-container">
         <a href="contact.html" class="btn-brown text-xs py-2 px-4">Contact Studio Support</a>
@@ -481,7 +481,7 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 7: REORDER YOUR STUDIO FAVOURITES
+       ACCOUNT &mdash; SECTION 7: REORDER YOUR STUDIO FAVOURITES
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -494,7 +494,7 @@
           <img src="assets/images/products/ceramic-cooking-pot.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
           <div class="flex-1">
             <h4 class="font-serif font-bold text-xs text-brandText">Ceramic Cooking Pot</h4>
-            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 1,500.00</div>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">&#8377; 1,500.00</div>
             <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-3" data-title="Durable Ceramic Cooking Pot with Lid" data-price="1500.00">Reorder</button>
           </div>
         </div>
@@ -502,7 +502,7 @@
           <img src="assets/images/products/mug-set.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
           <div class="flex-1">
             <h4 class="font-serif font-bold text-xs text-brandText">Hand-Turned Mug Set</h4>
-            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 229.00</div>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">&#8377; 229.00</div>
             <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-10" data-title="Hand-Turned Mug Set, 3-Piece" data-price="229.00">Reorder</button>
           </div>
         </div>
@@ -510,7 +510,7 @@
           <img src="assets/images/products/large-platter.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
           <div class="flex-1">
             <h4 class="font-serif font-bold text-xs text-brandText">Large Platter Plate</h4>
-            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 159.00</div>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">&#8377; 159.00</div>
             <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-1" data-title="Large Platter Plate" data-price="159.00">Reorder</button>
           </div>
         </div>
@@ -518,7 +518,7 @@
           <img src="assets/images/products/serving-bowl.png" class="w-14 h-14 object-cover rounded-lg border border-brandBorder">
           <div class="flex-1">
             <h4 class="font-serif font-bold text-xs text-brandText">Earthen Serving Bowl</h4>
-            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">₹ 340.00</div>
+            <div class="text-xs text-amber-900 dark:text-amber-400 font-bold">&#8377; 340.00</div>
             <button class="btn-brown text-[10px] py-1 px-3 mt-1 btn-add-cart" data-id="prod-6" data-title="Earthen Serving Soup Bowl" data-price="340.00">Reorder</button>
           </div>
         </div>
@@ -527,10 +527,10 @@
   </section>
 
   <!-- =========================================================================
-       ACCOUNT — SECTION 8: FINAL CTA
+       ACCOUNT &mdash; SECTION 8: FINAL CTA
        ========================================================================= -->
     <!-- =========================================================================
-       ACCOUNT — NEW SECTION: CLAY GUILD REWARDS TIER
+       ACCOUNT &mdash; NEW SECTION: CLAY GUILD REWARDS TIER
        ========================================================================= -->
   <section class="py-12 bg-brandTan/20 border-b border-brandBorder">
     <div class="container-custom">
@@ -546,7 +546,7 @@
             <div class="space-y-1">
               <div class="flex justify-between text-[10px] font-bold text-stone-500">
                 <span>Apprentice (Level 1)</span>
-                <span>Master Potter (Level 2) — 200 Points to Unlock</span>
+                <span>Master Potter (Level 2) &mdash; 200 Points to Unlock</span>
               </div>
               <div class="w-full bg-stone-200 dark:bg-stone-700 h-2.5 rounded-full overflow-hidden">
                 <div class="bg-brandBrown h-full" style="width: 60%"></div>
@@ -588,31 +588,31 @@
         </div>
         <div class="space-y-3 pt-2">
           <div class="flex items-center gap-3">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">âœ“</div>
             <div>
               <p class="font-bold text-brandText">Order Confirmed & Sealed</p>
-              <p class="text-[10px] text-stone-400">Jaipur Studio Guild • 14 Feb, 10:30 AM</p>
+              <p class="text-[10px] text-stone-400">Jaipur Studio Guild &bull; 14 Feb, 10:30 AM</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">âœ“</div>
             <div>
               <p class="font-bold text-brandText">Kiln Thermal Check & Wooden Tagging</p>
-              <p class="text-[10px] text-stone-400">Packaging Station #2 • 14 Feb, 03:15 PM</p>
+              <p class="text-[10px] text-stone-400">Packaging Station #2 &bull; 14 Feb, 03:15 PM</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">âœ“</div>
             <div>
               <p class="font-bold text-brandText">In Transit with Express Cargo</p>
-              <p class="text-[10px] text-stone-400">Jaipur Sorting Hub • 15 Feb, 08:00 AM</p>
+              <p class="text-[10px] text-stone-400">Jaipur Sorting Hub &bull; 15 Feb, 08:00 AM</p>
             </div>
           </div>
           <div class="flex items-center gap-3">
-            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">✓</div>
+            <div class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[10px] font-bold">âœ“</div>
             <div>
               <p class="font-bold text-emerald-600 dark:text-emerald-400" id="courierStatusText">Delivered to Recipient</p>
-              <p class="text-[10px] text-stone-400">Handed over to Ananya Sharma • 16 Feb</p>
+              <p class="text-[10px] text-stone-400">Handed over to Ananya Sharma &bull; 16 Feb</p>
             </div>
           </div>
         </div>
@@ -641,11 +641,11 @@
         </div>
         <div class="flex justify-between items-center font-bold text-brandText pt-1">
           <span id="invModalItem">Durable Ceramic Cooking Pot with Lid</span>
-          <span id="invModalPrice">₹ 1,500.00</span>
+          <span id="invModalPrice">&#8377; 1,500.00</span>
         </div>
         <div class="border-t border-brandBorder pt-2 flex justify-between font-bold text-stone-700 dark:text-stone-300">
           <span>Total Paid (Incl. Taxes & Packaging):</span>
-          <span class="text-amber-900 dark:text-amber-400" id="invModalTotal">₹ 1,500.00</span>
+          <span class="text-amber-900 dark:text-amber-400" id="invModalTotal">&#8377; 1,500.00</span>
         </div>
       </div>
       <button onclick="downloadInvoicePDF()" class="btn-brown w-full text-xs py-2.5 flex items-center justify-center gap-2">
@@ -757,13 +757,13 @@
         <div>
           <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Select Amount</label>
           <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="setTopupAmt(500)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 500</button>
-            <button type="button" onclick="setTopupAmt(1000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 1,000</button>
-            <button type="button" onclick="setTopupAmt(2000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">₹ 2,000</button>
+            <button type="button" onclick="setTopupAmt(500)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">&#8377; 500</button>
+            <button type="button" onclick="setTopupAmt(1000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">&#8377; 1,000</button>
+            <button type="button" onclick="setTopupAmt(2000)" class="p-2 rounded-lg border border-brandBorder bg-brandCream font-bold hover:border-brandBrown">&#8377; 2,000</button>
           </div>
         </div>
         <div>
-          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Custom Amount (₹)</label>
+          <label class="block font-semibold text-stone-700 dark:text-stone-300 mb-1">Custom Amount (&#8377;)</label>
           <input type="number" id="topupCustomAmt" value="500" min="100" class="w-full p-2.5 rounded-lg border border-brandBorder bg-brandCream text-brandText font-bold">
         </div>
         <button type="submit" class="btn-brown w-full py-2.5 mt-2">Proceed to Add Funds</button>
@@ -813,12 +813,12 @@
     }
 
     function switchAccountTab(tabName) {
-      document.querySelector(`.account-tab-btn[data-tab="${tabName}"]`)?.click();
+      document.querySelector(`.account-tab-btn[data-tab="${tabName}"]`)&bull;.click();
     }
 
     // Modal Helpers
-    function openModal(id) { document.getElementById(id)?.classList.remove('hidden'); }
-    function closeModal(id) { document.getElementById(id)?.classList.add('hidden'); }
+    function openModal(id) { document.getElementById(id)&bull;.classList.remove('hidden'); }
+    function closeModal(id) { document.getElementById(id)&bull;.classList.add('hidden'); }
 
     // Courier Modal
     function openCourierModal(orderId, awb, status) {
@@ -833,8 +833,8 @@
       document.getElementById('invModalTitle').textContent = `Invoice #${orderId}`;
       document.getElementById('invModalDate').textContent = date;
       document.getElementById('invModalItem').textContent = item;
-      document.getElementById('invModalPrice').textContent = `₹ ${price}`;
-      document.getElementById('invModalTotal').textContent = `₹ ${price}`;
+      document.getElementById('invModalPrice').textContent = `&#8377; ${price}`;
+      document.getElementById('invModalTotal').textContent = `&#8377; ${price}`;
       openModal('invoiceModal');
     }
 
@@ -885,7 +885,7 @@
         <div>
           <h4 class="font-serif font-bold text-base text-brandText">${title}</h4>
           <p class="text-xs font-semibold text-stone-700 dark:text-stone-300">${name}</p>
-          <p class="text-xs text-stone-500 mt-1">${street}<br>${city} — ${pin}</p>
+          <p class="text-xs text-stone-500 mt-1">${street}<br>${city} &mdash; ${pin}</p>
           <p class="text-xs text-stone-500 mt-1">Phone: ${phone}</p>
         </div>
       `;
@@ -906,7 +906,7 @@
     }
 
     function deleteAddressCard(cardId) {
-      document.getElementById(cardId)?.remove();
+      document.getElementById(cardId)&bull;.remove();
       showToast('Address removed');
     }
 
@@ -929,7 +929,7 @@
     }
 
     function removePaymentCard(cardId) {
-      document.getElementById(cardId)?.remove();
+      document.getElementById(cardId)&bull;.remove();
       showToast('Payment method removed');
     }
 
@@ -940,9 +940,9 @@
       const amt = parseFloat(document.getElementById('topupCustomAmt').value || 500);
       const curr = 450.00;
       const total = curr + amt;
-      document.getElementById('walletBalanceText').textContent = `₹ ${total.toFixed(2)}`;
+      document.getElementById('walletBalanceText').textContent = `&#8377; ${total.toFixed(2)}`;
       closeModal('walletModal');
-      showToast(`Added ₹ ${amt} to Studio Wallet! Balance: ₹ ${total.toFixed(2)}`);
+      showToast(`Added &#8377; ${amt} to Studio Wallet! Balance: &#8377; ${total.toFixed(2)}`);
     }
 
     const wishlistProductCatalog = {
@@ -1001,11 +1001,11 @@
       const wishTextEl = document.getElementById('wishlistItemsCountText');
       const accCountEl = document.getElementById('accWishlistCount');
       
-      const items = (typeof wishlistItems !== 'undefined') ? wishlistItems : (JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2']);
+      const items = (typeof wishlistItems !== 'undefined') &bull; wishlistItems : (JSON.parse(localStorage.getItem('ceramic_kitchen_wishlist')) || ['prod-1', 'prod-2']);
       const count = items.length;
 
       if (accCountEl) accCountEl.textContent = count;
-      if (wishTextEl) wishTextEl.textContent = `${count} Item${count === 1 ? '' : 's'} Saved`;
+      if (wishTextEl) wishTextEl.textContent = `${count} Item${count === 1 &bull; '' : 's'} Saved`;
       if (typeof updateWishlistBadges === 'function') updateWishlistBadges();
 
       if (!wishlistGrid) return;
@@ -1044,7 +1044,7 @@
               <span class="text-[10px] font-bold text-brandBrown uppercase tracking-wider">${prod.category}</span>
               <h4 class="font-serif font-bold text-sm text-brandText">${prod.title}</h4>
               <p class="text-xs text-stone-500 line-clamp-2">${prod.description}</p>
-              <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">₹ ${prod.price.toFixed(2)}</div>
+              <div class="font-bold text-amber-900 dark:text-amber-400 text-sm mt-1">&#8377; ${prod.price.toFixed(2)}</div>
             </div>
             <button onclick="addToCart('${prod.id}', '${prod.title.replace(/'/g, "\\'")}', ${prod.price}, '${prod.image}')" class="btn-brown w-full text-xs py-2">Add to Shopping Bag</button>
           </div>
@@ -1081,7 +1081,7 @@
   </script>
 
   <!-- GLOBAL FOOTER -->
-      <footer class="footer-wrapper">
+      <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -1141,7 +1141,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops &mdash; no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input">
             <button type="submit">Subscribe</button>
@@ -1170,7 +1170,7 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
@@ -1208,7 +1208,7 @@
     <div class="cart-footer">
       <div class="flex justify-between items-center mb-4">
         <span class="text-sm font-semibold">Subtotal:</span>
-        <span id="cartSubtotal" class="font-serif font-bold text-lg text-brandBrown">₹ 0.00</span>
+        <span id="cartSubtotal" class="font-serif font-bold text-lg text-brandBrown">&#8377; 0.00</span>
       </div>
       <a href="cart.html" class="btn-brown w-full text-center block text-xs">View Cart & Checkout</a>
     </div>
@@ -1227,3 +1227,4 @@
   </script>
 </body>
 </html>
+

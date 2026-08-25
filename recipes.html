@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER -->
   <header class="main-header">
@@ -73,7 +73,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9790; Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -81,7 +81,7 @@
   </header>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 1: HERO
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 1: HERO
        ========================================================================= -->
   <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
     <div class="container-custom max-w-xl">
@@ -94,7 +94,7 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 2: FEATURED RECIPE SPOTLIGHT (BALANCED & PERFECTLY FILLED)
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 2: FEATURED RECIPE SPOTLIGHT (BALANCED & PERFECTLY FILLED)
        ========================================================================= -->
   <section class="py-8 bg-brandCream border-b border-brandBorder/60">
     <div class="container-custom">
@@ -151,14 +151,12 @@
         </div>
       </div>
     </div>
-  </section>
-
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 3: RECIPE CATEGORY FILTERS (FUNCTIONAL & COMPACT)
+       RECIPES PAGE &mdash; SECTION 3: RECIPE CATEGORY FILTERS
        ========================================================================= -->
   <section class="py-4 bg-brandCream border-b border-brandBorder/60">
     <div class="container-custom flex justify-center flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold px-2 max-w-full">
-      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandBrown text-white shadow-sm" data-category="all">All Recipes (8)</button>
+      <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandBrown text-white shadow-sm" data-category="all" id="recipeAllBtn">All Recipes (24)</button>
       <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="breakfast">Breakfast</button>
       <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="everyday">Everyday Meals</button>
       <button class="recipe-cat-btn px-3.5 py-1.5 rounded-full transition-all bg-brandCard border border-brandBorder text-stone-700 dark:text-stone-300 hover:border-brandBrown" data-category="baking">Baking</button>
@@ -169,99 +167,119 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 4: LATEST RECIPES (FILTERABLE GRID)
+       RECIPES PAGE &mdash; SECTION 4: LATEST RECIPES (FILTERABLE GRID)
        ========================================================================= -->
   <section class="py-8 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
       <h2 class="text-xl font-serif font-bold text-brandText mb-5 text-center">Latest Kitchen Recipes</h2>
       <div id="recipeGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
         
-        <!-- CARD 1 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking vegetarian">
-          <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=800&q=80" alt="Rustic Country Sourdough Loaf" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Rustic Country Sourdough</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Crisp golden crust baked inside a ceramic casserole lid trap.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- BREAKFAST (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast">
+          <img src="assets/images/recipes/breakfast-eggs.png" alt="Fluffy Scrambled Eggs" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span><h3 class="font-serif font-bold text-sm text-brandText">Fluffy Scrambled Eggs</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast">
+          <img src="assets/images/recipes/breakfast-oatmeal.png" alt="Creamy Oat Porridge" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span><h3 class="font-serif font-bold text-sm text-brandText">Creamy Oat Porridge</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast">
+          <img src="assets/images/recipes/breakfast-pancakes.png" alt="Buttermilk Pancakes" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span><h3 class="font-serif font-bold text-sm text-brandText">Buttermilk Pancakes</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast">
+          <img src="assets/images/recipes/breakfast-chai.png" alt="Masala Chai Milk Tea" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span><h3 class="font-serif font-bold text-sm text-brandText">Masala Chai Milk Tea</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast vegetarian">
-          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Spiced Cardamom Milk Tea" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Spiced Cardamom Milk Tea</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Steeped gently in clay teapots for an earthy, soothing aroma.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- EVERYDAY MEALS (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday">
+          <img src="assets/images/recipes/everyday-chicken-curry.png" alt="Golden Chicken Curry" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span><h3 class="font-serif font-bold text-sm text-brandText">Golden Chicken Curry</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday">
+          <img src="assets/images/recipes/everyday-pasta.png" alt="Homemade Basil Pasta" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span><h3 class="font-serif font-bold text-sm text-brandText">Homemade Basil Pasta</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday">
+          <img src="assets/images/recipes/everyday-medley.png" alt="Roasted Root Medley" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span><h3 class="font-serif font-bold text-sm text-brandText">Roasted Root Medley</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday">
+          <img src="assets/images/recipes/everyday-salmon.png" alt="Seared Salmon Plate" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span><h3 class="font-serif font-bold text-sm text-brandText">Seared Salmon Plate</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow vegetarian">
-          <img src="assets/images/recipes/claypot-curry.png" alt="Slow Braised Lentil Dal" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOK</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Slow Braised Lentil Dal</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Creamy yellow lentils infused with cumin and mustard seeds.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- BAKING (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking">
+          <img src="assets/images/recipes/baking-sourdough.png" alt="Rustic Country Sourdough" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span><h3 class="font-serif font-bold text-sm text-brandText">Rustic Country Sourdough</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking">
+          <img src="assets/images/recipes/baking-focaccia.png" alt="Rosemary Clay Focaccia" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span><h3 class="font-serif font-bold text-sm text-brandText">Rosemary Clay Focaccia</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking">
+          <img src="assets/images/recipes/baking-cinnamon.png" alt="Ceramic Baked Cinnamon Rolls" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span><h3 class="font-serif font-bold text-sm text-brandText">Baked Cinnamon Rolls</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking">
+          <img src="assets/images/recipes/baking-garlic.png" alt="Artisan Garlic Bread" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span><h3 class="font-serif font-bold text-sm text-brandText">Artisan Garlic Bread</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="breakfast vegetarian">
-          <img src="https://images.unsplash.com/photo-1517673400267-0251440c45dc?auto=format&fit=crop&w=800&q=80" alt="Earthen Claypot Honey Oats" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">BREAKFAST</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Earthen Claypot Honey Oats</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Warm oat porridge infused with wild cinnamon and clay-baked almonds.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- SLOW COOKING (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow">
+          <img src="assets/images/recipes/claypot-curry.png" alt="Braised Lentil Dal" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOKING</span><h3 class="font-serif font-bold text-sm text-brandText">Braised Lentil Dal</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow">
+          <img src="assets/images/recipes/slow-harvest-stew.jpg" alt="Harvest Vegetable Stew" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOKING</span><h3 class="font-serif font-bold text-sm text-brandText">Harvest Vegetable Stew</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow">
+          <img src="assets/images/recipes/slow-pot-roast.jpg" alt="Slow Cooked Chickpea Stew" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOKING</span><h3 class="font-serif font-bold text-sm text-brandText">Slow Braised Pot Roast</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow">
+          <img src="assets/images/recipes/recipe-stew.png" alt="Claypot Lamb Stew" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOKING</span><h3 class="font-serif font-bold text-sm text-brandText">Claypot Lamb Stew</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="slow vegetarian">
-          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="Harvest Vegetable Stew" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW COOK</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Harvest Vegetable Stew</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Earthen clay retains aromatic steam, creating deep winter flavors.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- VEGETARIAN (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="vegetarian">
+          <img src="assets/images/recipes/veg-summer-salad.jpg" alt="Fresh Summer Salad" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">VEGETARIAN</span><h3 class="font-serif font-bold text-sm text-brandText">Fresh Summer Salad</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="vegetarian">
+          <img src="assets/images/recipes/veg-goddess-bowl.jpg" alt="Green Goddess Bowl" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">VEGETARIAN</span><h3 class="font-serif font-bold text-sm text-brandText">Green Goddess Bowl</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="vegetarian">
+          <img src="assets/images/recipes/veg-stuffed-peppers.jpg" alt="Stuffed Bell Peppers" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">VEGETARIAN</span><h3 class="font-serif font-bold text-sm text-brandText">Stuffed Bell Peppers</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="vegetarian">
+          <img src="assets/images/recipes/veg-avocado-toast.jpg" alt="Avocado Toast" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">VEGETARIAN</span><h3 class="font-serif font-bold text-sm text-brandText">Artisan Avocado Toast</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
-        <!-- CARD 6 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="baking vegetarian">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Rosemary Terracotta Focaccia" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">BAKING</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Rosemary Clay Focaccia</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Herb-infused Italian flatbread oven-baked on terracotta baking tiles.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <!-- DESSERTS (4 Cards) -->
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts">
+          <img src="assets/images/recipes/dessert-phirni.jpg" alt="Claypot Saffron Phirni" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span><h3 class="font-serif font-bold text-sm text-brandText">Claypot Saffron Phirni</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
-
-        <!-- CARD 7 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts vegetarian">
-          <img src="https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=800&q=80" alt="Earthen Baked Rice Pudding" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Claypot Saffron Phirni</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Slow-chilled cardamom rice pudding served in unglazed earthen bowls.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts">
+          <img src="assets/images/recipes/dessert-chocolate.jpg" alt="Ceramic Baked Brownies" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span><h3 class="font-serif font-bold text-sm text-brandText">Baked Chocolate Brownies</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
-
-        <!-- CARD 8 -->
-        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="everyday vegetarian">
-          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Roasted Root Vegetables" class="h-44 w-full object-cover">
-          <div class="p-4 space-y-2 flex-1 flex flex-col">
-            <span class="text-[10px] font-bold text-brandOlive uppercase">EVERYDAY MEALS</span>
-            <h3 class="font-serif font-bold text-sm text-brandText">Clay-Roasted Root Medley</h3>
-            <p class="text-xs text-stone-600 dark:text-stone-400 flex-1">Tender sweet potatoes, carrots, and shallots roasted in earthen covered pots.</p>
-            <a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2">Read Recipe &rarr;</a>
-          </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts">
+          <img src="assets/images/recipes/dessert-berry-tart.jpg" alt="Berry Tart" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span><h3 class="font-serif font-bold text-sm text-brandText">Rustic Berry Tart</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
+        </div>
+        <div class="recipe-card-item bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col transition-all duration-300" data-category="desserts">
+          <img src="assets/images/recipes/dessert-panna-cotta.jpg" alt="Vanilla Panna Cotta" class="h-44 w-full object-cover">
+          <div class="p-4 space-y-2 flex-1 flex flex-col"><span class="text-[10px] font-bold text-brandOlive uppercase">DESSERTS</span><h3 class="font-serif font-bold text-sm text-brandText">Vanilla Panna Cotta</h3><a href="recipe-details.html" class="text-xs font-bold text-brandBrown hover:underline pt-2 mt-auto">Read Recipe &rarr;</a></div>
         </div>
 
       </div>
@@ -269,7 +287,7 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 4.5 (NEW): CLAYPOT SLOW SIMMERING MASTERY
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 4.5 (NEW): CLAYPOT SLOW SIMMERING MASTERY
        ========================================================================= -->
   <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -292,14 +310,14 @@
           </div>
         </div>
         <div class="lg:col-span-6 rounded-2xl overflow-hidden h-72 border border-brandBorder shadow-subtle">
-          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Slow Simmered Claypot Curry" class="w-full h-full object-cover">
+          <img src="assets/images/recipes/veg-summer-salad.jpg" alt="Slow Simmered Claypot Curry" class="w-full h-full object-cover">
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 4.6 (NEW): BREAD BAKING IN TERRACOTTA
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 4.6 (NEW): BREAD BAKING IN TERRACOTTA
        ========================================================================= -->
   <section class="py-14 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -320,26 +338,26 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 5: POPULAR RECIPES
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 5: POPULAR RECIPES
        ========================================================================= -->
   <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
     <div class="container-custom">
       <h2 class="text-xl font-serif font-bold text-brandText mb-6 text-center">Popular Community Favorites</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center">
-          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80" alt="Jaipur Spiced Chickpea Stew" class="w-20 h-20 object-cover rounded-lg">
+          <img src="assets/images/recipes/slow-pot-roast.jpg" alt="Jaipur Spiced Chickpea Stew" class="w-20 h-20 object-cover rounded-lg">
           <div>
             <span class="text-[10px] font-bold text-brandBrown uppercase">SLOW SIMMER</span>
             <h4 class="font-serif font-bold text-sm text-brandText">Jaipur Spiced Chickpea Stew</h4>
-            <span class="text-xs text-stone-500">★ 4.9 • 140 Reviews</span>
+            <span class="text-xs text-stone-500">Ã¢Ëœâ€¦ 4.9 Ã¢â‚¬Â¢ 140 Reviews</span>
           </div>
         </div>
         <div class="bg-brandCard border border-brandBorder p-4 rounded-xl flex gap-4 items-center">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" class="w-20 h-20 object-cover rounded-lg">
+          <img src="assets/images/recipes/dessert-panna-cotta.jpg" class="w-20 h-20 object-cover rounded-lg">
           <div>
             <span class="text-[10px] font-bold text-brandBrown uppercase">BAKING</span>
             <h4 class="font-serif font-bold text-sm text-brandText">Earthen Terracotta Focaccia</h4>
-            <span class="text-xs text-stone-500">★ 4.8 • 98 Reviews</span>
+            <span class="text-xs text-stone-500">Ã¢Ëœâ€¦ 4.8 Ã¢â‚¬Â¢ 98 Reviews</span>
           </div>
         </div>
       </div>
@@ -347,7 +365,7 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 6: KITCHEN TIPS & COOKWARE PAIRING
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 6: KITCHEN TIPS & COOKWARE PAIRING
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom max-w-xl text-center space-y-4">
@@ -361,10 +379,10 @@
   </section>
 
   <!-- =========================================================================
-       RECIPES PAGE — SECTION 7: NEWSLETTER CTA
+       RECIPES PAGE Ã¢â‚¬â€ SECTION 7: NEWSLETTER CTA
        ========================================================================= -->
     <!-- =========================================================================
-       RECIPES — NEW SECTION: SEASONAL COOKING CALENDAR
+       RECIPES Ã¢â‚¬â€ NEW SECTION: SEASONAL COOKING CALENDAR
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -410,7 +428,7 @@
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+  <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -470,7 +488,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops Ã¢â‚¬â€ no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input">
             <button type="submit">Subscribe</button>
@@ -501,7 +519,7 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9790; Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
@@ -538,7 +556,7 @@
     <div class="cart-footer p-4 border-t border-brandBorder">
       <div class="flex justify-between items-center mb-4">
         <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
-        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">₹ 0.00</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">Ã¢â€šÂ¹ 0.00</span>
       </div>
       <a href="cart.html" class="btn-brown w-full py-3 text-center block">View Shopping Bag & Checkout &rarr;</a>
     </div>
@@ -559,3 +577,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+

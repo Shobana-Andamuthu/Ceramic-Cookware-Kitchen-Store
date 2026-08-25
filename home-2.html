@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -31,12 +31,12 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2&bull;family=Playfair+Display:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-<body class="bg-brandCream text-brandText antialiased flex flex-col min-h-screen">
+<body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
   <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
   <header class="main-header">
@@ -136,7 +136,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col">
-          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80" alt="The Science of Earthen Condensation" class="h-48 w-full object-cover">
+          <img src="assets/images/hero/hero-2.png" alt="The Science of Earthen Condensation" class="h-48 w-full object-cover">
           <div class="p-5 space-y-2.5 flex-1 flex flex-col">
             <span class="text-[10px] font-bold text-brandOlive uppercase">SLOW SIMMER</span>
             <h3 class="font-serif font-bold text-base text-brandText">The Science of Earthen Condensation</h3>
@@ -146,7 +146,7 @@
         </div>
 
         <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col">
-          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Sourdough Loaves in Terracotta Bakers" class="h-48 w-full object-cover">
+          <img src="assets/images/products/ceramic-cooking-pot.png" alt="Sourdough Loaves in Terracotta Bakers" class="h-48 w-full object-cover">
           <div class="p-5 space-y-2.5 flex-1 flex flex-col">
             <span class="text-[10px] font-bold text-brandOlive uppercase">BAKING JOURNAL</span>
             <h3 class="font-serif font-bold text-base text-brandText">Sourdough Loaves in Terracotta Bakers</h3>
@@ -156,7 +156,7 @@
         </div>
 
         <div class="bg-brandCard border border-brandBorder rounded-2xl overflow-hidden shadow-subtle flex flex-col">
-          <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80" alt="Clay Teapots & Earthen Porosity" class="h-48 w-full object-cover">
+          <img src="assets/images/products/bakeware-casserole.png" alt="Clay Teapots & Earthen Porosity" class="h-48 w-full object-cover">
           <div class="p-5 space-y-2.5 flex-1 flex flex-col">
             <span class="text-[10px] font-bold text-brandOlive uppercase">TEA CEREMONY</span>
             <h3 class="font-serif font-bold text-base text-brandText">Clay Teapots & Earthen Porosity</h3>
@@ -252,40 +252,44 @@
         <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400">Prepare raw terracotta & glazed earthenware for decades of non-toxic slow cooking.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch" style="grid-auto-rows:1fr;">
         
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-3 relative">
-          <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">01</div>
-          <h3 class="font-serif font-bold text-base text-brandText">Submerge in Pure Water</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Soak unglazed clay fully in cold water for 12 hours allowing pores to hydrate completely.</p>
-          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-1">Duration: 12 Hours</span>
+        <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle flex flex-col justify-between h-full">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">01</div>
+            <h3 class="font-serif font-bold text-base text-brandText">Submerge in Pure Water</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Soak unglazed clay fully in cold water for 12 hours allowing pores to hydrate completely.</p>
+          </div>
+          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-4 mt-auto">Duration: 12 Hours</span>
         </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-3 relative">
-          <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">02</div>
-          <h3 class="font-serif font-bold text-base text-brandText">Rub Cold-Pressed Oil</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Coat inside and exterior walls with unrefined sesame or mustard oil to seal micro-capillaries.</p>
-          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-1">Organic Botanical Oil</span>
+        <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle flex flex-col justify-between h-full">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">02</div>
+            <h3 class="font-serif font-bold text-base text-brandText">Rub Cold-Pressed Oil</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Coat inside and exterior walls with unrefined sesame or mustard oil to seal micro-capillaries.</p>
+          </div>
+          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-4 mt-auto">Organic Botanical Oil</span>
         </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-3 relative">
-          <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">03</div>
-          <h3 class="font-serif font-bold text-base text-brandText">Simmer Rice Starch Kanji</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Simmer starch-rich rice water over low heat for 20 mins to form a natural non-stick glaze barrier.</p>
-          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-1">Natural Non-Stick Barrier</span>
+        <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle flex flex-col justify-between h-full">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">03</div>
+            <h3 class="font-serif font-bold text-base text-brandText">Simmer Rice Starch Kanji</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Simmer starch-rich rice water over low heat for 20 mins to form a natural non-stick glaze barrier.</p>
+          </div>
+          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-4 mt-auto">Natural Non-Stick Barrier</span>
         </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-3 relative">
-          <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">04</div>
-          <h3 class="font-serif font-bold text-base text-brandText">Natural Sun Cure</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Allow the pot to air-dry completely under warm indirect sunlight before your first feast.</p>
-          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-1">Ready For First Feast</span>
+        <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle flex flex-col justify-between h-full">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-full bg-amber-800 text-white font-serif font-bold flex items-center justify-center text-sm shadow-sm">04</div>
+            <h3 class="font-serif font-bold text-base text-brandText">Natural Sun Cure</h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">Allow the pot to air-dry completely under warm indirect sunlight before your first feast.</p>
+          </div>
+          <span class="text-[10px] font-semibold text-amber-800 dark:text-amber-400 block pt-4 mt-auto">Ready For First Feast</span>
         </div>
 
       </div>
     </div>
   </section>
-
   <!-- =========================================================================
        HOME 2 — SECTION 6: GIFTING
        ========================================================================= -->
@@ -319,16 +323,16 @@
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="rounded-xl overflow-hidden h-44 border border-brandBorder">
-          <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=800&q=80" alt="Earthen Terracotta Cooking Pots" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/products/tea-set.png" alt="Earthen Terracotta Cooking Pots" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="rounded-xl overflow-hidden h-44 border border-brandBorder">
-          <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?auto=format&fit=crop&w=800&q=80" alt="Clay Bowls & Studio Workshop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/lifestyle/artisan-hands.png" alt="Clay Bowls & Studio Workshop" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="rounded-xl overflow-hidden h-44 border border-brandBorder">
-          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80" alt="Speckled Ceramic Bowl & Spoons" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/lifestyle/kiln-firing.png" alt="Speckled Ceramic Bowl & Spoons" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
         </div>
         <div class="rounded-xl overflow-hidden h-44 border border-brandBorder">
-          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Porcelain Dessert Bowls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+          <img src="assets/images/lifestyle/mineral-glaze.png" alt="Porcelain Dessert Bowls" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
         </div>
       </div>
     </div>
@@ -350,7 +354,7 @@
         <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle flex flex-col justify-between h-full space-y-4">
           <div class="space-y-3">
             <div class="aspect-square rounded-xl overflow-hidden bg-brandTan flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&h=500&q=80" alt="Yuki Tanaka" class="w-full h-full object-cover object-center">
+              <img src="assets/images/avatars/anand.png" alt="Yuki Tanaka" class="w-full h-full object-cover object-center">
             </div>
             <span class="text-[10px] font-bold text-brandOlive uppercase tracking-wider block">Kyoto, Japan (Autumn 2025)</span>
             <h3 class="font-serif font-bold text-sm text-brandText">Yuki Tanaka</h3>
@@ -361,7 +365,7 @@
         <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle flex flex-col justify-between h-full space-y-4">
           <div class="space-y-3">
             <div class="aspect-square rounded-xl overflow-hidden bg-brandTan flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&h=500&q=80" alt="Marco Rossi" class="w-full h-full object-cover object-center">
+              <img src="assets/images/avatars/ramdev.png" alt="Marco Rossi" class="w-full h-full object-cover object-center">
             </div>
             <span class="text-[10px] font-bold text-brandOlive uppercase tracking-wider block">Tuscany, Italy (Winter 2025)</span>
             <h3 class="font-serif font-bold text-sm text-brandText">Marco Rossi</h3>
@@ -372,7 +376,7 @@
         <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle flex flex-col justify-between h-full space-y-4">
           <div class="space-y-3">
             <div class="aspect-square rounded-xl overflow-hidden bg-brandTan flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&h=500&q=80" alt="Ananya Sen" class="w-full h-full object-cover object-center">
+              <img src="assets/images/avatars/sunita.png" alt="Ananya Sen" class="w-full h-full object-cover object-center">
             </div>
             <span class="text-[10px] font-bold text-brandOlive uppercase tracking-wider block">Bengal, India (Spring 2026)</span>
             <h3 class="font-serif font-bold text-sm text-brandText">Ananya Sen</h3>
@@ -383,7 +387,7 @@
         <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle flex flex-col justify-between h-full space-y-4">
           <div class="space-y-3">
             <div class="aspect-square rounded-xl overflow-hidden bg-brandTan flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&h=500&q=80" alt="Siddharth Sharma" class="w-full h-full object-cover object-center">
+              <img src="assets/images/avatars/anand.png" alt="Siddharth Sharma" class="w-full h-full object-cover object-center">
             </div>
             <span class="text-[10px] font-bold text-brandOlive uppercase tracking-wider block">Studio Host (Permanent)</span>
             <h3 class="font-serif font-bold text-sm text-brandText">Siddharth Sharma</h3>
@@ -408,7 +412,7 @@
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+        <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -557,3 +561,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
