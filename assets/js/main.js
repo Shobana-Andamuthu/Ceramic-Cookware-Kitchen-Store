@@ -650,36 +650,7 @@ function initCategoryFilters() {
     });
   }
 
-  // Gallery Category Filter
-  const galleryBtns = document.querySelectorAll('.gallery-cat-btn');
-  const galleryCards = document.querySelectorAll('.gallery-card-item');
 
-  if (galleryBtns.length && galleryCards.length) {
-    galleryBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cat = btn.getAttribute('data-category');
-
-        galleryBtns.forEach(b => {
-          b.classList.remove('bg-brandBrown', 'text-white', 'shadow-sm');
-          b.classList.add('bg-brandCard', 'border', 'border-brandBorder', 'text-stone-700', 'dark:text-stone-300');
-        });
-
-        btn.classList.remove('bg-brandCard', 'border', 'border-brandBorder', 'text-stone-700', 'dark:text-stone-300');
-        btn.classList.add('bg-brandBrown', 'text-white', 'shadow-sm');
-
-        galleryCards.forEach(card => {
-          const itemCat = (card.getAttribute('data-category') || '').toLowerCase().split(/\s+/);
-          if (cat === 'all' || itemCat.includes(cat.toLowerCase())) {
-            card.style.display = 'block';
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  }
 
   // Gift Sets Category Filter
   const giftBtns = document.querySelectorAll('.gift-cat-btn');
