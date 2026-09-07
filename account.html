@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account & Wishlist | Ceramic Kitchen</title>
   <meta name="description" content="Manage your Ceramic Kitchen orders, track earthenware dispatches, view saved wishlist ceramics, and update studio delivery preferences.">
+  <!-- Favicon / Title Bar Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -52,7 +56,7 @@
       </a>
 
       <!-- DESKTOP NAVBAR -->
-      <nav class="desktop-nav hidden lg:block">
+      <nav class="desktop-nav hidden xl:block">
         <ul class="nav-links">
           <li class="nav-item group">
             <a href="index.html" class="nav-link ">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
@@ -75,7 +79,7 @@
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
         <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
-        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </div>
   </header>
@@ -1154,8 +1158,8 @@
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
           <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops &mdash; no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
-            <input type="email" required placeholder="Your email" class="newsletter-input">
-            <button type="submit">Subscribe</button>
+            <input type="email" required placeholder="Your email" class="newsletter-input" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">
+            <button type="submit" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">Subscribe</button>
           </form>
         </div>
 

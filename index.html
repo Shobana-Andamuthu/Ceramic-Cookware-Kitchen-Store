@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ceramic Kitchen | Premium Earthen Cookware & Kitchen Store</title>
   <meta name="description" content="Shop handcrafted non-toxic ceramic cookware, terracotta Dutch ovens, baking dishes, and clay tea sets made by master studio potters.">
+  <!-- Favicon / Title Bar Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -52,7 +56,7 @@
       </a>
 
       <!-- DESKTOP NAVBAR -->
-      <nav class="desktop-nav hidden lg:block">
+      <nav class="desktop-nav hidden xl:block">
         <ul class="nav-links">
           <li class="nav-item group">
             <a href="index.html" class="nav-link active">Home <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></a>
@@ -75,7 +79,7 @@
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
         <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
-        <button id="mobileMenuToggleBtn" class="icon-btn lg:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </div>
   </header>
@@ -543,8 +547,8 @@
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
           <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
-            <input type="email" required placeholder="Your email" class="newsletter-input">
-            <button type="submit">Subscribe</button>
+            <input type="email" required placeholder="Your email" class="newsletter-input" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">
+            <button type="submit" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">Subscribe</button>
           </form>
         </div>
 
@@ -578,13 +582,13 @@
 
       <div class="space-y-3 pt-1">
         <div>
-          <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
-            <span>Home</span>
-            <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <button class="mobile-acc-btn active text-brandBrown font-bold w-full flex justify-between items-center py-2 border-b border-brandBorder/60">
+            <span class="text-brandBrown font-bold">Home</span>
+            <svg class="acc-icon w-4 h-4 transition-transform text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
-            <a href="index.html" class="block text-brandBrown font-bold">Home 1</a>
-            <a href="home-2.html" class="block hover:text-brandBrown">Home 2</a>
+            <a href="index.html" class="block text-brandBrown font-bold active">Home 1</a>
+            <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
           </div>
         </div>
         <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>

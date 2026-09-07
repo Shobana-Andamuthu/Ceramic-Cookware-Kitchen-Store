@@ -118,10 +118,65 @@ function initHeader() {
   const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
   const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
 
+  function updateActiveMobileNav() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const isHomePage = currentPath === 'index.html' || currentPath === '' || currentPath === 'home-2.html';
+    
+    const homeAccBtn = mobileNavDrawer?.querySelector('.mobile-acc-btn');
+    if (homeAccBtn) {
+      if (isHomePage) {
+        homeAccBtn.classList.add('active', 'text-brandBrown', 'font-bold');
+        homeAccBtn.classList.remove('text-brandText');
+        const span = homeAccBtn.querySelector('span');
+        if (span) {
+          span.classList.add('text-brandBrown', 'font-bold');
+        }
+        const accIcon = homeAccBtn.querySelector('.acc-icon');
+        if (accIcon) {
+          accIcon.classList.add('text-brandBrown');
+        }
+        
+        const content = homeAccBtn.nextElementSibling;
+
+        const home1Link = content?.querySelector('a[href="index.html"]');
+        const home2Link = content?.querySelector('a[href="home-2.html"]');
+        if (currentPath === 'home-2.html') {
+          home2Link?.classList.add('text-brandBrown', 'font-bold', 'active');
+          home2Link?.classList.remove('text-brandText');
+          home1Link?.classList.remove('text-brandBrown', 'font-bold', 'active');
+          home1Link?.classList.add('text-brandText');
+        } else {
+          home1Link?.classList.add('text-brandBrown', 'font-bold', 'active');
+          home1Link?.classList.remove('text-brandText');
+          home2Link?.classList.remove('text-brandBrown', 'font-bold', 'active');
+          home2Link?.classList.add('text-brandText');
+        }
+      } else {
+        homeAccBtn.classList.remove('active', 'text-brandBrown', 'font-bold');
+        homeAccBtn.classList.add('text-brandText');
+        const span = homeAccBtn.querySelector('span');
+        if (span) {
+          span.classList.remove('text-brandBrown', 'font-bold');
+        }
+      }
+    }
+
+    // Highlight direct matching link in mobile drawer
+    const allDrawerLinks = mobileNavDrawer?.querySelectorAll('a') || [];
+    allDrawerLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href === currentPath) {
+        link.classList.add('text-brandBrown', 'font-bold', 'active');
+        link.classList.remove('text-brandText');
+      }
+    });
+  }
+
   function openMobileNav() {
     mobileNavDrawer?.classList.add('active');
     mobileNavBackdrop?.classList.add('active');
     document.body.style.overflow = 'hidden';
+    updateActiveMobileNav();
   }
 
   function closeMobileNav() {
@@ -133,6 +188,9 @@ function initHeader() {
   mobileToggleBtn?.addEventListener('click', openMobileNav);
   closeMobileNavBtn?.addEventListener('click', closeMobileNav);
   mobileNavBackdrop?.addEventListener('click', closeMobileNav);
+
+  // Run on page load as well
+  updateActiveMobileNav();
 
   // Mobile Menu Accordions
   const accordionHeaderBtns = document.querySelectorAll('.mobile-acc-btn');
