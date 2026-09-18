@@ -19,9 +19,14 @@ const MIME_TYPES = {
 const server = http.createServer((req, res) => {
   let reqUrl = req.url.split('?')[0];
   if (reqUrl === '/') reqUrl = '/index.html';
+  let filePath = path.join(__dirname, reqUrl);
+
+  // Support extensionless HTML routes like /products -> /products.html
+  if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
+    filePath = filePath + '.html';
+  }
 
   // Support /css/style.css alias to /assets/css/style.css if requested
-  let filePath = path.join(__dirname, reqUrl);
   if (!fs.existsSync(filePath) && reqUrl.startsWith('/css/')) {
     filePath = path.join(__dirname, 'assets', reqUrl);
   }

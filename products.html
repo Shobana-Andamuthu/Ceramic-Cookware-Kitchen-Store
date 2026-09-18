@@ -77,7 +77,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9790; Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -85,20 +85,21 @@
   </header>
 
   <!-- =========================================================================
-       PRODUCTS — SECTION 1: PAGE HERO
+       PRODUCTS —  SECTION 1: PAGE HERO
        ========================================================================= -->
-  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
-    <div class="container-custom max-w-xl">
-      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">STUDIO CATALOG</span>
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Explore Earthen Ceramics</h1>
-      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+  <section class="page-hero-standard" style="background-image: url('assets/images/hero/hero-products.png');">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">STUDIO CATALOG</span>
+      <h1 class="page-hero-title">Explore Earthen Ceramics</h1>
+      <p class="page-hero-desc">
         Handmolded cookware, sourdough baking dishes, and non-toxic ceramic serving platters.
       </p>
     </div>
   </section>
 
   <!-- =========================================================================
-       PRODUCTS — SECTION 2: INTERACTIVE VISUAL CATEGORY CARDS
+       PRODUCTS —  SECTION 2: INTERACTIVE VISUAL CATEGORY CARDS
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -216,7 +217,7 @@
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
-      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" style="grid-auto-rows: 1fr;">
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch" style="grid-auto-rows: 1fr;">
         
         <!-- ==================== COOKWARE (4 CARDS) ==================== -->
         <!-- COOKWARE 1 -->
@@ -629,7 +630,7 @@
           </p>
           <div class="flex items-center gap-4">
             <span class="text-lg font-bold text-brandBrown font-serif">₹ 699</span>
-            <button onclick="addToCart('Artisan Pot Seasoning Kit', 699, 'assets/images/products/care-kit.png')" class="btn-brown text-xs py-2 px-5 rounded-full">Add Care Kit to Cart &rarr;</button>
+            <button onclick="addToCart('prod-care-kit', 'Artisan Pot Seasoning Kit', 699, 'assets/images/products/care-kit.png')" class="btn-brown text-xs py-2 px-5 rounded-full">Add Care Kit to Cart &rarr;</button>
           </div>
         </div>
       </div>
@@ -637,13 +638,19 @@
   </section>
 
   <!-- =========================================================================
-       PRODUCTS — SECTION 7: FINAL CTA
+       PRODUCTS — SECTION 9: FOOTER CTA BANNER
        ========================================================================= -->
   <section class="footer-cta bg-brandOlive text-white">
     <div class="container-custom max-w-xl">
-      <h2 class="text-2xl md:text-3xl font-serif font-bold">Custom & Restaurant Orders</h2>
-      <p class="text-xs text-stone-200">Looking for custom pottery stamp engraving or bulk restaurant dinnerware?</p>
-      <a href="contact.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Inquire With Studio Concierge &rarr;</a>
+      <span class="text-xs font-bold text-amber-300 uppercase tracking-widest block mb-1">HANDCRAFTED HERITAGE</span>
+      <h2 class="text-2xl md:text-3xl font-serif font-bold text-white">Transform Your Kitchen Today</h2>
+      <p class="text-xs md:text-sm text-stone-200">
+        Experience non-toxic earthen cookware delivered directly from our Jaipur pottery studio to your doorstep. Free pan-India shipping over ₹ 999.
+      </p>
+      <div class="btn-container">
+        <a href="products.html" class="btn-brown text-xs py-2.5 px-6">Explore Cookware Shop &rarr;</a>
+        <a href="material-guide.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs py-2.5 px-5 rounded-md transition-colors">Care &amp; Material Guide</a>
+      </div>
     </div>
   </section>
 
@@ -719,7 +726,7 @@
         <!-- NEWSLETTER -->
         <div class="footer-column footer-newsletter-col">
           <h4 class="footer-title">Join Our Kitchen Journal</h4>
-          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops — no spam.</p>
+          <p class="footer-brand-desc mb-2">Recipe guides &amp; early collection drops —  no spam.</p>
           <form onsubmit="event.preventDefault(); showToast('Thank you for subscribing!');" class="newsletter-box">
             <input type="email" required placeholder="Your email" class="newsletter-input" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">
             <button type="submit" style="width: 100% !important; height: 46px !important; min-height: 46px !important; border-radius: 12px !important; box-sizing: border-box !important;">Subscribe</button>
@@ -738,68 +745,6 @@
     </div>
   </footer>
 
-  <!-- MOBILE NAVIGATION DRAWER -->
-  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
-  <aside id="mobileNavDrawer" class="cart-drawer">
-    <div class="cart-header">
-      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
-      <button id="closeMobileNavBtn" class="text-stone-500 hover:text-brandBrown"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
-    </div>
-    <div class="cart-body p-4 space-y-4 text-sm font-semibold">
-      
-      <!-- MOBILE / TABLET NAV CONTROLS -->
-      <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
-        <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9790; Dark</button>
-        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
-      </div>
-
-      <div class="space-y-3 pt-1">
-        <div>
-          <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
-            <span>Home</span>
-            <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
-            <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
-            <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
-          </div>
-        </div>
-        <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
-        <a href="products.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Products</a>
-        <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
-        <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
-        <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
-        <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- QUICK VIEW MODAL OVERLAY -->
-  <div id="quickViewModal" class="modal-overlay">
-    <div class="modal-content max-w-2xl">
-      <div class="flex justify-between items-center border-b border-brandBorder pb-3 mb-4">
-        <span id="qvCategory" class="text-[10px] font-bold text-brandBrown tracking-widest">COOKWARE</span>
-        <button id="closeQuickViewBtn" class="text-stone-500 hover:text-stone-800"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-        <div class="md:col-span-6 aspect-square rounded-xl overflow-hidden bg-brandTan">
-          <img id="qvImage" src="" class="w-full h-full object-cover">
-        </div>
-        <div class="md:col-span-6 space-y-3">
-          <h3 id="qvTitle" class="font-serif font-bold text-xl text-brandText">Product Title</h3>
-          <div id="qvPrice" class="text-xl font-bold text-amber-900 dark:text-amber-400">₹ 0.00</div>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-            Handmolded earthenware, vitrified in 18-hour kilns. Non-toxic mineral glazes, gas stove and oven safe up to 260°C.
-          </p>
-          <button id="qvAddToCartBtn" class="btn-brown text-xs py-2.5 w-full btn-add-cart">Add to Bag &rarr;</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="assets/js/main.js"></script>
   <script>
     function filterCategory(cat, el) {
       // Deactivate all category card buttons
@@ -860,6 +805,7 @@
 
     function sortProducts(val) {
       const grid = document.getElementById('productGrid');
+      if (!grid) return;
       const cards = Array.from(grid.querySelectorAll('.product-card'));
       
       cards.sort((a, b) => {
@@ -873,6 +819,71 @@
       cards.forEach(c => grid.appendChild(c));
     }
   </script>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobileNavBackdrop" class="drawer-overlay"></div>
+  <aside id="mobileNavDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
+      <button id="closeMobileNavBtn" class="text-stone-500 hover:text-brandBrown"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    </div>
+    <div class="cart-body p-4 space-y-4 text-sm font-semibold">
+      
+      <!-- MOBILE / TABLET NAV CONTROLS -->
+      <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
+        <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn drawer-login-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
+      </div>
+
+      <div class="space-y-3 pt-1">
+        <div>
+          <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
+            <span>Home</span>
+            <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+            <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
+            <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
+        <a href="products.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Products</a>
+        <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
+        <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
+        <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
+        <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- QUICK VIEW MODAL OVERLAY -->
+  <div id="quickViewModal" class="modal-overlay">
+    <div class="modal-content max-w-2xl p-0 overflow-hidden">
+      <div class="modal-header-strip">
+        <div>
+          <span id="qvCategory" class="modal-category">COOKWARE</span>
+          <h3 id="qvTitle" class="modal-title">Product Title</h3>
+        </div>
+        <button id="closeQuickViewBtn" class="modal-close-btn" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+      <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-6 aspect-square rounded-xl overflow-hidden bg-brandTan border border-brandBorder">
+          <img id="qvImage" src="" class="w-full h-full object-cover" alt="Product Image">
+        </div>
+        <div class="md:col-span-6 space-y-4">
+          <div id="qvPrice" class="text-2xl font-serif font-bold text-amber-900 dark:text-amber-400">₹ 0.00</div>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+            Handmolded earthenware, vitrified in 18-hour kilns. Non-toxic mineral glazes, gas stove and oven safe up to 260°C.
+          </p>
+          <button id="qvAddToCartBtn" class="btn-brown text-xs py-3 w-full btn-add-cart rounded-lg">Add to Bag &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-

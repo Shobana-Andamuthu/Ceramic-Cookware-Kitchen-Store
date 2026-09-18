@@ -175,6 +175,8 @@ function initHeader() {
   function openMobileNav() {
     mobileNavDrawer?.classList.add('active');
     mobileNavBackdrop?.classList.add('active');
+    document.documentElement.classList.add('mobile-menu-open');
+    document.body.classList.add('mobile-menu-open');
     document.body.style.overflow = 'hidden';
     updateActiveMobileNav();
   }
@@ -182,12 +184,30 @@ function initHeader() {
   function closeMobileNav() {
     mobileNavDrawer?.classList.remove('active');
     mobileNavBackdrop?.classList.remove('active');
+    document.documentElement.classList.remove('mobile-menu-open');
+    document.body.classList.remove('mobile-menu-open');
     document.body.style.overflow = '';
   }
 
   mobileToggleBtn?.addEventListener('click', openMobileNav);
   closeMobileNavBtn?.addEventListener('click', closeMobileNav);
   mobileNavBackdrop?.addEventListener('click', closeMobileNav);
+  mobileNavBackdrop?.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+  }, { passive: false });
+
+  // Keyboard accessibility: Close mobile drawer or modals on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileNav();
+      document.getElementById('quickViewModal')?.classList.remove('active');
+      document.getElementById('cartDrawer')?.classList.remove('active');
+      document.getElementById('drawerOverlay')?.classList.remove('active');
+      document.documentElement.classList.remove('mobile-menu-open');
+      document.body.classList.remove('mobile-menu-open');
+      document.body.style.overflow = '';
+    }
+  });
 
   // Run on page load as well
   updateActiveMobileNav();
@@ -223,6 +243,8 @@ function initCart() {
   function openCart() {
     cartDrawer?.classList.add('active');
     drawerOverlay?.classList.add('active');
+    document.documentElement.classList.add('mobile-menu-open');
+    document.body.classList.add('mobile-menu-open');
     document.body.style.overflow = 'hidden';
     renderCart();
   }
@@ -230,12 +252,17 @@ function initCart() {
   function closeCart() {
     cartDrawer?.classList.remove('active');
     drawerOverlay?.classList.remove('active');
+    document.documentElement.classList.remove('mobile-menu-open');
+    document.body.classList.remove('mobile-menu-open');
     document.body.style.overflow = '';
   }
 
   cartToggleBtns.forEach(btn => btn.addEventListener('click', openCart));
   closeCartBtn?.addEventListener('click', closeCart);
   drawerOverlay?.addEventListener('click', closeCart);
+  drawerOverlay?.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+  }, { passive: false });
 
   // Delegate Add To Cart Click Events
   document.body.addEventListener('click', (e) => {

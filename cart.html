@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Bag | Ceramic Kitchen</title>
-  <meta name="description" content="Review your selected handcrafted ceramic cookware, terracotta pots, and baking dishes before checkout.">
+  <meta name="description" content="Review your selected artisan terracotta cookware items and proceed to secure checkout.">
   <!-- Favicon / Title Bar Icons -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
@@ -42,12 +42,12 @@
 </head>
 <body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
-  <!-- GLOBAL HEADER (ONE GLOBAL NAVBAR ON EVERY PAGE) -->
+  <!-- GLOBAL HEADER -->
   <header class="main-header">
     <div class="container-custom py-3.5 flex items-center justify-between">
       <a href="index.html" class="brand-logo group">
         <div class="brand-logo-icon">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 00-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
         </div>
         <div>
           <span class="brand-name block">Ceramic Kitchen</span>
@@ -77,7 +77,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -85,17 +85,19 @@
   </header>
 
   <!-- =========================================================================
-       CART &mdash; SECTION 1: HERO
+       CART — SECTION 1: HERO
        ========================================================================= -->
-  <section class="bg-brandTan/40 py-8 border-b border-brandBorder text-center">
-    <div class="container-custom max-w-xl">
-      <h1 class="text-2xl md:text-3xl font-serif font-bold text-brandText">Your Shopping Bag</h1>
-      <p class="text-stone-600 dark:text-stone-400 text-xs mt-1">Review items and proceed to secure checkout</p>
+  <section class="page-hero-standard" style="background-image: url('assets/images/hero/hero-cart.png');" style="background-image: url('assets/images/hero/hero-cart.png');">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">YOUR SELECTIONS</span>
+      <h1 class="page-hero-title">Your Shopping Bag</h1>
+      <p class="page-hero-desc">Review items and proceed to secure checkout</p>
     </div>
   </section>
 
   <!-- =========================================================================
-       CART &mdash; SECTION 2: MAIN CART ITEMS & ORDER SUMMARY
+       CART — SECTION 2: MAIN CART ITEMS & ORDER SUMMARY
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -108,254 +110,39 @@
             <button onclick="cartItems = []; saveCart(); renderCartPage(); showToast('Cart cleared');" class="text-xs text-red-600 hover:underline">Clear Bag</button>
           </div>
 
-          <div id="cartPageItems" class="space-y-4 divide-y divide-brandBorder/60"></div>
+          <div id="cartPageItems" class="space-y-4 divide-y divide-brandBorder">
+            <!-- Dynamically Rendered by renderCartPage() -->
+          </div>
         </div>
 
-        <!-- RIGHT: SUMMARY & CHECKOUT -->
-        <div class="lg:col-span-4 bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle space-y-4 h-fit sticky top-24">
-          <h3 class="font-serif font-bold text-base text-brandText border-b border-brandBorder pb-3">Order Summary</h3>
-          
-          <div class="space-y-2 text-xs">
-            <div class="flex justify-between">
-              <span class="text-stone-600 dark:text-stone-400">Subtotal</span>
-              <span id="pageSubtotal" class="font-bold text-brandText">&#8377; 0.00</span>
+        <!-- RIGHT: SUMMARY -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle space-y-4">
+            <h3 class="font-serif font-bold text-base text-brandText border-b border-brandBorder pb-3">Order Summary</h3>
+            <div class="space-y-2 text-xs text-stone-600 dark:text-stone-400">
+              <div class="flex justify-between">
+                <span>Subtotal</span>
+                <span id="pageSubtotal" class="font-bold text-brandText">&#8377; 0.00</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Pan-India Shipping</span>
+                <span class="text-emerald-600 font-bold">FREE</span>
+              </div>
+              <div class="flex justify-between border-t border-brandBorder pt-2 text-sm font-bold text-brandText">
+                <span>Total</span>
+                <span id="pageTotal" class="text-amber-900 dark:text-amber-400">&#8377; 0.00</span>
+              </div>
             </div>
-            <div class="flex justify-between">
-              <span class="text-stone-600 dark:text-stone-400">Eco Transit Protection</span>
-              <span class="text-emerald-700 dark:text-emerald-400 font-bold">FREE</span>
-            </div>
-            <div class="flex justify-between">
-              <span class="text-stone-600 dark:text-stone-400">Pan-India Express Shipping</span>
-              <span class="text-emerald-700 dark:text-emerald-400 font-bold">FREE</span>
-            </div>
-          </div>
-
-          <div class="border-t border-brandBorder pt-3 flex justify-between items-center text-sm">
-            <span class="font-bold text-brandText">Total</span>
-            <span id="pageTotal" class="font-bold text-amber-900 dark:text-amber-400 text-lg">&#8377; 0.00</span>
-          </div>
-
-          <button onclick="showToast('Proceeding to checkout simulation!');" class="btn-brown w-full py-3 text-xs font-bold text-center block">Complete Checkout &rarr;</button>
-
-          <div class="text-[10px] text-stone-600 dark:text-stone-400 text-center space-y-1.5 pt-2">
-            <div class="flex items-center justify-center gap-1.5"><svg class="w-3.5 h-3.5 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg> 256-Bit SSL Encrypted Payment</div>
-            <div class="flex items-center justify-center gap-1.5"><svg class="w-3.5 h-3.5 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> 30-Day Damage Replacement Guarantee</div>
+            <button onclick="showToast('Proceeding to Secure Checkout...');" class="btn-brown w-full py-3 text-xs font-bold">Proceed to Checkout &rarr;</button>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 3: ECO PACKAGING PERKS (CLEAN SVG ICONS)
-       ========================================================================= -->
-  <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-xs">
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
-          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown font-bold flex items-center justify-center mx-auto">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-          </div>
-          <h3 class="font-serif font-bold text-sm text-brandText">Honeycomb Paper Padding</h3>
-          <p class="text-stone-600 dark:text-stone-400">Wrapped in 100% plastic-free expandable kraft paper cushion layer.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
-          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown font-bold flex items-center justify-center mx-auto">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 class="font-serif font-bold text-sm text-brandText">Transit Damage Assurance</h3>
-          <p class="text-stone-600 dark:text-stone-400">If any item breaks during delivery, we send a replacement free within 24 hours.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
-          <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown font-bold flex items-center justify-center mx-auto">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7"/></svg>
-          </div>
-          <h3 class="font-serif font-bold text-sm text-brandText">Carbon-Neutral Freight</h3>
-          <p class="text-stone-600 dark:text-stone-400">Partnered with courier partners offsets 100% of transport carbon emissions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 4: COMPLEMENTARY CARE ADD-ONS
-       ========================================================================= -->
-  <section class="py-12 bg-brandCream border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="text-center max-w-xl mx-auto mb-8">
-        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block">RECOMMENDED CARE</span>
-        <h2 class="text-xl font-serif font-bold text-brandText">Essential Studio Cookware Add-Ons</h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        
-        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 space-y-3 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-brandOlive uppercase">CARE ESSENTIAL</span>
-            <h3 class="font-serif font-bold text-xs text-brandText mt-1">Organic Mustard Clay Oil</h3>
-            <p class="text-[11px] text-stone-500 mt-1">Cold-pressed oil specifically formulated for initial clay seasoning.</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 180.00</span>
-            <button onclick="addToCart('add-oil', 'Organic Mustard Clay Oil', 180, 'assets/images/products/storage-jar.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
-          </div>
-        </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 space-y-3 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-brandOlive uppercase">CLEANING TOOL</span>
-            <h3 class="font-serif font-bold text-xs text-brandText mt-1">Natural Sisal Scrubber Brush</h3>
-            <p class="text-[11px] text-stone-500 mt-1">Soft plant bristles designed to clean terracotta without scratching glaze.</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 140.00</span>
-            <button onclick="addToCart('add-brush', 'Natural Sisal Scrubber Brush', 140, 'assets/images/products/serving-bowl.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
-          </div>
-        </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 space-y-3 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-brandOlive uppercase">TABLE ACCESSORY</span>
-            <h3 class="font-serif font-bold text-xs text-brandText mt-1">Terracotta Heat Trivet Mat</h3>
-            <p class="text-[11px] text-stone-500 mt-1">Handwoven jute and clay ring mat to rest hot pots directly on dining tables.</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 220.00</span>
-            <button onclick="addToCart('add-mat', 'Terracotta Heat Trivet Mat', 220, 'assets/images/products/large-platter.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
-          </div>
-        </div>
-
-        <div class="bg-brandCard border border-brandBorder rounded-xl p-4 space-y-3 flex flex-col justify-between">
-          <div>
-            <span class="text-[10px] font-bold text-brandOlive uppercase">TEA TOOL</span>
-            <h3 class="font-serif font-bold text-xs text-brandText mt-1">Clay Botanical Tea Steeper</h3>
-            <p class="text-[11px] text-stone-500 mt-1">Hand-punched terracotta infuser cone for chai and herbal teas.</p>
-          </div>
-          <div class="flex items-center justify-between border-t border-brandBorder pt-2">
-            <span class="text-xs font-bold text-amber-900 dark:text-amber-400">&#8377; 190.00</span>
-            <button onclick="addToCart('add-steeper', 'Clay Botanical Tea Steeper', 190, 'assets/images/products/tea-set.png'); renderCartPage();" class="btn-brown text-[11px] py-1 px-3">+ Add</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 5: CUSTOMER GUARANTEE & RETURNS
-       ========================================================================= -->
-  <section class="py-10 bg-brandTan/40 border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-4 font-serif font-bold text-xl text-brandText">
-          Our Jaipur Pottery Quality Guarantee
-        </div>
-        <div class="lg:col-span-8 text-xs text-stone-600 dark:text-stone-400 leading-relaxed grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <h4 class="font-bold text-brandBrown mb-1">100% Non-Toxic Clay Assurance</h4>
-            <p>Every piece is certified free of lead, cadmium, or chemical sealing lacquers. Safe for daily high-heat cooking.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-brandBrown mb-1">Easy 30-Day Replacements</h4>
-            <p>If you encounter manufacturing defects or thermal cracking under normal usage, we replace your item hassle-free.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 6: STUDIO CRAFTSMANSHIP BANNER
-       ========================================================================= -->
-  <section class="py-10 bg-brandCream border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-subtle">
-        <div class="space-y-2 max-w-xl">
-          <span class="text-[10px] font-bold text-brandBrown uppercase tracking-widest">HANDMADE WITH CARE</span>
-          <h3 class="font-serif font-bold text-lg text-brandText">Supporting 45+ Master Potter Families</h3>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
-            Your purchase directly sustains traditional wheel-throwing communities in Rajasthan, preserving centuries of heritage ceramic craft.
-          </p>
-        </div>
-        <a href="about.html" class="btn-outline-brown text-xs py-2.5 px-5 whitespace-nowrap">Read Studio Heritage &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 7: WHY CHOOSE CERAMIC KITCHEN
-       ========================================================================= -->
-  <section class="py-10 bg-brandTan/30 border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="text-center max-w-lg mx-auto mb-6">
-        <h2 class="text-xl font-serif font-bold text-brandText">Why 25,000 Kitchens Choose Us</h2>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-center">
-        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl shadow-subtle space-y-1">
-          <div class="font-serif font-bold text-xl text-brandBrown">18h</div>
-          <div class="font-bold text-stone-500 uppercase tracking-wide text-[10px]">Kiln Firing</div>
-          <p class="text-stone-500 dark:text-stone-400">Wood-fired vitrification for maximum durability.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl shadow-subtle space-y-1">
-          <div class="font-serif font-bold text-xl text-brandBrown">0%</div>
-          <div class="font-bold text-stone-500 uppercase tracking-wide text-[10px]">Toxic Metals</div>
-          <p class="text-stone-500 dark:text-stone-400">NABL certified lead & cadmium free glaze formula.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl shadow-subtle space-y-1">
-          <div class="font-serif font-bold text-xl text-brandBrown">45+</div>
-          <div class="font-bold text-stone-500 uppercase tracking-wide text-[10px]">Potter Families</div>
-          <p class="text-stone-500 dark:text-stone-400">Fair-wage artisan community in Sanganer, Jaipur.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder p-4 rounded-xl shadow-subtle space-y-1">
-          <div class="font-serif font-bold text-xl text-brandBrown">4.9&#9733;</div>
-          <div class="font-bold text-stone-500 uppercase tracking-wide text-[10px]">Customer Rating</div>
-          <p class="text-stone-500 dark:text-stone-400">Based on 1,200+ verified reviews across platforms.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
-       CART &mdash; SECTION 8: FINAL CTA
-       ========================================================================= -->
-    <!-- =========================================================================
-       CART &mdash; NEW SECTION: TRANSIT SAFE BREAKAGE GUARANTEE
-       ========================================================================= -->
-  <section class="py-12 bg-brandCream border-b border-brandBorder">
-    <div class="container-custom">
-      <div class="text-center max-w-xl mx-auto mb-8">
-        <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Peace of Mind</span>
-        <h2 class="text-2xl font-serif font-bold text-brandText">Our Safe Transit Packaging Guarantee</h2>
-        <p class="text-xs text-stone-500 mt-2">Ceramics are fragile, but our custom engineered honeycomb paper system ensures your items arrive completely intact.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-2">
-          <div class="font-bold text-stone-700 dark:text-stone-300">1. Double-Wall Kraft Box</div>
-          <p class="text-stone-600 dark:text-stone-400">All pots are nested inside thick double-wall heavy corrugated shipping boxes engineered to withstand drops up to 1.5 meters.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-2">
-          <div class="font-bold text-stone-700 dark:text-stone-300">2. Honeycomb Paper Wrap</div>
-          <p class="text-stone-600 dark:text-stone-400">No plastic bubble wrap. We cushion vessels in expandable hex-cut honeycomb brown paper which absorbs structural shock perfectly.</p>
-        </div>
-        <div class="bg-brandCard border border-brandBorder rounded-2xl p-5 shadow-subtle space-y-2">
-          <div class="font-bold text-stone-700 dark:text-stone-300">3. Zero-Risk Breakage Pledge</div>
-          <p class="text-stone-600 dark:text-stone-400">In the rare event that a ceramic piece suffers a fracture during transit, email a photo to our concierge and we will ship a free replacement instantly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="footer-cta bg-brandOlive text-white">
-    <div class="container-custom max-w-xl">
-      <h2 class="text-2xl font-serif font-bold">Need Custom Gifting or Assistance?</h2>
-      <p class="text-xs text-stone-200">Our studio concierge team is available to help with order customizations or handwritten gift notes.</p>
-      <a href="contact.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Contact Studio Concierge &rarr;</a>
     </div>
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper mt-auto">
+  <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -363,7 +150,7 @@
         <div class="footer-column footer-brand-col">
           <div class="footer-brand-logo-container">
             <div class="footer-brand-icon">
-              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 00-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             </div>
             <span class="footer-brand-name">Ceramic Kitchen</span>
           </div>
@@ -413,7 +200,7 @@
               </div>
             </li>
             <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg class="w-3.5 h-3.5 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1.01 1.01 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               <span class="leading-none">+91 91 123 4567</span>
             </li>
             <li class="flex items-center gap-2">
@@ -457,8 +244,8 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
-        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown drawer-login-btn text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
       <div class="space-y-3 pt-1">
@@ -476,7 +263,6 @@
         <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
         <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
         <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
         <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
         <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
       </div>
@@ -491,8 +277,8 @@
       const totalEl = document.getElementById('pageTotal');
       
       const sub = cartItems.reduce((a, b) => a + (b.price * b.qty), 0);
-      if (subtotalEl) subtotalEl.textContent = `&#8377; ${sub.toFixed(2)}`;
-      if (totalEl) totalEl.textContent = `&#8377; ${sub.toFixed(2)}`;
+      if (subtotalEl) subtotalEl.textContent = `\u20B9 ${sub.toFixed(2)}`;
+      if (totalEl) totalEl.textContent = `\u20B9 ${sub.toFixed(2)}`;
 
       if (!container) return;
       if (cartItems.length === 0) {
@@ -516,8 +302,8 @@
             <button onclick="updateCartQty('${item.id}', -1); renderCartPage();" class="px-2 py-0.5 border border-brandBorder rounded text-xs font-bold">-</button>
             <span class="text-xs font-bold px-2">${item.qty}</span>
             <button onclick="updateCartQty('${item.id}', 1); renderCartPage();" class="px-2 py-0.5 border border-brandBorder rounded text-xs font-bold">+</button>
+            <button onclick="removeFromCart('${item.id}'); renderCartPage();" class="text-stone-400 hover:text-red-500 ml-2 text-xs">Remove</button>
           </div>
-          <button onclick="removeFromCart('${item.id}'); renderCartPage();" class="text-xs text-red-600 hover:underline">Remove</button>
         </div>
       `).join('');
     }
@@ -526,4 +312,3 @@
   </script>
 </body>
 </html>
-

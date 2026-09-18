@@ -97,7 +97,7 @@
           <p class="hero-desc">
             Slow-fire Dutch ovens, casseroles, and serving platter sets hand-shaped in Jaipur. Retains 100% of steam nutrients.
           </p>
-          <div class="flex items-center gap-3">
+          <div class="flex flex-wrap items-center justify-center gap-3">
             <a href="products.html" class="btn-brown text-xs">Explore Shop Collection &rarr;</a>
             <a href="material-guide.html" class="btn-outline-brown text-xs">Material Guide</a>
           </div>
@@ -379,7 +379,7 @@
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
       <div class="text-center max-w-xl mx-auto mb-8">
-        <span class="text-xs font-bold text-brandOlive uppercase tracking-widest block">TESTIMONIALS</span>
+        <span class="text-xs font-bold text-brandBrown dark:text-amber-400 uppercase tracking-widest block">TESTIMONIALS</span>
         <h2 class="text-2xl font-serif font-bold text-brandText">Loved by Home Chefs & Bakers</h2>
       </div>
 
@@ -434,7 +434,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <!-- Left Column: Content -->
         <div class="lg:col-span-6 space-y-4">
-          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Interactive Experience</span>
+          <span class="text-xs font-bold text-brandBrown dark:text-amber-400 uppercase tracking-widest block">INTERACTIVE EXPERIENCE</span>
           <h2 class="text-2xl md:text-3xl font-serif font-bold text-brandText leading-tight">Virtual Studio Tour &amp; Clay Throwing Masterclass</h2>
           <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Step inside our Jaipur workshop from anywhere in the world. Join our master artisans live as they demonstrate raw clay sifting, kick-wheel turning, and mineral glazing. Learn the physics of slow-heat clay cooking and how to season your earthenware pots for a lifetime of culinary rich stews.
@@ -474,7 +474,7 @@
   </section>
 
   <!-- GLOBAL FOOTER -->
-        <footer class="footer-wrapper">
+  <footer class="footer-wrapper">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -577,7 +577,7 @@
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
         <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
-        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
+        <a href="login.html" class="auth-action-btn drawer-login-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
       <div class="space-y-3 pt-1">
@@ -595,7 +595,6 @@
         <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
         <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
         <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
         <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
         <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
       </div>
@@ -621,17 +620,21 @@
 
   <!-- QUICK VIEW MODAL OVERLAY -->
   <div id="quickViewModal" class="modal-overlay">
-    <div class="modal-content max-w-2xl">
-      <div class="flex justify-between items-center border-b border-brandBorder pb-3 mb-4">
-        <span id="qvCategory" class="text-[10px] font-bold text-brandBrown tracking-widest">COOKWARE</span>
-        <button id="closeQuickViewBtn" class="text-stone-500 hover:text-stone-800"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+    <div class="modal-content max-w-2xl p-0 overflow-hidden">
+      <div class="modal-header-strip">
+        <div>
+          <span id="qvCategory" class="modal-category">COOKWARE</span>
+          <h3 id="qvTitle" class="modal-title">Product Title</h3>
+        </div>
+        <button id="closeQuickViewBtn" class="modal-close-btn" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+      <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
         <div class="md:col-span-6 aspect-square rounded-xl overflow-hidden bg-brandTan">
-          <img id="qvImage" src="" class="w-full h-full object-cover">
+          <img id="qvImage" src="" class="w-full h-full object-cover" alt="Product Image">
         </div>
         <div class="md:col-span-6 space-y-3">
-          <h3 id="qvTitle" class="font-serif font-bold text-xl text-brandText">Product Title</h3>
           <div id="qvPrice" class="text-xl font-bold text-amber-900 dark:text-amber-400">₹ 0.00</div>
           <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
             Handmolded earthenware, vitrified in 18-hour kilns. Non-toxic mineral glazes, gas stove and oven safe up to 260°C.

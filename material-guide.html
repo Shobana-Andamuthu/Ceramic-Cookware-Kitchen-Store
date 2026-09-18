@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,7 @@
           colors: {
             brandCream: 'var(--bg-primary)',
             brandTan: 'var(--bg-secondary)',
+            brandCard: 'var(--bg-secondary)',
             brandOlive: 'var(--bg-olive)',
             brandBrown: 'var(--accent-brown)',
             brandText: 'var(--text-primary)',
@@ -77,7 +78,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -87,11 +88,12 @@
   <!-- =========================================================================
        MATERIAL GUIDE &mdash; SECTION 1: MATERIAL HERO
        ========================================================================= -->
-  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
-    <div class="container-custom max-w-xl">
-      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">CRAFT & SCIENCE</span>
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Material & Care Science</h1>
-      <p class="text-stone-600 dark:text-stone-400 text-xs md:text-sm mt-2">
+  <section class="page-hero-standard" style="background-image: url('assets/images/hero/hero-material-guide.png');">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">CRAFT &amp; SCIENCE</span>
+      <h1 class="page-hero-title">Material &amp; Care Science</h1>
+      <p class="page-hero-desc">
         Understanding natural Jaipur clay composition, thermal shock resistance, and non-toxic mineral glaze standards.
       </p>
     </div>
@@ -137,7 +139,7 @@
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 4: HEATING PERFORMANCE & FAR-INFRARED HEAT (CLEAN SVG ICONS)
+       MATERIAL GUIDE &mdash; SECTION 4: HEATING PERFORMANCE
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -170,7 +172,7 @@
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 4.5 (NEW): VITRIFICATION SCIENCE
+       MATERIAL GUIDE &mdash; SECTION 4.5: VITRIFICATION SCIENCE
        ========================================================================= -->
   <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -200,7 +202,7 @@
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 4.6 (NEW): STOVE COMPATIBILITY MATRIX
+       MATERIAL GUIDE &mdash; SECTION 4.6: STOVE COMPATIBILITY MATRIX
        ========================================================================= -->
   <section class="py-14 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -251,7 +253,7 @@
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 4.7 (NEW): CARE JOURNAL & WASHING BEST PRACTICES
+       MATERIAL GUIDE &mdash; SECTION 4.7: DAILY MAINTENANCE
        ========================================================================= -->
   <section class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -266,8 +268,8 @@
             Maintaining earthen ceramics is simple. Wash with warm water and soft coconut fiber sponge. Avoid harsh chemical detergents or synthetic bleach. Allow pots to air dry completely before storing in open wooden kitchen racks.
           </p>
           <div class="flex items-center gap-3 pt-2 text-xs">
-            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">âœ“ Warm Water Rinse</span>
-            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200">âœ“ Air Dry in Sunlight</span>
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200 inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Warm Water Rinse</span>
+            <span class="bg-brandCard border border-brandBorder py-1.5 px-3 rounded-full font-semibold text-stone-800 dark:text-stone-200 inline-flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg> Air Dry in Sunlight</span>
           </div>
         </div>
       </div>
@@ -278,30 +280,30 @@
        MATERIAL GUIDE &mdash; SECTION 5: CARE & SEASONING STEPS
        ========================================================================= -->
   <section class="py-12 bg-brandTan/40 border-b border-brandBorder">
-    <div class="container-custom max-w-3xl">
+    <div class="container-custom max-w-4xl">
       <h2 class="text-2xl font-serif font-bold text-brandText mb-8 text-center">First-Time Seasoning Steps</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
           <div class="font-serif font-bold text-brandBrown text-lg">Step 1: Soak</div>
-          <p class="text-stone-600 dark:text-stone-400">Submerge the new pot in clean water for 8-12 hours before initial cooking.</p>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Submerge the new pot in clean water for 8-12 hours before initial cooking.</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
           <div class="font-serif font-bold text-brandBrown text-lg">Step 2: Oil Coat</div>
-          <p class="text-stone-600 dark:text-stone-400">Rub unrefined mustard or sesame oil into interior surfaces and air dry.</p>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Rub unrefined mustard or sesame oil into interior surfaces and air dry.</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-5 rounded-xl space-y-2 shadow-subtle">
           <div class="font-serif font-bold text-brandBrown text-lg">Step 3: Low Simmer</div>
-          <p class="text-stone-600 dark:text-stone-400">Simmer rice water on low heat for 15 mins to seal natural clay pores.</p>
+          <p class="text-stone-600 dark:text-stone-400 leading-relaxed">Simmer rice water on low heat for 15 mins to seal natural clay pores.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 6: MATERIAL COMPARISON TABLE
+       MATERIAL GUIDE &mdash; SECTION 6: MATERIAL PERFORMANCE COMPARISON TABLE
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -310,36 +312,36 @@
         <table class="w-full text-xs text-left border border-brandBorder rounded-xl overflow-hidden bg-brandCard">
           <thead class="bg-brandTan text-brandBrown font-serif font-bold border-b border-brandBorder">
             <tr>
-              <th class="p-3">Cookware Feature</th>
-              <th class="p-3">Earthen Terracotta Clay</th>
-              <th class="p-3">Enameled Cast Iron</th>
-              <th class="p-3">Synthetic Non-Stick (PTFE)</th>
+              <th class="p-3.5">Cookware Feature</th>
+              <th class="p-3.5">Earthen Terracotta Clay</th>
+              <th class="p-3.5">Enameled Cast Iron</th>
+              <th class="p-3.5">Synthetic Non-Stick (PTFE)</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-brandBorder/60 text-stone-700 dark:text-stone-300">
             <tr>
-              <td class="p-3 font-semibold">Toxics & Heavy Metals</td>
-              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">100% Free</td>
-              <td class="p-3">Low Risk</td>
-              <td class="p-3 text-red-600">Chemical Fumes at >260°C</td>
+              <td class="p-3.5 font-semibold">Toxics &amp; Heavy Metals</td>
+              <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-400">100% Free</td>
+              <td class="p-3.5">Low Risk</td>
+              <td class="p-3.5 text-red-600">Chemical Fumes at &gt;260°C</td>
             </tr>
             <tr>
-              <td class="p-3 font-semibold">Nutrient & Steam Retention</td>
-              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">High (Micro-Porous)</td>
-              <td class="p-3">Moderate</td>
-              <td class="p-3">Low</td>
+              <td class="p-3.5 font-semibold">Nutrient &amp; Steam Retention</td>
+              <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-400">High (Micro-Porous)</td>
+              <td class="p-3.5">Moderate</td>
+              <td class="p-3.5">Low</td>
             </tr>
             <tr>
-              <td class="p-3 font-semibold">Alkaline Neutralization</td>
-              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">Yes (Neutralizes Acid)</td>
-              <td class="p-3">No</td>
-              <td class="p-3">No</td>
+              <td class="p-3.5 font-semibold">Alkaline Neutralization</td>
+              <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-400">Yes (Neutralizes Acid)</td>
+              <td class="p-3.5">No</td>
+              <td class="p-3.5">No</td>
             </tr>
             <tr>
-              <td class="p-3 font-semibold">Heat Distribution</td>
-              <td class="p-3 font-bold text-emerald-700 dark:text-emerald-400">Far-Infrared Even Heat</td>
-              <td class="p-3">Heavy Direct Heat</td>
-              <td class="p-3">Quick Hot Spots</td>
+              <td class="p-3.5 font-semibold">Heat Distribution</td>
+              <td class="p-3.5 font-bold text-emerald-700 dark:text-emerald-400">Far-Infrared Even Heat</td>
+              <td class="p-3.5">Heavy Direct Heat</td>
+              <td class="p-3.5">Quick Hot Spots</td>
             </tr>
           </tbody>
         </table>
@@ -348,17 +350,14 @@
   </section>
 
   <!-- =========================================================================
-       MATERIAL GUIDE &mdash; SECTION 7: FINAL CTA
+       MATERIAL GUIDE &mdash; SECTION 7: HOME POROSITY TEST
        ========================================================================= -->
-    <!-- =========================================================================
-       MATERIAL GUIDE &mdash; NEW SECTION: HOME POROSITY TEST
-       ========================================================================= -->
-  <section class="py-12 bg-brandCream border-b border-brandBorder">
+  <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <!-- Info Column -->
         <div class="lg:col-span-5 space-y-4">
-          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Verify Clay Quality</span>
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">VERIFY CLAY QUALITY</span>
           <h2 class="text-2xl font-serif font-bold text-brandText leading-tight">Testing Earthenware Porosity At Home</h2>
           <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             Real earthenware breathes. If a clay pot doesn't absorb water slightly, it has been treated with chemical synthetic sealants. Follow our two quick studio tests to verify the organic purity of your cooking clay at home.
@@ -384,16 +383,17 @@
     </div>
   </section>
 
-<section class="footer-cta bg-brandOlive text-white">
-    <div class="container-custom max-w-xl">
-      <h2 class="text-2xl font-serif font-bold">Experience Healthier Cooking</h2>
-      <p class="text-xs text-stone-200">Switch to non-toxic clay Dutch ovens and handcrafted bakeware today.</p>
-      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Shop Cookware Collection &rarr;</a>
+  <!-- FOOTER CTA -->
+  <section class="footer-cta bg-brandOlive text-white">
+    <div class="container-custom max-w-xl text-center">
+      <h2 class="text-2xl font-serif font-bold mb-2">Experience Healthier Cooking</h2>
+      <p class="text-xs text-stone-200 mb-4">Switch to non-toxic clay Dutch ovens and handcrafted bakeware today.</p>
+      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block">Shop Cookware Collection &rarr;</a>
     </div>
   </section>
 
   <!-- GLOBAL FOOTER -->
-      <footer class="footer-wrapper mt-auto">
+  <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
@@ -481,7 +481,9 @@
         </div>
       </div>
     </div>
-  </footer><!-- MOBILE NAVIGATION DRAWER -->
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobileNavBackdrop" class="drawer-overlay"></div>
   <aside id="mobileNavDrawer" class="cart-drawer">
     <div class="cart-header">
@@ -493,8 +495,8 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
-        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn drawer-login-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
       <div class="space-y-3 pt-1">
@@ -512,7 +514,6 @@
         <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
         <a href="material-guide.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Material Guide</a>
         <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
         <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
         <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
       </div>
@@ -527,16 +528,15 @@
       <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
     </div>
     <div id="cartItemsContainer" class="cart-body"></div>
-    <div class="cart-footer">
+    <div class="cart-footer p-4 border-t border-brandBorder">
       <div class="flex justify-between items-center mb-4">
-        <span class="text-sm font-semibold">Subtotal:</span>
-        <span id="cartSubtotal" class="font-serif font-bold text-lg text-brandBrown">&#8377; 0.00</span>
+        <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">&#8377; 0.00</span>
       </div>
-      <a href="cart.html" class="btn-brown w-full text-center block text-xs">View Cart & Checkout</a>
+      <a href="cart.html" class="btn-brown w-full py-3 text-center block">View Shopping Bag & Checkout &rarr;</a>
     </div>
   </aside>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -77,7 +77,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -363,32 +363,42 @@
         </div>
       </div>
     </div>
-  </footer><!-- MOBILE NAVIGATION DRAWER -->
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobileNavBackdrop" class="drawer-overlay"></div>
   <aside id="mobileNavDrawer" class="cart-drawer">
     <div class="cart-header">
       <h3 class="font-serif font-bold text-stone-800 dark:text-stone-100 text-base">Navigation</h3>
       <button id="closeMobileNavBtn" class="text-stone-500 hover:text-brandBrown"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
     </div>
-    <div class="cart-body p-4 space-y-3 text-sm font-semibold">
-      <div>
-        <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
-          <span>Home</span>
-          <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
-          <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
-          <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
-        </div>
+    <div class="cart-body p-4 space-y-4 text-sm font-semibold">
+      
+      <!-- MOBILE / TABLET NAV CONTROLS -->
+      <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
+        <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn drawer-login-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
-      <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
-      <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
-      <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
-      <a href="recipes.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Recipes</a>
-      <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
-      <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
-      <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
-      <a href="login.html" class="block py-2 text-brandBrown font-bold">Login</a>
+
+      <div class="space-y-3 pt-1">
+        <div>
+          <button class="mobile-acc-btn w-full flex justify-between items-center py-2 border-b border-brandBorder/60 text-brandText">
+            <span>Home</span>
+            <svg class="acc-icon w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="hidden pl-4 py-2 space-y-2 text-xs font-normal border-b border-brandBorder/40">
+            <a href="index.html" class="block hover:text-brandBrown text-brandText">Home 1</a>
+            <a href="home-2.html" class="block hover:text-brandBrown text-brandText">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="block py-2 text-brandText border-b border-brandBorder/60">About</a>
+        <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
+        <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
+        <a href="recipes.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Recipes</a>
+        <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
+        <a href="contact.html" class="block py-2 text-brandText border-b border-brandBorder/60">Contact</a>
+      </div>
     </div>
   </aside>
 
@@ -400,16 +410,27 @@
       <button id="closeCartBtn" class="text-stone-500"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
     </div>
     <div id="cartItemsContainer" class="cart-body"></div>
-    <div class="cart-footer">
+    <div class="cart-footer p-4 border-t border-brandBorder">
       <div class="flex justify-between items-center mb-4">
-        <span class="text-sm font-semibold">Subtotal:</span>
-        <span id="cartSubtotal" class="font-serif font-bold text-lg text-brandBrown">&#8377; 0.00</span>
+        <span class="text-sm font-semibold text-stone-600 dark:text-stone-400">Subtotal:</span>
+        <span id="cartSubtotal" class="text-lg font-bold text-amber-900 dark:text-amber-400">&#8377; 0.00</span>
       </div>
-      <a href="cart.html" class="btn-brown w-full text-center block text-xs">View Cart & Checkout</a>
+      <a href="cart.html" class="btn-brown w-full py-3 text-center block">View Shopping Bag & Checkout &rarr;</a>
     </div>
   </aside>
+
+  <!-- SEARCH MODAL OVERLAY -->
+  <div id="searchModalOverlay" class="modal-overlay">
+    <div class="modal-content p-6 max-w-xl">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-serif font-bold text-lg text-brandText">Search Ceramic Kitchen</h3>
+        <button id="closeSearchBtn" class="text-stone-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
+      </div>
+      <input id="globalSearchInput" type="text" placeholder="Type to search cookware, recipes, guides..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-3 text-xs outline-none focus:border-brandBrown mb-4">
+      <div id="searchResultsContainer" class="max-h-60 overflow-y-auto space-y-2"></div>
+    </div>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-

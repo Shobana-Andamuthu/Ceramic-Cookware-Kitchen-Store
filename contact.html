@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -42,16 +42,12 @@
 </head>
 <body class="bg-brandCream text-brandText antialiased min-h-screen flex flex-col">
 
-  <!-- TOP NAV STRIP -->
-  
-  </div>
-
   <!-- GLOBAL HEADER -->
   <header class="main-header">
     <div class="container-custom py-3.5 flex items-center justify-between">
       <a href="index.html" class="brand-logo group">
         <div class="brand-logo-icon">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 00-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
         </div>
         <div>
           <span class="brand-name block">Ceramic Kitchen</span>
@@ -81,7 +77,7 @@
       <!-- RIGHT UTILITIES -->
       <div class="header-actions">
         <button class="toggle-pill-btn dir-toggle-btn" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">&#9733;¾ Dark</button>
+        <button class="toggle-pill-btn theme-toggle-btn" aria-label="Toggle Theme">☾ Dark</button>
         <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-3">Login</a>
         <button id="mobileMenuToggleBtn" class="icon-btn xl:hidden" aria-label="Toggle Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -89,25 +85,26 @@
   </header>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 1: HERO
+       CONTACT PAGE — SECTION 1: HERO
        ========================================================================= -->
-  <section class="bg-brandTan/40 py-10 border-b border-brandBorder text-center">
-    <div class="container-custom max-w-xl">
-      <span class="text-xs font-bold text-brandBrown uppercase tracking-widest block mb-1">STUDIO CONCIERGE</span>
-      <h1 class="text-3xl md:text-4xl font-serif font-bold text-brandText">Get in Touch With Us</h1>
-      <p class="text-stone-600 dark:text-stone-300 text-sm mt-2">
+  <section class="page-hero-standard" style="background-image: url('assets/images/hero/hero-contact.png');" style="background-image: url('assets/images/hero/hero-contact.png');">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="page-hero-eyebrow">STUDIO CONCIERGE</span>
+      <h1 class="page-hero-title">Get in Touch With Us</h1>
+      <p class="page-hero-desc">
         Have questions about sizing, terracotta seasoning, or custom order dispatches? Our Jaipur studio team is here to assist.
       </p>
     </div>
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 2: CONTACT INFO CARDS (CLEAN SVG ICONS)
+       CONTACT PAGE — SECTION 2: CONTACT INFO CARDS
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center text-xs">
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl shadow-subtle space-y-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center text-xs">
+        <div class="bg-brandCard border border-brandBorder p-4 sm:p-5 rounded-2xl shadow-subtle space-y-2">
           <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
@@ -115,7 +112,7 @@
           <p class="text-stone-600 dark:text-stone-400">Studio 4, Potter's Quarter, Jaipur, Rajasthan 302001</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl shadow-subtle space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-4 sm:p-5 rounded-2xl shadow-subtle space-y-2">
           <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1.01 1.01 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           </div>
@@ -123,15 +120,15 @@
           <p class="text-stone-600 dark:text-stone-400">+91 91 123 4567<br>Mon - Sat: 9am - 6pm</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl shadow-subtle space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-4 sm:p-5 rounded-2xl shadow-subtle space-y-2">
           <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
           <h3 class="font-serif font-bold text-sm text-brandText">Email Support</h3>
-          <p class="text-stone-600 dark:text-stone-400">info@ceramickitchen.com<br>support@ceramickitchen.com</p>
+          <p class="text-stone-600 dark:text-stone-400 break-all sm:break-words">info@ceramickitchen.com<br>support@ceramickitchen.com</p>
         </div>
 
-        <div class="bg-brandCard border border-brandBorder p-5 rounded-2xl shadow-subtle space-y-2">
+        <div class="bg-brandCard border border-brandBorder p-4 sm:p-5 rounded-2xl shadow-subtle space-y-2">
           <div class="w-10 h-10 rounded-full bg-brandTan text-brandBrown flex items-center justify-center mx-auto">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
@@ -143,7 +140,7 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; GOOGLE MAPS INTERACTIVE STUDIO LOCATION
+       CONTACT PAGE — GOOGLE MAPS LOCATION
        ========================================================================= -->
   <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
@@ -170,14 +167,14 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 3: CONTACT FORM
+       CONTACT PAGE — SECTION 3: CONTACT FORM (CENTERED HEADING)
        ========================================================================= -->
   <section class="py-12 bg-brandCream border-b border-brandBorder">
     <div class="container-custom max-w-2xl">
       <div class="bg-brandCard border border-brandBorder rounded-2xl p-8 shadow-subtle space-y-5">
-        <div>
-          <h2 class="text-2xl font-serif font-bold text-brandText">Send a Message</h2>
-          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Fill out the details below and our team will get back to you promptly.</p>
+        <div class="text-center">
+          <h2 class="text-2xl font-serif font-bold text-brandText text-center">Send a Message</h2>
+          <p class="text-xs text-stone-500 dark:text-stone-400 mt-1 text-center">Fill out the details below and our team will get back to you promptly.</p>
         </div>
 
         <form onsubmit="event.preventDefault(); showToast('Message sent! We will contact you shortly.'); this.reset();" class="space-y-4 text-xs">
@@ -220,7 +217,7 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 4: FREQUENTLY ASKED QUESTIONS (MIGRATED FAQ SECTION)
+       CONTACT PAGE — SECTION 4: FREQUENTLY ASKED QUESTIONS
        ========================================================================= -->
   <section id="faq" class="py-14 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom max-w-3xl">
@@ -292,7 +289,7 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 5: DELIVERY & POLICY STRIP
+       CONTACT PAGE — SECTION 5: DELIVERY & POLICY STRIP
        ========================================================================= -->
   <section class="py-8 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
@@ -300,7 +297,7 @@
         <div class="flex flex-col items-center gap-2 bg-brandCard border border-brandBorder rounded-xl p-4 shadow-subtle">
           <svg class="w-6 h-6 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
           <h4 class="font-serif font-bold text-sm text-brandText">Free Pan-India Shipping</h4>
-          <p class="text-stone-500 dark:text-stone-400">On all orders above &#8377;999. Express 3-5 day delivery via Delhivery & Bluedart.</p>
+          <p class="text-stone-500 dark:text-stone-400">On all orders above &#8377;999. Express 3-5 day delivery via Delhivery &amp; Bluedart.</p>
         </div>
         <div class="flex flex-col items-center gap-2 bg-brandCard border border-brandBorder rounded-xl p-4 shadow-subtle">
           <svg class="w-6 h-6 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
@@ -317,14 +314,14 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 6: WHOLESALE & TRADE ENQUIRY
+       CONTACT PAGE — SECTION 6: WHOLESALE & TRADE ENQUIRY
        ========================================================================= -->
   <section class="py-12 bg-brandTan/30 border-b border-brandBorder">
     <div class="container-custom">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         <div class="lg:col-span-5 space-y-4">
-          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">TRADE & WHOLESALE</span>
-          <h2 class="text-2xl font-serif font-bold text-brandText">Bulk & Registry Orders</h2>
+          <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">TRADE &amp; WHOLESALE</span>
+          <h2 class="text-2xl font-serif font-bold text-brandText">Bulk &amp; Registry Orders</h2>
           <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
             Looking to supply restaurants, hotels, or gifting platforms? We offer custom logo-embossed pottery, bulk pricing tiers, and exclusive wholesale accounts with dedicated support.
           </p>
@@ -335,7 +332,7 @@
           </ul>
         </div>
         <div class="lg:col-span-7 bg-brandCard border border-brandBorder rounded-2xl p-6 shadow-subtle">
-          <h3 class="font-serif font-bold text-base text-brandText mb-4">Submit Trade Enquiry</h3>
+          <h3 class="font-serif font-bold text-base text-brandText mb-4 text-center">Submit Trade Enquiry</h3>
           <form onsubmit="event.preventDefault(); showToast('Trade enquiry submitted! We respond within 24 hrs.');" class="space-y-3 text-xs">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input type="text" required placeholder="Company / Restaurant Name" class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
@@ -346,11 +343,11 @@
                 <option>50 - 100 Units</option><option>100 - 500 Units</option><option>500+ Units</option>
               </select>
               <select class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown">
-                <option>Cookware Sets</option><option>Dining & Serveware</option><option>Gift Bundles</option><option>Mixed Assortment</option>
+                <option>Cookware Sets</option><option>Dining &amp; Serveware</option><option>Gift Bundles</option><option>Mixed Assortment</option>
               </select>
             </div>
             <textarea rows="2" placeholder="Additional requirements or custom specifications..." class="w-full bg-brandCream border border-brandBorder rounded-lg p-2.5 outline-none focus:border-brandBrown"></textarea>
-            <button class="btn-brown w-full py-2.5 text-xs">Send Trade Enquiry &rarr;</button>
+            <button class="btn-brown w-full py-2.5 text-xs font-bold">Send Trade Enquiry &rarr;</button>
           </form>
         </div>
       </div>
@@ -358,15 +355,15 @@
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 7: STUDIO TOUR BOOKING
+       CONTACT PAGE — SECTION 7: STUDIO TOUR BOOKING (STRAIGHT LINE ALIGNMENT)
        ========================================================================= -->
   <section class="py-10 bg-brandCream border-b border-brandBorder">
     <div class="container-custom">
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-        <div class="md:col-span-8 space-y-3">
-          <span class="text-xs font-bold text-brandOlive uppercase tracking-widest">JAIPUR STUDIO VISITS</span>
-          <h2 class="text-xl font-serif font-bold text-brandText">Book a Weekend Pottery Workshop</h2>
-          <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-8 space-y-3">
+          <span class="text-xs font-bold text-brandBrown dark:text-amber-400 uppercase tracking-widest">JAIPUR STUDIO VISITS</span>
+          <h2 class="text-xl md:text-2xl font-serif font-bold text-brandText">Book a Weekend Pottery Workshop</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
             We host intimate Saturday studio tours and beginner wheel-throwing sessions for groups of 4&ndash;12. Walk through our Sanganer kiln, hand-throw your own clay bowl, and experience first-hand why our cookware tastes different.
           </p>
           <div class="flex flex-wrap gap-4 text-xs font-semibold text-stone-600 dark:text-stone-400">
@@ -375,64 +372,70 @@
             <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> &#8377;999 per person, includes chai</span>
           </div>
         </div>
-        <div class="md:col-span-4 text-center">
-          <a href="#" onclick="showToast('Workshop booking form will open shortly!'); return false;" class="btn-brown text-xs py-3 px-6 w-full sm:w-auto">Book Studio Tour &rarr;</a>
-          <p class="text-[10px] text-stone-500 mt-2">Limited to 12 spots per Saturday session</p>
+        <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center">
+          <a href="#" onclick="showToast('Workshop booking form will open shortly!'); return false;" class="btn-brown text-xs py-3 px-6 w-full sm:w-[240px] rounded-md shadow-sm font-bold text-center inline-flex items-center justify-center whitespace-nowrap">Book Studio Tour &rarr;</a>
+          <p class="text-[10px] text-stone-500 mt-1.5 text-center lg:text-right w-full sm:w-[240px]">Limited to 12 spots per Saturday session</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       CONTACT PAGE &mdash; SECTION 8: FINAL CTA
+       CONTACT PAGE — SECTION 8: LIVE KICK-WHEEL SESSION (STRAIGHT LINE ALIGNMENT)
        ========================================================================= -->
-    <!-- =========================================================================
-       CONTACT &mdash; NEW SECTION: KICK-WHEEL WORKSHOP BOOKING
-       ========================================================================= -->
-  <section class="py-12 bg-brandTan/20 border-b border-brandBorder">
+  <section class="py-10 bg-brandTan/20 border-b border-brandBorder">
     <div class="container-custom">
-      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          <div class="lg:col-span-8 space-y-3">
-            <span class="text-xs font-bold text-brandBrown uppercase tracking-widest">Visit the Studio</span>
-            <h2 class="text-xl md:text-2xl font-serif font-bold text-brandText">Schedule a Live Kick-Wheel Throwing Session</h2>
-            <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-              Visiting Jaipur? Join us for an hour at the kick-wheel. Under the direct guidance of master potters, sift clay, center it on the stone wheel, and shape your own mini terracotta soup bowl to take home.
-            </p>
-            <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-stone-600 dark:text-stone-400 pt-1">
-              <div><strong class="font-semibold text-brandText">Daily Slots:</strong> 10:00 AM &amp; 3:00 PM</div>
-              <div class="hidden sm:block text-stone-300 dark:text-stone-700">|</div>
-              <div><strong class="font-semibold text-brandText">Fee:</strong> &#8377;450 per person</div>
-            </div>
+      <div class="bg-brandCard border border-brandBorder rounded-2xl p-6 md:p-8 shadow-subtle grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-8 space-y-3">
+          <span class="text-xs font-bold text-brandBrown dark:text-amber-400 uppercase tracking-widest">VISIT THE STUDIO</span>
+          <h2 class="text-xl md:text-2xl font-serif font-bold text-brandText">Schedule a Live Kick-Wheel Throwing Session</h2>
+          <p class="text-xs md:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+            Visiting Jaipur? Join us for an hour at the kick-wheel. Under the direct guidance of master potters, sift clay, center it on the stone wheel, and shape your own mini terracotta soup bowl to take home.
+          </p>
+          <div class="flex flex-wrap gap-4 text-xs font-semibold text-stone-600 dark:text-stone-400">
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Daily Slots: 10:00 AM &amp; 3:00 PM</span>
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg> 1-on-1 Master Potter Guide</span>
+            <span class="flex items-center gap-1"><svg class="w-4 h-4 text-brandBrown" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> &#8377;450 per person, includes bowl</span>
           </div>
-          <div class="lg:col-span-4 lg:text-right">
-            <button onclick="event.preventDefault(); showToast('Pottery slot request sent!');" class="btn-brown text-xs py-3 px-6 w-full lg:w-auto rounded-md shadow-sm">Request Studio Spot Pass &rarr;</button>
-          </div>
+        </div>
+        <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center">
+          <button onclick="event.preventDefault(); showToast('Pottery slot request sent!');" class="btn-brown text-xs py-3 px-6 w-full sm:w-[240px] rounded-md shadow-sm font-bold text-center inline-flex items-center justify-center whitespace-nowrap">Request Studio Spot Pass &rarr;</button>
+          <p class="text-[10px] text-stone-500 mt-1.5 text-center lg:text-right w-full sm:w-[240px]">Limited to 8 spots per daily session</p>
         </div>
       </div>
     </div>
   </section>
 
-<section class="footer-cta bg-brandOlive text-white">
+  <!-- =========================================================================
+       CONTACT PAGE — SECTION 9: FINAL CTA
+       ========================================================================= -->
+  <section class="footer-cta bg-brandOlive text-white">
     <div class="container-custom max-w-xl">
-      <h2 class="text-2xl md:text-3xl font-serif font-bold">Browse the Collection First</h2>
+      <span class="text-xs font-bold text-amber-300 uppercase tracking-widest block mb-1">HANDCRAFTED COOKWARE</span>
+      <h2 class="text-2xl md:text-3xl font-serif font-bold text-white">Browse the Collection First</h2>
       <p class="text-xs text-stone-200">Explore our handcrafted cooking pots and bakeware collections online.</p>
-      <a href="products.html" class="btn-brown text-xs py-2.5 px-6 inline-block mt-2">Explore Shop &rarr;</a>
+      <div class="btn-container mt-3">
+        <a href="products.html" class="btn-brown text-xs py-2.5 px-6 font-bold rounded-md shadow-sm">Explore Cookware Shop &rarr;</a>
+        <a href="material-guide.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-xs py-2.5 px-5 rounded-md transition-colors">Care &amp; Material Guide</a>
+      </div>
     </div>
   </section>
 
   <!-- GLOBAL FOOTER -->
-      <footer class="footer-wrapper mt-auto">
+  <footer class="footer-wrapper mt-auto">
     <div class="container-custom">
       <div class="footer-grid">
 
         <!-- BRAND -->
         <div class="footer-column footer-brand-col">
-          <div class="footer-brand-logo-container">
-            <div class="footer-brand-icon">
-              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <div class="footer-brand-logo-container flex items-start gap-2.5 mb-3">
+            <div class="footer-brand-icon shrink-0 mt-0.5">
+              <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 00-2-2v-6a2 2 0 00-2-2m14 0V9a2 2 0 012-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
             </div>
-            <span class="footer-brand-name">Ceramic Kitchen</span>
+            <div>
+              <span class="footer-brand-name font-serif font-bold text-sm text-white block leading-tight">Ceramic Kitchen</span>
+              <span class="footer-brand-subtitle text-[9.5px] tracking-wider uppercase opacity-80 font-sans font-medium text-stone-300 block whitespace-nowrap">Ceramic Cookware and Kitchen Store</span>
+            </div>
           </div>
           <p class="footer-brand-desc">Handcrafted earthen cookware from Jaipur's Sanganer Potter's Quarter since 2016.</p>
         </div>
@@ -510,7 +513,9 @@
         </div>
       </div>
     </div>
-  </footer><!-- MOBILE NAVIGATION DRAWER -->
+  </footer>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
   <div id="mobileNavBackdrop" class="drawer-overlay"></div>
   <aside id="mobileNavDrawer" class="cart-drawer">
     <div class="cart-header">
@@ -522,8 +527,8 @@
       <!-- MOBILE / TABLET NAV CONTROLS -->
       <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-brandTan/60 dark:bg-stone-800/60 border border-brandBorder/60">
         <button class="toggle-pill-btn dir-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Direction">RTL</button>
-        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">&#9733;¾ Dark</button>
-        <a href="login.html" class="auth-action-btn btn-brown text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
+        <button class="toggle-pill-btn theme-toggle-btn text-xs py-1.5 px-3 rounded-full bg-brandCard text-stone-800 dark:text-stone-200 border border-brandBorder shadow-sm hover:border-brandBrown" aria-label="Toggle Theme">☾ Dark</button>
+        <a href="login.html" class="auth-action-btn btn-brown drawer-login-btn text-xs py-1.5 px-4 rounded-xl shadow-sm">Login</a>
       </div>
 
       <div class="space-y-3 pt-1">
@@ -541,7 +546,6 @@
         <a href="products.html" class="block py-2 text-brandText border-b border-brandBorder/60">Products</a>
         <a href="material-guide.html" class="block py-2 text-brandText border-b border-brandBorder/60">Material Guide</a>
         <a href="recipes.html" class="block py-2 text-brandText border-b border-brandBorder/60">Recipes</a>
-        <a href="gift-sets.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gift Sets</a>
         <a href="gallery.html" class="block py-2 text-brandText border-b border-brandBorder/60">Gallery</a>
         <a href="contact.html" class="block py-2 text-brandBrown font-bold border-b border-brandBorder/60">Contact</a>
       </div>
@@ -580,4 +584,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
